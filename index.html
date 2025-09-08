@@ -1,141 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Game Title | Official Site</title>
-    <!-- Tailwind CSS -->
+    <title>Hooded Horse | Indie Game Publishing</title>
+    
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Orbitron for titles, Inter for body text -->
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark blue-gray background */
-            color: #d1d5db; /* Light gray text */
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb; /* text-gray-200 */
         }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
+        .font-heading {
+            font-family: 'Teko', sans-serif;
         }
-        /* Style for the video container to maintain aspect ratio */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://placehold.co/1920x1080/111827/4f46e5?text=Cosmic+Battle');
+            background-size: cover;
+            background-position: center;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .newsletter-bg {
+            background-color: #1e293b; /* slate-800 */
         }
-        .social-icon:hover svg {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.7)); /* Glowing effect on hover */
+        /* Simple transition for language switching */
+        [data-key] {
+            transition: opacity 0.3s ease-in-out;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="text-gray-200">
 
     <!-- Header -->
-    <header class="py-6">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="font-orbitron text-4xl md:text-6xl font-bold text-white uppercase tracking-wider">
-                <!-- TODO: Replace with your game's title -->
-                Your Game Title
-            </h1>
-            <p class="mt-2 text-lg md:text-xl text-indigo-300">
-                <!-- TODO: Replace with your game's tagline -->
-                An adventure awaits.
-            </p>
+    <header class="bg-black/30 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Top Social Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Steam">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 8c0 1.886.634 3.63 1.697 5.013l.008.013a7.96 7.96 0 0 0 .933-2.132A7.95 7.95 0 0 1 8 2c3.31 0 6 2.686 6 6a5.98 5.98 0 0 1-1.854 4.24l-.01.012a5.97 5.97 0 0 1-4.147 1.758 6.012 6.012 0 0 1-5.22-3.26l-.007-.015-1.42.535zm1.68 1.878a6.02 6.02 0 0 1-.399-2.045 6.012 6.012 0 0 1 3.26-5.224l.015-.008.534-1.42A7.96 7.96 0 0 0 2.22 7.78a7.97 7.97 0 0 0 2.133.933l-.11.11H2.009zm3.827-3.97a3.974 3.974 0 0 1 3.99-3.993 3.974 3.974 0 0 1 3.992 3.993 3.974 3.974 0 0 1-3.992 3.993 3.974 3.974 0 0 1-3.99-3.993zm2.01.006a1.974 1.974 0 0 0 1.98-1.986 1.974 1.974 0 0 0-1.98-1.986 1.974 1.974 0 0 0-1.98 1.986 1.974 1.974 0 0 0 1.98 1.986z"/></svg>
+                </a>
+                 <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Discord">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.165 5.734 1.165 8.353 0a.05.05 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1 .015.019.05.05 0 0 1-.02.066 8.875 8.875 0 0 1-1.248.595.05.05 0 0 0-.01.059c.236.466.51.899.818 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/></svg>
+                </a>
+            </div>
+            <a href="#" class="absolute left-1/2 -translate-x-1/2">
+                <img src="https://placehold.co/150x50/0a0a0a/ffffff?text=HOODED+HORSE" alt="Hooded Horse Logo" class="h-8">
+            </a>
+            <div class="flex items-center space-x-4">
+                 <!-- Language Selector -->
+                <div class="relative" id="language-selector-container">
+                    <button id="language-selector-button" class="flex items-center hover:text-white transition-colors text-sm">
+                        <span>English</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="language-dropdown" class="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-700 rounded-md shadow-lg py-1 hidden">
+                        <!-- Language options will be injected here by JS -->
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-12">
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg min-h-screen flex flex-col justify-center items-center text-center pt-20 px-4">
+            <h1 class="text-6xl md:text-8xl text-white font-heading tracking-wider uppercase" data-key="heroTitle">Indie Game Publishing</h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl" data-key="heroSubtitle">Hooded Horse is a publisher of games featuring strategic and tactical depth.</p>
+        </section>
 
-        <!-- Game Trailer Section -->
-        <section id="trailer">
-            <h2 class="font-orbitron text-3xl font-bold text-center text-white mb-8">Watch The Trailer</h2>
-            <div class="video-container max-w-4xl mx-auto">
-                <!-- TODO: Replace with your YouTube video embed code -->
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Featured Video -->
+        <section class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl text-white font-heading mb-8" data-key="videoTitle">Watch the Hooded Horse Direct!</h2>
+                 <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-2xl"></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platforms -->
+        <section class="py-12 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center items-center space-x-8 md:space-x-16 text-gray-500">
+                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=STEAM" alt="Steam" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=GOG" alt="GOG" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=EPIC" alt="Epic Games" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=WINDOWS" alt="Windows" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="mt-20 max-w-4xl mx-auto text-center">
-            <h2 class="font-orbitron text-3xl font-bold text-white mb-4">About The Game</h2>
-            <p class="text-lg leading-relaxed">
-                <!-- TODO: Replace with a description of your game -->
-                Dive into a rich, story-driven experience where your choices matter. Explore a vast open world, battle formidable foes, and uncover ancient mysteries. Wishlist now to be part of the journey!
-            </p>
-            <!-- Call to Action Button -->
-            <div class="mt-8">
-                 <a href="#" class="inline-block bg-indigo-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-indigo-500 transition-colors duration-300 transform hover:scale-105">
-                    <!-- TODO: Add your Steam store page link -->
-                    Wishlist on Steam
-                </a>
+        <!-- Screenshots -->
+        <section class="py-16 md:py-24">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl text-white mb-10 font-heading" data-key="screenshotsTitle">Screenshots</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+1" alt="Game Screenshot 1" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+2" alt="Game Screenshot 2" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+3" alt="Game Screenshot 3" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+4" alt="Game Screenshot 4" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
             </div>
         </section>
-
-        <!-- Social & Community Section -->
-        <section id="community" class="mt-20 text-center">
-            <h2 class="font-orbitron text-3xl font-bold text-white mb-8">Join Our Community</h2>
-            <div class="flex justify-center items-center flex-wrap gap-6">
-                
-                <!-- TODO: Replace '#' with your actual profile links -->
-
-                <!-- YouTube -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="YouTube">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.802 5.392a3.001 3.001 0 0 0-2.09-2.103C15.903 3 12 3 12 3s-3.903 0-5.712.289a3.001 3.001 0 0 0-2.09 2.103C4 7.21 4 12 4 12s0 4.79.288 6.608a3.001 3.001 0 0 0 2.09 2.103C8.097 21 12 21 12 21s3.903 0 5.712-.289a3.001 3.001 0 0 0 2.09-2.103C20 16.79 20 12 20 12s0-4.79-.198-6.608zM9.75 15.3V8.7l5.25 3.3-5.25 3.3z" clip-rule="evenodd" /></svg>
-                </a>
-                <!-- Discord -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="Discord">
-                   <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.36981C18.9915 3.68149 17.5843 3.19451 16.12 3C15.966 3.28443 15.7891 3.62624 15.6343 4.01518C13.911 3.67075 12.179 3.67075 10.4566 4.01518C10.3019 3.62624 10.125 3.28443 9.97101 3C8.50669 3.19451 7.10049 3.68149 5.775 4.36981C3.64434 7.0203 2.98602 9.6106 3.21401 12.1121C4.66444 13.6063 6.28444 14.5732 7.971 15.118C8.31975 14.6502 8.63625 14.1593 8.919 13.6452C8.38575 13.4159 7.87425 13.1435 7.392 12.828C7.521 12.7235 7.64475 12.6147 7.76175 12.5015C11.538 14.136 12.5535 14.136 16.3298 12.5015C16.4468 12.6147 16.5705 12.7235 16.6995 12.828C16.2172 13.1435 15.7058 13.4159 15.1725 13.6452C15.4552 14.1593 15.7718 14.6502 16.1205 15.118C17.8071 14.5732 19.4271 13.6063 20.8775 12.1121C21.1377 9.00686 19.9507 6.44227 20.317 4.36981ZM8.6775 11.2801C7.8825 11.2801 7.22925 10.5583 7.22925 9.68284C7.22925 8.80739 7.8825 8.08557 8.6775 8.08557C9.4725 8.08557 10.1258 8.80739 10.1258 9.68284C10.125 9.817 10.1123 9.94776 10.0883 10.0751C10.0845 10.0935 10.0808 10.1119 10.0762 10.1302C10.0215 10.3737 9.91125 10.5997 9.759 10.7936C9.516 11.087 9.138 11.2801 8.6775 11.2801ZM15.4125 11.2801C14.6175 11.2801 13.9643 10.5583 13.9643 9.68284C13.9643 8.80739 14.6175 8.08557 15.4125 8.08557C16.2075 8.08557 16.8608 8.80739 16.8608 9.68284C16.8608 10.5583 16.2075 11.2801 15.4125 11.2801Z"/></svg>
-                </a>
-                <!-- Bluesky -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="Bluesky">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm5.707 15.707c-3.79 3.79-9.878 3.818-13.684.037l1.414-1.414c2.994 2.994 7.844 2.973 10.838-.02l1.432 1.4zM4.293 8.293c3.79-3.79 9.878-3.818 13.684-.037l-1.414 1.414c-2.994-2.994-7.844-2.973-10.838.02L4.293 8.293z"/></svg>
-                </a>
-                <!-- Instagram -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="Instagram">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.63 15.08c-.4.4-.95.63-1.54.63h-6.18c-1.21 0-2.19-1-2.19-2.22V8.51c0-1.22.98-2.22 2.19-2.22h6.18c.59 0 1.14.23 1.54.63.4.4.63.95.63 1.54v6.18c0 .59-.23 1.14-.63 1.54z"/><path d="M12 7.81c-2.31 0-4.19 1.88-4.19 4.19s1.88 4.19 4.19 4.19 4.19-1.88 4.19-4.19-1.88-4.19-4.19-4.19zm0 6.84c-1.46 0-2.65-1.19-2.65-2.65s1.19-2.65 2.65-2.65 2.65 1.19 2.65 2.65-1.19 2.65-2.65 2.65zm4.33-6.91c-.42 0-.76.34-.76.76s.34.76.76.76.76-.34.76-.76-.34-.76-.76-.76z"/></svg>
-                </a>
-                <!-- Facebook -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="Facebook">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v7.028C18.343 21.128 22 16.991 22 12z"/></svg>
-                </a>
-                <!-- Itch.io -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="itch.io">
-                    <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.951 16.512l7.153-1.332.146 1.258-4.819.897 1.838 1.936-1.125.328-2.193-2.186zm-.714-2.14L12 3l9.763 11.372-7.907.822-1.856-4.577-4.162 4.162.72 2.15-1.1.28zm18.17 4.966l-2.13-2.124-1.126.327 1.774 1.868-4.755.885.145 1.258 7.03-1.305z"/></svg>
-                </a>
-                <!-- Steam -->
-                <a href="#" class="social-icon text-gray-400 hover:text-white transition-all duration-300" title="Steam">
-                     <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.003 2C6.48 2 2.003 6.477 2.003 12c0 5.523 4.477 10 10 10 5.523 0 10-4.477 10-10 0-5.523-4.477-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.52-10.435l-3.328 1.157v3.023l3.328 1.157c.706.246 1.22-.387 1.025-1.077l-.63-2.09c-.195-.69-.97-1.15-1.74-.5l.345-1.23zm-5.467.568l-1.92-2.12c-.417-.46-.03-.976.58-.876l3.523.577-2.183 2.42zm.17 1.48l2.257-2.513 1.06 3.73-3.317-1.217zm-.59-5.112c1.472 0 2.663 1.19 2.663 2.663 0 1.472-1.19 2.663-2.664 2.663-1.472 0-2.663-1.19-2.663-2.663 0-1.472 1.19-2.663 2.664-2.663zm-2.193 7.828l3.33-1.157v-3.02l-3.33-1.16c-.704-.246-1.218.387-1.024 1.076l.63 2.09c.196.69.97 1.152 1.74.5l-.346 1.23z"/></svg>
-                </a>
-
+        
+        <!-- Publisher Info -->
+        <section class="py-16 md:py-24 bg-gray-900/50">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <img src="https://placehold.co/200x60/111827/ffffff?text=HOODED+HORSE" alt="Hooded Horse Logo" class="h-10 mx-auto mb-8">
+                <h3 class="text-3xl md:text-4xl text-white font-heading" data-key="publisherInfoTitle">Publisher Inspired By Strategy, Simulation, and Role-Playing Games</h3>
+                <p class="mt-4 text-gray-400" data-key="publisherInfoDesc">We are a publisher of deep strategic and tactical games from around the world. Our aim is to empower and support independent developers to create the games they love, and to bring those games to you.</p>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section class="py-16 md:py-24 newsletter-bg">
+            <div class="container mx-auto px-6 text-center max-w-2xl">
+                <h2 class="text-4xl text-white font-heading" data-key="newsletterTitle">Join Our Newsletter Today</h2>
+                <p class="mt-2 text-gray-400 mb-8" data-key="newsletterSubtitle">Get the latest news about our games, events, and more.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-yellow-500 focus:outline-none" data-key="newsletterPlaceholder" aria-label="Email for newsletter">
+                    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-md transition-colors" data-key="newsletterButton">Subscribe</button>
+                </form>
             </div>
         </section>
 
     </main>
-
+    
     <!-- Footer -->
-    <footer class="mt-20 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <!-- TODO: Replace with your studio/developer name -->
-            <p>&copy; 2025 Your Game Studio. All rights reserved.</p>
+    <footer class="bg-black py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div>
+                     <img src="https://placehold.co/150x50/000000/ffffff?text=H+HORSE" alt="Hooded Horse Logo" class="h-8 mb-4">
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3" data-key="footerGames">Games</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Strategy</a></li>
+                        <li><a href="#" class="hover:text-white">RPG</a></li>
+                        <li><a href="#" class="hover:text-white">Simulation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3" data-key="footerAbout">About</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white" data-key="footerTeam">Our Team</a></li>
+                        <li><a href="#" class="hover:text-white" data-key="footerCareers">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3" data-key="footerCommunity">Community</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-bold text-white mb-3" data-key="footerContact">Contact</h4>
+                    <ul class="text-gray-400 space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white" data-key="footerSupport">Support</a></li>
+                        <li><a href="#" class="hover:text-white" data-key="footerPress">Press</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm" data-key="footerCopyright">© 2025 Hooded Horse. All rights reserved.</p>
+                <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-white" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.022.26-.01.104c-.048.519-.119 1.023-.22 1.402a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.171-.006.087-.004.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg></a>
+                    <a href="#" class="text-gray-500 hover:text-white" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+                </div>
+            </div>
         </div>
     </footer>
 
+
+    <script>
+        // --- TRANSLATION SCRIPT ---
+        const translations = {
+            'en': {
+                name: "English",
+                heroTitle: "Indie Game Publishing",
+                heroSubtitle: "Hooded Horse is a publisher of games featuring strategic and tactical depth.",
+                videoTitle: "Watch the Hooded Horse Direct!",
+                screenshotsTitle: "Screenshots",
+                publisherInfoTitle: "Publisher Inspired By Strategy, Simulation, and Role-Playing Games",
+                publisherInfoDesc: "We are a publisher of deep strategic and tactical games from around the world. Our aim is to empower and support independent developers to create the games they love, and to bring those games to you.",
+                newsletterTitle: "Join Our Newsletter Today",
+                newsletterSubtitle: "Get the latest news about our games, events, and more.",
+                newsletterPlaceholder: "your.email@example.com",
+                newsletterButton: "Subscribe",
+                footerGames: "Games",
+                footerAbout: "About",
+                footerTeam: "Our Team",
+                footerCareers: "Careers",
+                footerCommunity: "Community",
+                footerContact: "Contact",
+                footerSupport: "Support",
+                footerPress: "Press",
+                footerCopyright: "© 2025 Hooded Horse. All rights reserved."
+            },
+            'zh-CN': {
+                name: "简体中文",
+                heroTitle: "独立游戏发行",
+                heroSubtitle: "Hooded Horse 是一家发行具有战略和战术深度游戏的发行商。",
+                videoTitle: "观看 Hooded Horse Direct！",
+                screenshotsTitle: "游戏截图",
+                publisherInfoTitle: "受策略、模拟和角色扮演游戏启发的发行商",
+                publisherInfoDesc: "我们是一家来自世界各地的深度战略和战术游戏的发行商。我们的目标是赋能和支持独立开发者创作他们热爱的游戏，并将这些游戏带给您。",
+                newsletterTitle: "立即订阅我们的新闻通讯",
+                newsletterSubtitle: "获取有关我们游戏、活动等的最新消息。",
+                newsletterPlaceholder: "your.email@example.com",
+                newsletterButton: "订阅",
+                footerGames: "游戏",
+                footerAbout: "关于",
+                footerTeam: "我们的团队",
+                footerCareers: "招聘",
+                footerCommunity: "社区",
+                footerContact: "联系",
+                footerSupport: "支持",
+                footerPress: "媒体",
+                footerCopyright: "© 2025 Hooded Horse。版权所有。"
+            }
+        };
+
+        const languageSelectorContainer = document.getElementById('language-selector-container');
+        const languageSelectorButton = document.getElementById('language-selector-button');
+        const languageDropdown = document.getElementById('language-dropdown');
+
+        // Populate language dropdown
+        for (const langCode in translations) {
+            const langName = translations[langCode].name;
+            const link = document.createElement('a');
+            link.href = '#';
+            link.textContent = langName;
+            link.classList.add('block', 'px-4', 'py-2', 'text-sm', 'text-gray-300', 'hover:bg-gray-700', 'hover:text-white');
+            link.dataset.lang = langCode;
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                setLanguage(langCode);
+                languageDropdown.classList.add('hidden');
+            });
+            languageDropdown.appendChild(link);
+        }
+
+        const setLanguage = (lang) => {
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(el => {
+                const key = el.dataset.key;
+                if (translations[lang] && translations[lang][key]) {
+                    el.style.opacity = 0;
+                    setTimeout(() => {
+                        if (el.tagName === 'INPUT') {
+                            el.placeholder = translations[lang][key];
+                        } else {
+                            el.innerText = translations[lang][key];
+                        }
+                        el.style.opacity = 1;
+                    }, 150);
+                }
+            });
+            // Update button text
+            languageSelectorButton.querySelector('span').innerText = translations[lang].name;
+             // Handle RTL for Arabic
+            if (lang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        };
+
+        // Toggle dropdown
+        languageSelectorButton.addEventListener('click', () => {
+            languageDropdown.classList.toggle('hidden');
+        });
+
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!languageSelectorContainer.contains(e.target)) {
+                languageDropdown.classList.add('hidden');
+            }
+        });
+        
+        // --- MOBILE MENU SCRIPT (placeholder) ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        // Add functionality for mobile menu if needed
+        
+        // Set default language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('en');
+        });
+    </script>
+
 </body>
 </html>
+
