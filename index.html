@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hooded Horse | Indie Game Publishing</title>
+    <title>Emptyhanded&Whitewolf | Strategy Game Development</title>
     
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
             font-family: 'Teko', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://placehold.co/1920x1080/111827/4f46e5?text=Cosmic+Battle');
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('assets/library_hero.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -52,7 +52,7 @@
                 </a>
             </div>
             <a href="#" class="absolute left-1/2 -translate-x-1/2">
-                <img src="https://placehold.co/150x50/0a0a0a/ffffff?text=HOODED+HORSE" alt="Hooded Horse Logo" class="h-8">
+                <img src="assets/emptyhanded&whitewolf_logo.png" alt="Emptyhanded&Whitewolf Logo" class="h-8">
             </a>
             <div class="flex items-center space-x-4">
                  <!-- Language Selector -->
@@ -75,59 +75,73 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero-bg min-h-screen flex flex-col justify-center items-center text-center pt-20 px-4">
-            <h1 class="text-6xl md:text-8xl text-white font-heading tracking-wider uppercase" data-key="heroTitle">Indie Game Publishing</h1>
-            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl" data-key="heroSubtitle">Hooded Horse is a publisher of games featuring strategic and tactical depth.</p>
+            <h1 class="text-6xl md:text-8xl text-white font-heading tracking-wider uppercase" data-key="heroTitle">We ❤️ strategy games</h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl" data-key="heroSubtitle">Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.</p>
         </section>
 
-        <!-- Featured Video -->
-        <section class="py-16 md:py-24 bg-black">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl text-white font-heading mb-8" data-key="videoTitle">Watch the Hooded Horse Direct!</h2>
-                 <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-2xl"></iframe>
-                </div>
-            </div>
-        </section>
+		<!-- Game Trailer Section -->
+		<section id="trailer" class="py-16 bg-black">
+		  <h2 class="font-orbitron text-3xl font-bold text-center text-white mb-8">
+			Watch The Trailer
+		  </h2>
+
+		  <div class="max-w-4xl mx-auto">
+			<div class="relative w-full" style="padding-top: 56.25%;">
+			  <iframe
+				class="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+				src="https://www.youtube.com/embed/0Q0tH4m_hRI"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			  ></iframe>
+			</div>
+		  </div>
+		</section>
         
-        <!-- Platforms -->
-        <section class="py-12 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="flex justify-center items-center space-x-8 md:space-x-16 text-gray-500">
-                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=STEAM" alt="Steam" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
-                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=GOG" alt="GOG" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
-                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=EPIC" alt="Epic Games" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
-                    <img src="https://placehold.co/120x40/1f2937/9ca3af?text=WINDOWS" alt="Windows" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
-                </div>
-            </div>
-        </section>
+		<!-- Platforms --> 
+		<section class="py-12 bg-gray-900">
+		  <div class="container mx-auto px-6">
+			<div class="flex justify-center items-center space-x-8 md:space-x-16 text-gray-500">
+			  <a href="https://store.steampowered.com/app/3070420/Martial_Realms/" target="_blank" rel="noopener noreferrer">
+				<img src="assets/logo_steam.svg" alt="Steam" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+			  </a>
+			</div>
+		  </div>
+		</section>
 
         <!-- Screenshots -->
         <section class="py-16 md:py-24">
              <div class="container mx-auto px-6 text-center">
                 <h2 class="text-5xl text-white mb-10 font-heading" data-key="screenshotsTitle">Screenshots</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+1" alt="Game Screenshot 1" class="rounded-lg shadow-lg w-full h-full object-cover">
-                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+2" alt="Game Screenshot 2" class="rounded-lg shadow-lg w-full h-full object-cover">
-                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+3" alt="Game Screenshot 3" class="rounded-lg shadow-lg w-full h-full object-cover">
-                    <img src="https://placehold.co/800x450/111827/4f46e5?text=Screenshot+4" alt="Game Screenshot 4" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot1.jpg" alt="Game Screenshot 1" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot7.jpg" alt="Game Screenshot 2" class="rounded-lg shadow-lg w-full h-full object-cover">
+					<img src="assets/screenshot2.jpg" alt="Game Screenshot 1" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot8.jpg" alt="Game Screenshot 2" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot3.jpg" alt="Game Screenshot 3" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot4.jpg" alt="Game Screenshot 4" class="rounded-lg shadow-lg w-full h-full object-cover">                    
+					<img src="assets/screenshot5.jpg" alt="Game Screenshot 3" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="assets/screenshot6.jpg" alt="Game Screenshot 4" class="rounded-lg shadow-lg w-full h-full object-cover">
                 </div>
             </div>
         </section>
         
-        <!-- Publisher Info -->
-        <section class="py-16 md:py-24 bg-gray-900/50">
-            <div class="container mx-auto px-6 text-center max-w-3xl">
-                <img src="https://placehold.co/200x60/111827/ffffff?text=HOODED+HORSE" alt="Hooded Horse Logo" class="h-10 mx-auto mb-8">
-                <h3 class="text-3xl md:text-4xl text-white font-heading" data-key="publisherInfoTitle">Publisher Inspired By Strategy, Simulation, and Role-Playing Games</h3>
-                <p class="mt-4 text-gray-400" data-key="publisherInfoDesc">We are a publisher of deep strategic and tactical games from around the world. Our aim is to empower and support independent developers to create the games they love, and to bring those games to you.</p>
-            </div>
-        </section>
+		<!-- Publisher Info -->
+		<section class="py-16 md:py-24 bg-gray-900/50">
+			<div class="container mx-auto px-6 text-center max-w-3xl">
+				<img src="assets/emptyhanded&whitewolf_logo_text_h.png" alt="Emptyhanded&Whitewolf Logo" class="h-64 mx-auto mb-8">
+				<h3 class="text-3xl md:text-4xl text-white font-heading" data-key="publisherInfoTitle">Developer In Love With Strategy, Simulation, and Role-Playing Games</h3>
+				<p class="mt-4 text-gray-400" data-key="publisherInfoDesc">We are a developer of deep strategic and tactical games from around the world. Our aim is to create the games you love, and to bring these games to you.</p>
+			</div>
+		</section>
+
         
         <!-- Newsletter -->
         <section class="py-16 md:py-24 newsletter-bg">
             <div class="container mx-auto px-6 text-center max-w-2xl">
                 <h2 class="text-4xl text-white font-heading" data-key="newsletterTitle">Join Our Newsletter Today</h2>
-                <p class="mt-2 text-gray-400 mb-8" data-key="newsletterSubtitle">Get the latest news about our games, events, and more.</p>
+                <p class="mt-2 text-gray-400 mb-8" data-key="newsletterSubtitle">Join our news letter to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.</p>
                 <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                     <input type="email" placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-md bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-yellow-500 focus:outline-none" data-key="newsletterPlaceholder" aria-label="Email for newsletter">
                     <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-md transition-colors" data-key="newsletterButton">Subscribe</button>
@@ -137,102 +151,435 @@
 
     </main>
     
-    <!-- Footer -->
-    <footer class="bg-black py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-                <div>
-                     <img src="https://placehold.co/150x50/000000/ffffff?text=H+HORSE" alt="Hooded Horse Logo" class="h-8 mb-4">
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-3" data-key="footerGames">Games</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Strategy</a></li>
-                        <li><a href="#" class="hover:text-white">RPG</a></li>
-                        <li><a href="#" class="hover:text-white">Simulation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-3" data-key="footerAbout">About</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white" data-key="footerTeam">Our Team</a></li>
-                        <li><a href="#" class="hover:text-white" data-key="footerCareers">Careers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-3" data-key="footerCommunity">Community</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Discord</a></li>
-                        <li><a href="#" class="hover:text-white">Twitter</a></li>
-                    </ul>
-                </div>
-                 <div>
-                    <h4 class="font-bold text-white mb-3" data-key="footerContact">Contact</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white" data-key="footerSupport">Support</a></li>
-                        <li><a href="#" class="hover:text-white" data-key="footerPress">Press</a></li>
-                    </ul>
-                </div>
-            </div>
-             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-                <p class="text-gray-500 text-sm" data-key="footerCopyright">© 2025 Hooded Horse. All rights reserved.</p>
-                <div class="flex items-center space-x-4 mt-4 sm:mt-0">
-                    <a href="#" class="text-gray-500 hover:text-white" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.022.26-.01.104c-.048.519-.119 1.023-.22 1.402a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.171-.006.087-.004.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg></a>
-                    <a href="#" class="text-gray-500 hover:text-white" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<!-- Footer -->
+	<footer class="bg-black text-gray-300">
+	  <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+		<!-- Left column: Contact -->
+		<div>
+		  <h3 class="text-blue-400 font-bold mb-4">EMPTYHANDED & WHITEWOLF</h3>
+		  <ul class="space-y-3 text-sm">
+			<li class="flex items-center space-x-2">
+			  <span data-key="footerPressEmail">📄 Press:</span>
+			  <a href="mailto:press@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
+				press@emptyhandedwhitewolf.com
+			  </a>
+			</li>
+			<li class="flex items-center space-x-2">
+			  <span data-key="footerStreamerEmail">🎮 Streamer:</span>
+			  <a href="mailto:influencers@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
+				influencers@emptyhandedwhitewolf.com
+			  </a>
+			</li>
+			<li class="flex items-center space-x-2">
+			  <span data-key="footerPublisherEmail">📢 Publisher:</span>
+			  <a href="mailto:publisher@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
+				publisher@emptyhandedwhitewolf.com
+			  </a>
+			</li>
+			<li class="flex items-center space-x-2">
+			  <span data-key="footerDeveloperEmail">💻 Developer:</span>
+			  <a href="mailto:developer@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
+				publisher@emptyhandedwhitewolf.com
+			  </a>
+			</li>
+			<li class="flex items-center space-x-2">
+			  <span data-key="footerGeneralEmail">❓ General:</span>
+			  <a href="mailto:contact@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
+				contact@emptyhandedwhitewolf.com
+			  </a>
+			</li>
+		  </ul>
+		</div>
+
+		<!-- Right column: Menu -->
+		<div>
+		  <h3 class="text-blue-400 font-bold mb-4">MENU</h3>
+		  <ul class="space-y-3 text-sm">
+			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerInfluencers">Influencers</a></li>
+			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerJobs">Freelance Jobs</a></li>
+			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerPress">Press</a></li>
+			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerWikis">Official Wikis</a></li>
+		  </ul>
+		</div>
+	  </div>
+
+	  <!-- Bottom bar -->
+	  <div class="border-t border-gray-700 bg-gray-900 px-6 py-6">
+		<div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+		  <!-- Left: copyright + policies -->
+		  <p class="text-sm text-gray-400 mb-4 md:mb-0">
+			© Copyright 2025 |
+			<a href="#" class="text-yellow-400 hover:underline">Terms of Use</a> |
+			<a href="#" class="text-yellow-400 hover:underline">Privacy Policy</a> |
+			<a href="#" class="text-yellow-400 hover:underline">Alpha and Beta Testing Agreement</a>
+		  </p>
+
+		  <!-- Right: social icons -->
+		  <div class="flex space-x-4 text-yellow-400 text-xl">
+			<!-- Replace these placeholders with proper SVGs or icons -->
+			<a href="#" aria-label="Steam">🎮</a>
+			<a href="#" aria-label="GOG">🕹️</a>
+			<a href="#" aria-label="Twitter">🐦</a>
+			<a href="#" aria-label="YouTube">▶️</a>
+			<a href="#" aria-label="Reddit">👽</a>
+			<a href="#" aria-label="Facebook">📘</a>
+			<a href="#" aria-label="Discord">💬</a>
+		  </div>
+		</div>
+	  </div>
+	</footer>
+
 
 
     <script>
-        // --- TRANSLATION SCRIPT ---
-        const translations = {
-            'en': {
-                name: "English",
-                heroTitle: "Indie Game Publishing",
-                heroSubtitle: "Hooded Horse is a publisher of games featuring strategic and tactical depth.",
-                videoTitle: "Watch the Hooded Horse Direct!",
-                screenshotsTitle: "Screenshots",
-                publisherInfoTitle: "Publisher Inspired By Strategy, Simulation, and Role-Playing Games",
-                publisherInfoDesc: "We are a publisher of deep strategic and tactical games from around the world. Our aim is to empower and support independent developers to create the games they love, and to bring those games to you.",
-                newsletterTitle: "Join Our Newsletter Today",
-                newsletterSubtitle: "Get the latest news about our games, events, and more.",
-                newsletterPlaceholder: "your.email@example.com",
-                newsletterButton: "Subscribe",
-                footerGames: "Games",
-                footerAbout: "About",
-                footerTeam: "Our Team",
-                footerCareers: "Careers",
-                footerCommunity: "Community",
-                footerContact: "Contact",
-                footerSupport: "Support",
-                footerPress: "Press",
-                footerCopyright: "© 2025 Hooded Horse. All rights reserved."
-            },
-            'zh-CN': {
-                name: "简体中文",
-                heroTitle: "独立游戏发行",
-                heroSubtitle: "Hooded Horse 是一家发行具有战略和战术深度游戏的发行商。",
-                videoTitle: "观看 Hooded Horse Direct！",
-                screenshotsTitle: "游戏截图",
-                publisherInfoTitle: "受策略、模拟和角色扮演游戏启发的发行商",
-                publisherInfoDesc: "我们是一家来自世界各地的深度战略和战术游戏的发行商。我们的目标是赋能和支持独立开发者创作他们热爱的游戏，并将这些游戏带给您。",
-                newsletterTitle: "立即订阅我们的新闻通讯",
-                newsletterSubtitle: "获取有关我们游戏、活动等的最新消息。",
-                newsletterPlaceholder: "your.email@example.com",
-                newsletterButton: "订阅",
-                footerGames: "游戏",
-                footerAbout: "关于",
-                footerTeam: "我们的团队",
-                footerCareers: "招聘",
-                footerCommunity: "社区",
-                footerContact: "联系",
-                footerSupport: "支持",
-                footerPress: "媒体",
-                footerCopyright: "© 2025 Hooded Horse。版权所有。"
-            }
-        };
+	// --- TRANSLATION SCRIPT --- 
+	const translations = {
+		'en': {
+			name: "English",
+			heroTitle: "We ❤️ strategy games",
+			heroSubtitle: "Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.",
+			videoTitle: "Watch the Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "Screenshots",
+			publisherInfoTitle: "Developer In Love With Strategy, Simulation, and Role-Playing Games",
+			publisherInfoDesc: "We are a developer of deep strategic and tactical games from around the world. Our aim is to create the games you love, and to bring these games to you.",
+			newsletterTitle: "Reserve Your Spot In Beta Test",
+			newsletterSubtitle: "Join our news letter to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Subscribe",
+			footerPressEmail: "Press",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Publisher",
+			footerDeveloperEmail: "Developer",
+			footerGeneralEmail: "Contact",
+			footerInfluencers: "Influencer",
+			footerJobs: "Freelance Jobs",
+			footerPress: "Press",
+			footerWikis: "Official Game Wikis",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. All rights reserved."
+		},
+		'zh-CN': {
+			name: "简体中文",
+			heroTitle: "我们 ❤️ 策略游戏",
+			heroSubtitle: "Emptyhanded&Whitewolf 是一家开发具有战略和战术深度游戏的开发者。",
+			videoTitle: "观看 Emptyhanded&Whitewolf Direct！",
+			screenshotsTitle: "游戏截图",
+			publisherInfoTitle: "热爱策略、模拟和角色扮演游戏的开发者",
+			publisherInfoDesc: "我们是一家开发深度战略和战术游戏的开发者。我们的目标是创造您喜爱的游戏，并将这些游戏带给您。",
+			newsletterTitle: "预订您的测试资格",
+			newsletterSubtitle: "加入我们的新闻通讯，获取关于游戏、活动的最新消息，抢先参加游戏测试等。",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "订阅",
+			footerPressEmail: "媒体",
+			footerStreamerEmail: "主播",
+			footerPublisherEmail: "发行",
+			footerDeveloperEmail: "开发者",
+			footerGeneralEmail: "联系",
+			footerInfluencers: "网红",
+			footerJobs: "自由职业",
+			footerPress: "新闻",
+			footerWikis: "官方游戏维基",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版权所有。"
+		},
+		'zh-TW': {
+			name: "繁體中文",
+			heroTitle: "我們 ❤️ 策略遊戲",
+			heroSubtitle: "Emptyhanded&Whitewolf 是一家開發具有戰略和戰術深度遊戲的開發者。",
+			videoTitle: "觀看 Emptyhanded&Whitewolf Direct！",
+			screenshotsTitle: "遊戲截圖",
+			publisherInfoTitle: "熱愛策略、模擬和角色扮演遊戲的開發者",
+			publisherInfoDesc: "我們是一家開發深度戰略和戰術遊戲的開發者。我們的目標是創造您喜愛的遊戲，並將這些遊戲帶給您。",
+			newsletterTitle: "預約您的測試名額",
+			newsletterSubtitle: "加入我們的電子報，獲取最新遊戲消息、活動資訊，並搶先參加遊戲測試。",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "訂閱",
+			footerPressEmail: "媒體",
+			footerStreamerEmail: "實況主",
+			footerPublisherEmail: "發行",
+			footerDeveloperEmail: "開發者",
+			footerGeneralEmail: "聯絡",
+			footerInfluencers: "網紅",
+			footerJobs: "自由工作",
+			footerPress: "新聞",
+			footerWikis: "官方遊戲維基",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版權所有。"
+		},
+		'ko': {
+			name: "한국어",
+			heroTitle: "우리는 ❤️ 전략 게임",
+			heroSubtitle: "Emptyhanded&Whitewolf는 전략적이고 전술적인 깊이를 가진 게임을 개발합니다.",
+			videoTitle: "Emptyhanded&Whitewolf Direct 시청하기!",
+			screenshotsTitle: "스크린샷",
+			publisherInfoTitle: "전략, 시뮬레이션, 롤플레잉 게임을 사랑하는 개발자",
+			publisherInfoDesc: "우리는 깊이 있는 전략 및 전술 게임을 개발합니다. 우리의 목표는 여러분이 좋아할 게임을 만들고 전달하는 것입니다.",
+			newsletterTitle: "베타 테스트 예약하기",
+			newsletterSubtitle: "뉴스레터를 구독해 최신 게임, 이벤트 소식과 누구보다 먼저 플레이테스트에 참여하세요.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "구독",
+			footerPressEmail: "언론",
+			footerStreamerEmail: "스트리머",
+			footerPublisherEmail: "퍼블리셔",
+			footerDeveloperEmail: "개발자",
+			footerGeneralEmail: "연락",
+			footerInfluencers: "인플루언서",
+			footerJobs: "프리랜서 채용",
+			footerPress: "보도자료",
+			footerWikis: "공식 게임 위키",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 판권 소유."
+		},
+		'ja': {
+			name: "日本語",
+			heroTitle: "私たちは ❤️ ストラテジーゲーム",
+			heroSubtitle: "Emptyhanded&Whitewolf は戦略性と戦術性の深さを持つゲームを開発するデベロッパーです。",
+			videoTitle: "Emptyhanded&Whitewolf Direct をご覧ください！",
+			screenshotsTitle: "スクリーンショット",
+			publisherInfoTitle: "戦略・シミュレーション・RPGを愛する開発者",
+			publisherInfoDesc: "私たちは深い戦略と戦術のゲームを開発しています。目標は、皆さんが愛するゲームを作り、届けることです。",
+			newsletterTitle: "ベータテストに参加予約",
+			newsletterSubtitle: "ニュースレターに登録して、最新のゲーム情報、イベント情報を受け取り、他の人より早くテストに参加しましょう。",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "購読",
+			footerPressEmail: "プレス",
+			footerStreamerEmail: "ストリーマー",
+			footerPublisherEmail: "パブリッシャー",
+			footerDeveloperEmail: "開発者",
+			footerGeneralEmail: "連絡先",
+			footerInfluencers: "インフルエンサー",
+			footerJobs: "フリーランス求人",
+			footerPress: "報道",
+			footerWikis: "公式ゲームウィキ",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 無断転載を禁ず。"
+		},
+		'vi': {
+			name: "Tiếng Việt",
+			heroTitle: "Chúng tôi ❤️ trò chơi chiến lược",
+			heroSubtitle: "Emptyhanded&Whitewolf là nhà phát triển trò chơi có chiều sâu chiến lược và chiến thuật.",
+			videoTitle: "Xem Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "Ảnh chụp màn hình",
+			publisherInfoTitle: "Nhà phát triển yêu thích game Chiến lược, Mô phỏng và Nhập vai",
+			publisherInfoDesc: "Chúng tôi phát triển các trò chơi chiến lược và chiến thuật chuyên sâu. Mục tiêu là tạo ra những trò chơi bạn yêu thích và mang chúng đến với bạn.",
+			newsletterTitle: "Đăng ký tham gia Beta Test",
+			newsletterSubtitle: "Đăng ký bản tin để nhận tin tức mới nhất về trò chơi, sự kiện, chơi thử game trước mọi người và nhiều hơn nữa.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Đăng ký",
+			footerPressEmail: "Báo chí",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Nhà phát hành",
+			footerDeveloperEmail: "Nhà phát triển",
+			footerGeneralEmail: "Liên hệ",
+			footerInfluencers: "Người ảnh hưởng",
+			footerJobs: "Việc làm tự do",
+			footerPress: "Tin tức",
+			footerWikis: "Wiki chính thức",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Bản quyền."
+		},
+		'id': {
+			name: "Bahasa Indonesia",
+			heroTitle: "Kami ❤️ permainan strategi",
+			heroSubtitle: "Emptyhanded&Whitewolf adalah pengembang game dengan kedalaman strategi dan taktik.",
+			videoTitle: "Tonton Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "Cuplikan Layar",
+			publisherInfoTitle: "Pengembang yang mencintai Game Strategi, Simulasi, dan RPG",
+			publisherInfoDesc: "Kami mengembangkan game strategi dan taktik yang mendalam. Tujuan kami adalah menciptakan game yang Anda sukai dan membawanya kepada Anda.",
+			newsletterTitle: "Pesan Tempat Anda di Beta Test",
+			newsletterSubtitle: "Bergabunglah dengan buletin kami untuk mendapatkan berita terbaru tentang game, acara, bermain game lebih awal, dan banyak lagi.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Berlangganan",
+			footerPressEmail: "Pers",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Penerbit",
+			footerDeveloperEmail: "Pengembang",
+			footerGeneralEmail: "Kontak",
+			footerInfluencers: "Influencer",
+			footerJobs: "Pekerjaan Lepas",
+			footerPress: "Berita",
+			footerWikis: "Wiki Resmi Game",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Hak cipta."
+		},
+		'th': {
+			name: "ภาษาไทย",
+			heroTitle: "พวกเรา ❤️ เกมกลยุทธ์",
+			heroSubtitle: "Emptyhanded&Whitewolf เป็นผู้พัฒนาเกมที่มีความลึกเชิงกลยุทธ์และยุทธวิธี",
+			videoTitle: "ชม Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "ภาพหน้าจอ",
+			publisherInfoTitle: "นักพัฒนาที่หลงใหลในเกมกลยุทธ์ จำลอง และสวมบทบาท",
+			publisherInfoDesc: "เราคือผู้พัฒนาเกมเชิงกลยุทธ์และยุทธวิธีลึกซึ้ง เป้าหมายคือสร้างเกมที่คุณรักและนำมาสู่คุณ",
+			newsletterTitle: "จองสิทธิ์เข้าร่วมทดสอบเบต้า",
+			newsletterSubtitle: "สมัครจดหมายข่าวเพื่อรับข่าวสารล่าสุดเกี่ยวกับเกม กิจกรรม และทดลองเล่นเกมก่อนใคร",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "สมัครสมาชิก",
+			footerPressEmail: "สื่อ",
+			footerStreamerEmail: "สตรีมเมอร์",
+			footerPublisherEmail: "ผู้จัดจำหน่าย",
+			footerDeveloperEmail: "นักพัฒนา",
+			footerGeneralEmail: "ติดต่อ",
+			footerInfluencers: "อินฟลูเอนเซอร์",
+			footerJobs: "งานฟรีแลนซ์",
+			footerPress: "ข่าว",
+			footerWikis: "วิกิทางการ",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf สงวนลิขสิทธิ์."
+		},
+		'ru': {
+			name: "Русский",
+			heroTitle: "Мы ❤️ стратегические игры",
+			heroSubtitle: "Emptyhanded&Whitewolf — разработчик игр с глубокой стратегией и тактикой.",
+			videoTitle: "Смотрите Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "Скриншоты",
+			publisherInfoTitle: "Разработчик, любящий стратегии, симуляторы и ролевые игры",
+			publisherInfoDesc: "Мы создаем глубокие стратегические и тактические игры. Наша цель — создавать игры, которые вы любите, и приносить их вам.",
+			newsletterTitle: "Забронируйте место в бета-тесте",
+			newsletterSubtitle: "Подпишитесь на рассылку, чтобы получать новости об играх, событиях, участвовать в плейтестах раньше других и многое другое.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Подписаться",
+			footerPressEmail: "Пресса",
+			footerStreamerEmail: "Стример",
+			footerPublisherEmail: "Издатель",
+			footerDeveloperEmail: "Разработчик",
+			footerGeneralEmail: "Контакт",
+			footerInfluencers: "Инфлюенсер",
+			footerJobs: "Фриланс",
+			footerPress: "Новости",
+			footerWikis: "Официальные вики",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Все права защищены."
+		},
+		'de': {
+			name: "Deutsch",
+			heroTitle: "Wir ❤️ Strategiespiele",
+			heroSubtitle: "Emptyhanded&Whitewolf ist ein Entwickler von Spielen mit strategischer und taktischer Tiefe.",
+			videoTitle: "Schau dir Emptyhanded&Whitewolf Direct an!",
+			screenshotsTitle: "Screenshots",
+			publisherInfoTitle: "Entwickler mit Leidenschaft für Strategie-, Simulations- und Rollenspiele",
+			publisherInfoDesc: "Wir entwickeln tiefgehende strategische und taktische Spiele. Unser Ziel ist es, Spiele zu schaffen, die Sie lieben, und sie zu Ihnen zu bringen.",
+			newsletterTitle: "Reserviere deinen Platz im Betatest",
+			newsletterSubtitle: "Melde dich für unseren Newsletter an, um die neuesten Nachrichten zu Spielen, Events, frühen Spieltests und mehr zu erhalten.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Abonnieren",
+			footerPressEmail: "Presse",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Publisher",
+			footerDeveloperEmail: "Entwickler",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influencer",
+			footerJobs: "Freelance Jobs",
+			footerPress: "Nachrichten",
+			footerWikis: "Offizielle Spielwikis",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle Rechte vorbehalten."
+		},
+		'es': {
+			name: "Español",
+			heroTitle: "Nos encantan ❤️ los juegos de estrategia",
+			heroSubtitle: "Emptyhanded&Whitewolf es un desarrollador de juegos con profundidad estratégica y táctica.",
+			videoTitle: "¡Mira el Emptyhanded&Whitewolf Direct!",
+			screenshotsTitle: "Capturas de pantalla",
+			publisherInfoTitle: "Desarrollador enamorado de los juegos de estrategia, simulación y rol",
+			publisherInfoDesc: "Somos un desarrollador de juegos estratégicos y tácticos profundos. Nuestro objetivo es crear los juegos que amas y llevarlos a ti.",
+			newsletterTitle: "Reserva tu lugar en la prueba beta",
+			newsletterSubtitle: "Únete a nuestro boletín para recibir las últimas noticias sobre nuestros juegos, eventos, probar antes que nadie y más.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Suscribirse",
+			footerPressEmail: "Prensa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editor",
+			footerDeveloperEmail: "Desarrollador",
+			footerGeneralEmail: "Contacto",
+			footerInfluencers: "Influencer",
+			footerJobs: "Trabajos Freelance",
+			footerPress: "Noticias",
+			footerWikis: "Wikis Oficiales del Juego",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos los derechos reservados."
+		},
+		'fr': {
+			name: "Français",
+			heroTitle: "Nous ❤️ les jeux de stratégie",
+			heroSubtitle: "Emptyhanded&Whitewolf est un développeur de jeux avec une profondeur stratégique et tactique.",
+			videoTitle: "Regardez le Emptyhanded&Whitewolf Direct !",
+			screenshotsTitle: "Captures d’écran",
+			publisherInfoTitle: "Développeur passionné de jeux de stratégie, de simulation et de rôle",
+			publisherInfoDesc: "Nous développons des jeux stratégiques et tactiques profonds. Notre objectif est de créer les jeux que vous aimez et de les partager avec vous.",
+			newsletterTitle: "Réservez votre place au test bêta",
+			newsletterSubtitle: "Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles sur nos jeux, événements, tester nos jeux avant tout le monde, et plus encore.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "S’abonner",
+			footerPressEmail: "Presse",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Éditeur",
+			footerDeveloperEmail: "Développeur",
+			footerGeneralEmail: "Contact",
+			footerInfluencers: "Influenceur",
+			footerJobs: "Travaux Freelance",
+			footerPress: "Actualités",
+			footerWikis: "Wikis Officiels du Jeu",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tous droits réservés."
+		},
+		'pt': {
+        name: "Português",
+        heroTitle: "Nós ❤️ jogos de estratégia",
+        heroSubtitle: "Emptyhanded&Whitewolf é uma desenvolvedora de jogos com profundidade estratégica e tática.",
+        videoTitle: "Assista ao Emptyhanded&Whitewolf Direct!",
+        screenshotsTitle: "Capturas de Tela",
+        publisherInfoTitle: "Desenvolvedora Apaixonada por Jogos de Estratégia, Simulação e RPG",
+        publisherInfoDesc: "Somos uma desenvolvedora de jogos estratégicos e táticos aprofundados de todo o mundo. Nosso objetivo é criar os jogos que você ama e trazê-los até você.",
+        newsletterTitle: "Reserve Seu Lugar no Teste Beta",
+        newsletterSubtitle: "Assine nossa newsletter para receber as últimas notícias sobre nossos jogos, eventos, jogar nosso jogo em teste antes de todo mundo e muito mais.",
+        newsletterPlaceholder: "seu.email@exemplo.com",
+        newsletterButton: "Inscrever-se",
+        footerPressEmail: "Imprensa",
+        footerStreamerEmail: "Streamer",
+        footerPublisherEmail: "Editora",
+        footerDeveloperEmail: "Desenvolvedora",
+        footerGeneralEmail: "Contato",
+        footerInfluencers: "Influenciador",
+        footerJobs: "Vagas de Freelance",
+        footerPress: "Imprensa",
+		footerWikis: "Wikis Oficiais do Jogo",
+        footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados."
+		},
+		'tr': {
+        name: "Türkçe",
+        heroTitle: "Strateji oyunlarını ❤️ seviyoruz",
+        heroSubtitle: "Emptyhanded&Whitewolf, stratejik ve taktiksel derinliği olan oyunlar geliştiren bir stüdyo.",
+        videoTitle: "Emptyhanded&Whitewolf Direct'i İzleyin!",
+        screenshotsTitle: "Ekran Görüntüleri",
+        publisherInfoTitle: "Strateji, Simülasyon ve Rol Yapma Oyunlarına Aşık Bir Geliştirici",
+        publisherInfoDesc: "Biz, dünyanın dört bir yanından derin stratejik ve taktiksel oyunlar geliştiren bir stüdyoyuz. Amacımız, sevdiğiniz oyunları yaratmak ve bu oyunları size sunmaktır.",
+        newsletterTitle: "Beta Testinde Yerinizi Ayırtın",
+        newsletterSubtitle: "Oyunlarımız, etkinliklerimiz, oyunlarımızı herkesten önce test etme fırsatı ve daha fazlası hakkında en son haberleri almak için bültenimize katılın.",
+        newsletterPlaceholder: "senin.email@example.com",
+        newsletterButton: "Abone Ol",
+        footerPressEmail: "Basın",
+        footerStreamerEmail: "Yayıncı",
+        footerPublisherEmail: "Yayıncı",
+        footerDeveloperEmail: "Geliştirici",
+        footerGeneralEmail: "İletişim",
+        footerInfluencers: "Influencer",
+        footerJobs: "Serbest Çalışma İşleri",
+        footerPress: "Basın",
+		footerWikis: "Resmi Oyun Wikileri",
+        footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tüm hakları saklıdır."
+		},
+		'ar': {
+        name: "العربية",
+        heroTitle: "نحن ❤️ ألعاب الاستراتيجية",
+        heroSubtitle: "Emptyhanded&Whitewolf هو مطور ألعاب تتميز بالعمق الاستراتيجي والتكتيكي.",
+        videoTitle: "شاهد البث المباشر من Emptyhanded&Whitewolf!",
+        screenshotsTitle: "لقطات الشاشة",
+        publisherInfoTitle: "مطور يعشق ألعاب الاستراتيجية والمحاكاة ولعب الأدوار",
+        publisherInfoDesc: "نحن مطورون لألعاب استراتيجية وتكتيكية عميقة من جميع أنحاء العالم. هدفنا هو صنع الألعاب التي تحبها، وتقديم هذه الألعاب إليك.",
+        newsletterTitle: "احجز مكانك في الاختبار التجريبي",
+        newsletterSubtitle: "انضم إلى قائمتنا البريدية للحصول على آخر الأخبار حول ألعابنا، وفعالياتنا، ولعب لعبتنا في مرحلة الاختبار التجريبي قبل أي شخص آخر، والمزيد.",
+        newsletterPlaceholder: "بريدك.الإلكتروني@مثال.com",
+        newsletterButton: "اشترك",
+        footerPressEmail: "للصحافة",
+        footerStreamerEmail: "لليوتيوبرز",
+        footerPublisherEmail: "للناشرين",
+        footerDeveloperEmail: "للمطورين",
+        footerGeneralEmail: "للاتصال",
+        footerInfluencers: "للمؤثرين",
+        footerJobs: "وظائف حرة",
+        footerPress: "صحافة",
+		footerWikis: "موسوعات الألعاب الرسمية",
+        footerCopyright: "© 2025 Emptyhanded&Whitewolf. جميع الحقوق محفوظة."
+		},
+	};
 
         const languageSelectorContainer = document.getElementById('language-selector-container');
         const languageSelectorButton = document.getElementById('language-selector-button');
