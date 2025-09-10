@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="jp" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emptyhanded&Whitewolf | Strategy Game Development</title>
-    
-    <!-- Tailwind CSS via CDN -->
+    <title>Multi-Language Site</title>
+    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts for language-specific typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Teko:wght@400;700&family=Roboto:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans:wght@400;700&display=swap"" rel="stylesheet">
     <style>
+        /* A base background color */
         body {
-            font-family: 'Roboto', 'Noto',sans-serif;
             background-color: #0a0a0a;
             color: #e5e7eb; /* text-gray-200 */
         }
-        .font-heading {
-            font-family: 'Teko', 'Noto',sans-serif;
-        }
-        .hero-bg {
+		.hero-bg {
             background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('assets/library_hero.jpg');
             background-size: cover;
             background-position: center;
@@ -31,30 +27,149 @@
         .newsletter-bg {
             background-color: #1e293b; /* slate-800 */
         }
+        
+        /* English Font Rules */
+        body.font-en {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-en .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Simplified Chinese Font Rules */
+        body.font-zh-CN {
+            font-family: 'Noto Sans SC', sans-serif; /* Body font */
+        }
+        body.font-zh-CN .font-heading {
+            font-family: 'Noto Sans SC', sans-serif; /* Heading font */
+        }
+        /* Traditional Chinese Font Rules */
+        body.font-zh-TW {
+            font-family: 'Noto Sans SC', sans-serif; /* Body font */
+        }
+        body.font-zh-TW .font-heading {
+            font-family: 'Noto Sans SC', sans-serif; /* Heading font */
+        }
+        /* Japanese Font Rules */
+        body.font-jp {
+            font-family: 'Noto Sans SC', sans-serif; /* Body font */
+        }
+        body.font-jp .font-heading {
+            font-family: 'Noto Sans SC', sans-serif; /* Heading font */
+        }
+        /* Korean Font Rules */
+        body.font-ko {
+            font-family: 'Noto Sans SC', sans-serif; /* Body font */
+        }
+        body.font-ko .font-heading {
+            font-family: 'Noto Sans SC', sans-serif; /* Heading font */
+        }
+        /* Indonesian Font Rules */
+        body.font-id {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-id .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Thai Font Rules */
+        body.font-th {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-th .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }		
+        /* Vietnamese Font Rules */
+        body.font-vi {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-vi .font-heading {
+            font-family: 'Oswald', sans-serif; /* Heading font */
+        }
+        /* Russian Font Rules */
+        body.font-ru {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-ru .font-heading {
+            font-family: 'Oswald', sans-serif; /* Heading font */
+        }
+        /* German Font Rules */
+        body.font-de {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-de .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* French Font Rules */
+        body.font-fr {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-fr .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Spanish Font Rules */
+        body.font-es {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-es .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Portugues Font Rules */
+        body.font-pt {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-pt .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Turkish Font Rules */
+        body.font-tr {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-tr .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }
+        /* Arabic Font Rules */
+        body.font-ar {
+            font-family: 'Roboto', sans-serif; /* Body font */
+        }
+        body.font-ar .font-heading {
+            font-family: 'Teko', sans-serif; /* Heading font */
+        }		
+		
+        
         /* Simple transition for language switching */
         [data-key] {
             transition: opacity 0.3s ease-in-out;
         }
     </style>
 </head>
+
 <body class="text-gray-200">
 
     <!-- Header -->
     <header class="bg-black/30 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Top Social Icons -->
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Steam">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 8c0 1.886.634 3.63 1.697 5.013l.008.013a7.96 7.96 0 0 0 .933-2.132A7.95 7.95 0 0 1 8 2c3.31 0 6 2.686 6 6a5.98 5.98 0 0 1-1.854 4.24l-.01.012a5.97 5.97 0 0 1-4.147 1.758 6.012 6.012 0 0 1-5.22-3.26l-.007-.015-1.42.535zm1.68 1.878a6.02 6.02 0 0 1-.399-2.045 6.012 6.012 0 0 1 3.26-5.224l.015-.008.534-1.42A7.96 7.96 0 0 0 2.22 7.78a7.97 7.97 0 0 0 2.133.933l-.11.11H2.009zm3.827-3.97a3.974 3.974 0 0 1 3.99-3.993 3.974 3.974 0 0 1 3.992 3.993 3.974 3.974 0 0 1-3.992 3.993 3.974 3.974 0 0 1-3.99-3.993zm2.01.006a1.974 1.974 0 0 0 1.98-1.986 1.974 1.974 0 0 0-1.98-1.986 1.974 1.974 0 0 0-1.98 1.986 1.974 1.974 0 0 0 1.98 1.986z"/></svg>
+            <div class="flex items-center gap-x-4">
+				<a href="https://www.youtube.com/@EmptyHandedDev" class="text-gray-400 hover:text-white transition-colors" aria-label="Youtube">
+					<img src="assets/youtube_icon_white.svg" alt="Youtube" class="h-4 opacity-60 hover:opacity-100 transition-opacity"/>
+				</a>
+				
+				<a href="https://space.bilibili.com/3546974278125995" class="text-gray-400 hover:text-white transition-colors" aria-label="Bilibili">
+					<img src="assets/bilibili_icon_white.svg" alt="Bilibili" class="h-5 opacity-60 hover:opacity-100 transition-opacity"/>
                 </a>
-                 <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Discord">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.165 5.734 1.165 8.353 0a.05.05 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1 .015.019.05.05 0 0 1-.02.066 8.875 8.875 0 0 1-1.248.595.05.05 0 0 0-.01.059c.236.466.51.899.818 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/></svg>
+				<a href="https://store.steampowered.com/app/3070420/Martial_Realms/" class="text-gray-400 hover:text-white transition-colors" aria-label="Steam">
+					<img src="assets/steam_icon_white.svg" alt="Steam" class="h-5 opacity-60 hover:opacity-100 transition-opacity"/>
                 </a>
             </div>
-            <a href="#" class="absolute left-1/2 -translate-x-1/2">
-                <img src="assets/emptyhanded&whitewolf_logo.png" alt="Emptyhanded&Whitewolf Logo" class="h-8">
-            </a>
-            <div class="flex items-center space-x-4">
+
+			<!-- Add dir attribute to the parent element if dynamically set by your app, or use a class to toggle direction -->
+			<div class="flex items-center justify-start space-x-2" dir="ltr">
+			  <a href="#" class="flex items-center text-gray-400 hover:text-white transition-colors" aria-label="EmptyhandedWhitewolf">
+				<img src="assets/emptyhanded&whitewolf_logo.png" alt="Emptyhanded&Whitewolf Logo" class="h-6 opacity-60 hover:opacity-100 transition-opacity">
+				<p class="ml-2 font-heading" data-key="developerName">Emptyhanded&Whitewolf</p>
+			  </a>
+			</div>
+						
+            <div class="flex items-center gapz-x-4">
                  <!-- Language Selector -->
                 <div class="relative" id="language-selector-container">
                     <button id="language-selector-button" class="flex items-center hover:text-white transition-colors text-sm">
@@ -72,17 +187,24 @@
         </div>
     </header>
 
-    <main>
+    <main>        
+	<!-- Developer Logo Section -->
+        <section id="developer_logo_menu" class="py-16 bg-black">
+		    <div class="container mx-auto px-6 text-center">
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
+					<img src="assets/emptyhanded&whitewolf_logo_text_h.png" alt="logo_h" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
         <!-- Hero Section -->
         <section id="home" class="hero-bg min-h-screen flex flex-col justify-center items-center text-center pt-20 px-4">
             <h1 class="text-6xl md:text-8xl text-white font-heading tracking-wider uppercase" data-key="heroTitle">We ❤️ strategy games</h1>
-            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl" data-key="heroSubtitle">Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.</p>
+            <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl" data-key="heroSubtitle">Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.</p>
         </section>
 
 		<!-- Game Trailer Section -->
 		<section id="trailer" class="py-16 bg-black">
 		  <h2 class="font-orbitron text-3xl font-bold text-center text-white mb-8">
-			Watch The Trailer
 		  </h2>
 
 		  <div class="max-w-4xl mx-auto">
@@ -102,9 +224,16 @@
 		<!-- Platforms --> 
 		<section class="py-12 bg-gray-900">
 		  <div class="container mx-auto px-6">
-			<div class="flex justify-center items-center space-x-8 md:space-x-16 text-gray-500">
-			  <a href="https://store.steampowered.com/app/3070420/Martial_Realms/" target="_blank" rel="noopener noreferrer">
-				<img src="assets/logo_steam.svg" alt="Steam" class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
+			<div class="flex justify-center items-center space-x-8 md:space-x-16 text-gray-500" dir="ltr">
+			  <a href="https://store.steampowered.com/app/3070420/Martial_Realms/" 
+				 target="_blank" 
+				 rel="emptyhandedwhitewolf_com_platform"
+				 class="flex items-center space-x-3">
+				 
+				<p class="font-heading text-3xl" data-key="availableOn">Wishlist on</p>
+				<img src="assets/logo_steam.svg" 
+					 alt="Steam" 
+					 class="h-8 opacity-60 hover:opacity-100 transition-opacity"/>
 			  </a>
 			</div>
 		  </div>
@@ -129,8 +258,10 @@
         
 		<!-- Publisher Info -->
 		<section class="py-16 md:py-24 bg-gray-900/50">
-			<div class="container mx-auto px-6 text-center max-w-3xl">
-				<img src="assets/emptyhanded&whitewolf_logo_text_h.png" alt="Emptyhanded&Whitewolf Logo" class="h-32 mx-auto mb-8">
+			<div class="container mx-auto px-6 text-center max-w-6xl">
+				<img src="assets/emptyhanded&whitewolf_logo_text_v.png" 
+					 alt="Emptyhanded&Whitewolf Logo" 
+					 class="w-64 md:w-96 lg:w-[200px] mx-auto mb-8">
 				<h3 class="text-3xl md:text-4xl text-white font-heading" data-key="publisherInfoTitle">Developer In Love With Strategy, Simulation, and Role-Playing Games</h3>
 				<p class="mt-4 text-gray-400" data-key="publisherInfoDesc">We are a developer of deep strategic and tactical games from around the world. Our aim is to create the games you love, and to bring these games to you.</p>
 			</div>
@@ -139,796 +270,624 @@
         
         <!-- Newsletter -->
         <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1757400");</style>
-    <style type="text/css">
-    /* LOADER */
-    .ml-form-embedSubmitLoad {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-    }
+		<style type="text/css">
+		/* LOADER */
+		.ml-form-embedSubmitLoad {
+		  display: inline-block;
+		  width: 20px;
+		  height: 20px;
+		}
 
-    .g-recaptcha {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-    height: ;
-    }
+		.g-recaptcha {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		transform-origin: 0 0;
+		-webkit-transform-origin: 0 0;
+		height: ;
+		}
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
+		.sr-only {
+		  position: absolute;
+		  width: 1px;
+		  height: 1px;
+		  padding: 0;
+		  margin: -1px;
+		  overflow: hidden;
+		  clip: rect(0,0,0,0);
+		  border: 0;
+		}
 
-    .ml-form-embedSubmitLoad:after {
-      content: " ";
-      display: block;
-      width: 11px;
-      height: 11px;
-      margin: 1px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-    border-color: #ffffff #ffffff #ffffff transparent;
-    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
-    }
-    @keyframes ml-form-embedSubmitLoad {
-      0% {
-      transform: rotate(0deg);
-      }
-      100% {
-      transform: rotate(360deg);
-      }
-    }
-      #mlb2-30659685.ml-form-embedContainer {
-        box-sizing: border-box;
-        display: table;
-        margin: 0 auto;
-        position: static;
-        width: 100% !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer h4,
-      #mlb2-30659685.ml-form-embedContainer p,
-      #mlb2-30659685.ml-form-embedContainer span,
-      #mlb2-30659685.ml-form-embedContainer button {
-        text-transform: none !important;
-        letter-spacing: normal !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper {
-        background-color: #274770;
-        
-        border-width: 0px;
-        border-color: transparent;
-        border-radius: 0px;
-        border-style: solid;
-        box-sizing: border-box;
-        display: inline-block !important;
-        margin: 0;
-        padding: 0;
-        position: relative;
-              }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 100%; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 100%; width: 100%; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-align-left { text-align: left; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-align-center { text-align: center; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-align-right { text-align: right; }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        height: auto;
-        margin: 0 auto !important;
-        max-width: 100%;
-        width: undefinedpx;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
-        padding: 20px 20px 0 20px;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
-        padding-bottom: 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
-        text-align: left;
-        margin: 0 0 20px 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
-        color: #ffffff;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-        font-size: 32px;
-        font-weight: 400;
-        margin: 0 0 10px 0;
-        text-align: center;
-        word-break: break-word;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-        color: #76757e;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 26px;
-        margin: 0 0 10px 0;
-        text-align: center;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
-        color: #76757e;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-        font-size: 20px;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
-        list-style-type: lower-alpha;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
-        list-style-type: lower-roman;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
-        color: #000000;
-        text-decoration: underline;
-      }
+		.ml-form-embedSubmitLoad:after {
+		  content: " ";
+		  display: block;
+		  width: 11px;
+		  height: 11px;
+		  margin: 1px;
+		  border-radius: 50%;
+		  border: 4px solid #fff;
+		border-color: #ffffff #ffffff #ffffff transparent;
+		animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+		}
+		@keyframes ml-form-embedSubmitLoad {
+		  0% {
+		  transform: rotate(0deg);
+		  }
+		  100% {
+		  transform: rotate(360deg);
+		  }
+		}
+		  #mlb2-30659685.ml-form-embedContainer {
+			box-sizing: border-box;
+			display: table;
+			margin: 0 auto;
+			position: static;
+			width: 100% !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer h4,
+		  #mlb2-30659685.ml-form-embedContainer p,
+		  #mlb2-30659685.ml-form-embedContainer span,
+		  #mlb2-30659685.ml-form-embedContainer button {
+			text-transform: none !important;
+			letter-spacing: normal !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper {
+			background-color: #274770;
+			
+			border-width: 0px;
+			border-color: transparent;
+			border-radius: 0px;
+			border-style: solid;
+			box-sizing: border-box;
+			display: inline-block !important;
+			margin: 0;
+			padding: 0;
+			position: relative;
+				  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 100%; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 100%; width: 100%; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			height: auto;
+			margin: 0 auto !important;
+			max-width: 100%;
+			width: undefinedpx;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+			padding: 20px 20px 0 20px;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+			padding-bottom: 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+			text-align: left;
+			margin: 0 0 20px 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+			color: #ffffff;
+			font-size: 32px;
+			font-weight: 400;
+			margin: 0 0 10px 0;
+			text-align: center;
+			word-break: break-word;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+			color: #76757e;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 26px;
+			margin: 0 0 10px 0;
+			text-align: center;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+			color: #76757e;
+			font-size: 20px;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+			list-style-type: lower-alpha;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+			list-style-type: lower-roman;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+			color: #000000;
+			text-decoration: underline;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
-        text-align: left!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+			text-align: left!important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
-        margin-bottom: 5px;
-        color: #ffffff;
-        font-size: 14px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-weight: bold; font-style: normal; text-decoration: none;;
-        display: inline-block;
-        line-height: 20px;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
-        margin: 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
-        margin: 0;
-        width: 100%;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        margin: 0 0 20px 0;
-        width: 100%;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        float: left;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-        margin: 0;
-        padding: 0 0 20px 0;
-        width: 100%;
-        height: auto;
-        float: left;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
-        margin: 0 0 10px 0;
-        width: 100%;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
-        margin: 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
-        margin: 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
-        background-color: #444d62 !important;
-        color: #ffffff !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 0px !important;
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 14px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #ffffff; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+			margin-bottom: 5px;
+			color: #ffffff;
+			font-size: 14px;
+			font-weight: bold; font-style: normal; text-decoration: none;;
+			display: inline-block;
+			line-height: 20px;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+			margin: 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+			margin: 0;
+			width: 100%;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+			margin: 0 0 20px 0;
+			width: 100%;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+			float: left;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+			margin: 0;
+			padding: 0 0 20px 0;
+			width: 100%;
+			height: auto;
+			float: left;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+			margin: 0 0 10px 0;
+			width: 100%;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+			margin: 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+			margin: 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+			background-color: #444d62 !important;
+			color: #ffffff !important;
+			border-color: #cccccc;
+			border-radius: 4px !important;
+			border-style: solid !important;
+			border-width: 0px !important;
+			font-size: 14px !important;
+			height: auto;
+			line-height: 21px !important;
+			margin-bottom: 0;
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 10px 10px !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+			max-width: 100% !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #ffffff; }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #ffffff; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #ffffff; }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #ffffff; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #ffffff; }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #ffffff; }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #ffffff; }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
-        background-color: #444d62 !important;
-        color: #ffffff !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 0px !important;
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 14px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+			background-color: #444d62 !important;
+			color: #ffffff !important;
+			border-color: #cccccc;
+			border-radius: 4px !important;
+			border-style: solid !important;
+			border-width: 0px !important;
+			font-size: 14px !important;
+			height: auto;
+			line-height: 21px !important;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 10px 10px !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+			max-width: 100% !important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-          border-color: #cccccc!important;
-          background-color: #444d62!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+			  border-color: #cccccc!important;
+			  background-color: #444d62!important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"]{
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin-top: 5px;
-        margin-left: -1.5rem;
-        overflow: visible;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"]{
+			box-sizing: border-box;
+			padding: 0;
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+			margin-top: 5px;
+			margin-left: -1.5rem;
+			overflow: visible;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-        border-radius: 4px!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+			border-radius: 4px!important;
+		  }
 
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
-          border-color: #000000!important;
-          background-color: #000000!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+			  border-color: #000000!important;
+			  background-color: #000000!important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
-           top: 2px;
-           box-sizing: border-box;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+			   top: 2px;
+			   box-sizing: border-box;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-           top: 0px!important;
-           box-sizing: border-box!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+			   top: 0px!important;
+			   box-sizing: border-box!important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-        top: 0px!important;
-           box-sizing: border-box!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+			top: 0px!important;
+			   box-sizing: border-box!important;
+		  }
 
-       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
-            top: 0px!important;
-            box-sizing: border-box!important;
-            position: absolute;
-            left: -1.5rem;
-            display: block;
-            width: 1rem;
-            height: 1rem;
-            content: "";
-       }
+		   #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+				top: 0px!important;
+				box-sizing: border-box!important;
+				position: absolute;
+				left: -1.5rem;
+				display: block;
+				width: 1rem;
+				height: 1rem;
+				content: "";
+		   }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
-        top: 0px!important;
-        box-sizing: border-box!important;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+			top: 0px!important;
+			box-sizing: border-box!important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
-          position: absolute;
-          top: 4px;
-          left: -1.5rem;
-          display: block;
-          width: 16px;
-          height: 16px;
-          pointer-events: none;
-          content: "";
-          background-color: #ffffff;
-          border: #adb5bd solid 1px;
-          border-radius: 50%;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+			  position: absolute;
+			  top: 4px;
+			  left: -1.5rem;
+			  display: block;
+			  width: 16px;
+			  height: 16px;
+			  pointer-events: none;
+			  content: "";
+			  background-color: #ffffff;
+			  border: #adb5bd solid 1px;
+			  border-radius: 50%;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
-          position: absolute;
-          top: 2px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+			  position: absolute;
+			  top: 2px!important;
+			  left: -1.5rem;
+			  display: block;
+			  width: 1rem;
+			  height: 1rem;
+			  content: "";
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
-          position: absolute;
-          top: 4px;
-          left: -1.5rem;
-          display: block;
-          width: 16px;
-          height: 16px;
-          pointer-events: none;
-          content: "";
-          background-color: #ffffff;
-          border: #adb5bd solid 1px;
-          border-radius: 50%;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+			  position: absolute;
+			  top: 4px;
+			  left: -1.5rem;
+			  display: block;
+			  width: 16px;
+			  height: 16px;
+			  pointer-events: none;
+			  content: "";
+			  background-color: #ffffff;
+			  border: #adb5bd solid 1px;
+			  border-radius: 50%;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
-          position: absolute;
-          top: 0px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+			  position: absolute;
+			  top: 0px!important;
+			  left: -1.5rem;
+			  display: block;
+			  width: 1rem;
+			  height: 1rem;
+			  content: "";
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-          position: absolute;
-          top: 0px!important;
-          left: -1.5rem;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          content: "";
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+			  position: absolute;
+			  top: 0px!important;
+			  left: -1.5rem;
+			  display: block;
+			  width: 1rem;
+			  height: 1rem;
+			  content: "";
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
-          background: no-repeat 50%/50% 50%;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
-          background: no-repeat 50%/50% 50%;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+			  background: no-repeat 50%/50% 50%;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+			  background: no-repeat 50%/50% 50%;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
-        position: relative;
-        display: block;
-        min-height: 1.5rem;
-        padding-left: 1.5rem;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+			position: relative;
+			display: block;
+			min-height: 1.5rem;
+			padding-left: 1.5rem;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
-          position: absolute;
-          z-index: -1;
-          opacity: 0;
-          box-sizing: border-box;
-          padding: 0;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+			  position: absolute;
+			  z-index: -1;
+			  opacity: 0;
+			  box-sizing: border-box;
+			  padding: 0;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
-          color: #000000;
-          font-size: 12px!important;
-          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-          line-height: 22px;
-          margin-bottom: 0;
-          position: relative;
-          vertical-align: top;
-          font-style: normal;
-          font-weight: 700;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+			  color: #000000;
+			  font-size: 12px!important;
+			  line-height: 22px;
+			  margin-bottom: 0;
+			  position: relative;
+			  vertical-align: top;
+			  font-style: normal;
+			  font-weight: 700;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
-        background-color: #444d62 !important;
-        color: #ffffff !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 0px !important;
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 14px !important;
-        line-height: 20px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 28px 10px 12px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-        background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+			background-color: #444d62 !important;
+			color: #ffffff !important;
+			border-color: #cccccc;
+			border-radius: 4px !important;
+			border-style: solid !important;
+			border-width: 0px !important;
+			font-size: 14px !important;
+			line-height: 20px !important;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 10px 28px 10px 12px !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+			max-width: 100% !important;
+			height: auto;
+			display: inline-block;
+			vertical-align: middle;
+			background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		  }
 
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
-        height: auto;
-        width: 100%;
-        float: left;
-      }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
-        background-color: #444d62;
-        color: #ffffff;
-        border-color: #cccccc;
-        border-radius: 4px;
-        border-style: solid;
-        border-width: 0px;
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px;
-        width: 100%;
-        box-sizing: border-box;
-        overflow-y: initial;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
-        background-color: #efc038 !important;
-        border-color: #efc038;
-        border-style: solid;
-        border-width: 0px;
-        border-radius: 0px;
-        box-shadow: none;
-        color: #ffffff !important;
-        cursor: pointer;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-        font-size: 18px !important;
-        font-weight: 700;
-        line-height: 20px;
-        margin: 0 !important;
-        padding: 10px !important;
-        width: 100%;
-        height: auto;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
-        background-color: #5c5a4c !important;
-        border-color: #5c5a4c !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin-top: 5px;
-        margin-left: -1.5rem;
-        overflow: visible;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
-        color: #ffffff;
-        display: block;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        text-align: left;
-        margin-bottom: 0;
-        position: relative;
-        vertical-align: top;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
-        font-weight: normal;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        display: block;
-        min-height: 24px;
-        padding-left: 24px;
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+			height: auto;
+			width: 100%;
+			float: left;
+		  }
+		  .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+		  .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+		  .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+		  .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+			background-color: #444d62;
+			color: #ffffff;
+			border-color: #cccccc;
+			border-radius: 4px;
+			border-style: solid;
+			border-width: 0px;
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 10px 10px;
+			width: 100%;
+			box-sizing: border-box;
+			overflow-y: initial;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+			background-color: #efc038 !important;
+			border-color: #efc038;
+			border-style: solid;
+			border-width: 0px;
+			border-radius: 0px;
+			box-shadow: none;
+			color: #ffffff !important;
+			cursor: pointer;
+			font-size: 18px !important;
+			font-weight: 700;
+			line-height: 20px;
+			margin: 0 !important;
+			padding: 10px !important;
+			width: 100%;
+			height: auto;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+			background-color: #5c5a4c !important;
+			border-color: #5c5a4c !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+			box-sizing: border-box;
+			padding: 0;
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+			margin-top: 5px;
+			margin-left: -1.5rem;
+			overflow: visible;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+			color: #ffffff;
+			display: block;
+			font-size: 12px;
+			text-align: left;
+			margin-bottom: 0;
+			position: relative;
+			vertical-align: top;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+			font-weight: normal;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			display: block;
+			min-height: 24px;
+			padding-left: 24px;
 
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
-        color: #ffffff;
-        text-decoration: underline;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
-        color: #ffffff !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-        font-size: 12px !important;
-        font-weight: normal !important;
-        line-height: 18px !important;
-        padding: 0 !important;
-        margin: 0 5px 0 0 !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
-        margin: 0;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
-        margin: 0 0 20px 0;
-        float: left;
-        width: 100%;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
-        background-color: #efc038 !important;
-        border: none !important;
-        border-radius: 0px !important;
-        box-shadow: none !important;
-        color: #ffffff !important;
-        cursor: pointer;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif !important;
-        font-size: 18px !important;
-        font-weight: 700 !important;
-        line-height: 21px !important;
-        height: auto;
-        padding: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
-        display: none;
-      }
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
-        background-color: #5c5a4c !important;
-      }
-      .ml-subscribe-close {
-        width: 30px;
-        height: 30px;
-        background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
-        background-size: 30px;
-        cursor: pointer;
-        margin-top: -10px;
-        margin-right: -10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-      .ml-error input, .ml-error textarea, .ml-error select {
-        border-color: red!important;
-      }
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+			color: #ffffff;
+			text-decoration: underline;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+			color: #ffffff !important;
+			font-size: 12px !important;
+			font-weight: normal !important;
+			line-height: 18px !important;
+			padding: 0 !important;
+			margin: 0 5px 0 0 !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+			margin: 0;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+			margin: 0 0 20px 0;
+			float: left;
+			width: 100%;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+			background-color: #efc038 !important;
+			border: none !important;
+			border-radius: 0px !important;
+			box-shadow: none !important;
+			color: #ffffff !important;
+			cursor: pointer;
+			font-size: 18px !important;
+			font-weight: 700 !important;
+			line-height: 21px !important;
+			height: auto;
+			padding: 10px !important;
+			width: 100% !important;
+			box-sizing: border-box !important;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+			display: none;
+		  }
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+			background-color: #5c5a4c !important;
+		  }
+		  .ml-subscribe-close {
+			width: 30px;
+			height: 30px;
+			background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
+			background-size: 30px;
+			cursor: pointer;
+			margin-top: -10px;
+			margin-right: -10px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		  }
+		  .ml-error input, .ml-error textarea, .ml-error select {
+			border-color: red!important;
+		  }
 
-      .ml-error .custom-checkbox-radio-list {
-        border: 1px solid red !important;
-        border-radius: 0px;
-        padding: 10px;
-      }
+		  .ml-error .custom-checkbox-radio-list {
+			border: 1px solid red !important;
+			border-radius: 0px;
+			padding: 10px;
+		  }
 
-      .ml-error .label-description,
-      .ml-error .label-description p,
-      .ml-error .label-description p a,
-      .ml-error label:first-child {
-        color: #ff0000 !important;
-      }
+		  .ml-error .label-description,
+		  .ml-error .label-description p,
+		  .ml-error .label-description p a,
+		  .ml-error label:first-child {
+			color: #ff0000 !important;
+		  }
 
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
-      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
-        color: #ff0000 !important;
-      }
-            @media only screen and (max-width: 400px){
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+		  #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+			color: #ff0000 !important;
+		  }
+				@media only screen and (max-width: 400px){
 
-        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
-        .ml-form-formContent.horozintalForm { float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+			.ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+			.ml-form-formContent.horozintalForm { float: left!important; }
+			.ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+			.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+			.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
+			.ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+			.ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
 
-      }
-    </style>
+		  }
+		</style>
 
-    <style type="text/css">
+		<style type="text/css">
 
-      .ml-mobileButton-horizontal { display: none; }
+		  .ml-mobileButton-horizontal { display: none; }
 
-      #mlb2-30659685 .ml-mobileButton-horizontal button {
+		  #mlb2-30659685 .ml-mobileButton-horizontal button {
 
-        background-color: #efc038 !important;
-        border-color: #efc038 !important;
-        border-style: solid !important;
-        border-width: 0px !important;
-        border-radius: 0px !important;
-        box-shadow: none !important;
-        color: #ffffff !important;
-        cursor: pointer;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        line-height: 20px !important;
-        padding: 10px !important;
-        width: 100% !important;
+			background-color: #efc038 !important;
+			border-color: #efc038 !important;
+			border-style: solid !important;
+			border-width: 0px !important;
+			border-radius: 0px !important;
+			box-shadow: none !important;
+			color: #ffffff !important;
+			cursor: pointer;
+			font-size: 14px !important;
+			font-weight: 700 !important;
+			line-height: 20px !important;
+			padding: 10px !important;
+			width: 100% !important;
 
-      }
+		  }
 
-      @media only screen and (max-width: 400px) {
-        #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-          padding: 0 0 10px 0 !important;
-        }
-        .ml-hide-horizontal { display: none !important; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal { display: none!important; }
-        .ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px;width:100%; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-bottom: 0px !important; }
-      }
+		  @media only screen and (max-width: 400px) {
+			#mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+			  padding: 0 0 10px 0 !important;
+			}
+			.ml-hide-horizontal { display: none !important; }
+			.ml-form-formContent.horozintalForm .ml-button-horizontal { display: none!important; }
+			.ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px;width:100%; }
+			.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-bottom: 0px !important; }
+		  }
 
-    </style>
-  <style type="text/css">
-    @media only screen and (max-width: 400px) {
-       .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
-        margin-bottom: 10px !important;
-        width: 100% !important;
-      }
-    }
-  </style>
+		</style>
+	  <style type="text/css">
+		@media only screen and (max-width: 400px) {
+		   .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+			margin-bottom: 10px !important;
+			width: 100% !important;
+		  }
+		}
+	  </style>
     
-    
-
-    
-    
-
-    
-    
-
-    
-
-      
-        
-        
-      
-
-      
-        
-        
-      
-
-      
-
-            
-            
-            
-            
-            
-            
-      
-
-      
-
-      
-        
-        
-         
-        
-        
-      
-
-        
-        
-        
-        
-        
-        
-      
-
-       
-
-        
-        
-        
-        
-        
-        
-        
-       
-
-
-      
-        
-        
-        
-        
-  
-
-
-
-  
-        
-        
-        
-      
-
-
-      
-    
-    
-    
-    
-    
-    
-    
-  
-
-  
-        
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-      
-
-       
-
-        
-        
-        
-        
-       
-
-       
-        
-        
-        
-        
-      
-
-      
-        
-        
-        
-        
-        
-        
-        
-       
-
-    
-
-    
-
-
-      
-
-
-      
-
-      
-      
-
-      
-
-      
-
-
-
-
-
-    
-
       
     <div id="mlb2-30659685" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30659685">
       <div class="ml-form-align-center ">
@@ -941,9 +900,9 @@
 
             <div class="ml-form-embedContent" style=" ">
               
-                <h4>Reserve Your Spot In Alpha and Beta Testing</h4>
+                <h4 class=" font-heading" data-key="newsletterTitle">Reserve Your Spot In Alpha and Beta Testing</h4>
                 
-                  <p>Join our news letter to get the latest news about our games, events, play out game in playtest ahead of everybody else, and more.</p>
+                <p class="mt-4 text-gray-400" data-key="newsletterSubtitle">Join our news letter to get the latest news about our games, events, play out game in playtest ahead of everybody else, and more.</p>
                 
               
             </div>
@@ -966,7 +925,7 @@
                         <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                           
                           <!-- input -->
-                      <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                      <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
                       <!-- /input -->
                         </div>
 
@@ -979,7 +938,9 @@
 
                   <div class="ml-button-horizontal primary ">
                     
-                      <button type="submit" class="primary">Subscribe</button>
+                    <button type="submit" class="primary">
+						<a data-key="newsletterButton"> Subscribe </a>
+					</button>
                     
                     <button disabled="disabled" style="display: none;" type="button" class="loading">
                       <div class="ml-form-embedSubmitLoad"></div>
@@ -994,16 +955,6 @@
               <!-- /Privacy policy -->
 
               
-
-              
-
-              
-
-
-
-
-
-
               
               <input type="hidden" name="ml-submit" value="1">
 
@@ -1139,39 +1090,19 @@
     <script>
 	// --- TRANSLATION SCRIPT --- 
 	const translations = {
-		'en': {
-			name: "English",
-			heroTitle: "We ❤️ strategy games",
-			heroSubtitle: "Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.",
-			videoTitle: "Watch the Emptyhanded&Whitewolf Direct!",
-			screenshotsTitle: "Screenshots",
-			publisherInfoTitle: "Developer In Love With Strategy, Simulation, and Role-Playing Games",
-			publisherInfoDesc: "We are a developer of deep strategic and tactical games from around the world. Our aim is to create the games you love, and to bring these games to you.",
-			newsletterTitle: "Reserve Your Spot In Beta Test",
-			newsletterSubtitle: "Join our news letter to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.",
-			newsletterPlaceholder: "your.email@example.com",
-			newsletterButton: "Subscribe",
-			footerPressEmail: "Press",
-			footerStreamerEmail: "Streamer",
-			footerPublisherEmail: "Publisher",
-			footerDeveloperEmail: "Developer",
-			footerGeneralEmail: "Contact",
-			footerInfluencers: "Influencer",
-			footerJobs: "Freelance Jobs",
-			footerPress: "Press",
-			footerWikis: "Official Game Wikis",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. All rights reserved."
-		},
 		'zh-CN': {
 			name: "简体中文",
+			fontClass: "font-zh-CN",
+			developerName: "空手白狼",
 			heroTitle: "我们 ❤️ 策略游戏",
-			heroSubtitle: "Emptyhanded&Whitewolf 是一家开发具有战略和战术深度游戏的开发者。",
+			heroSubtitle: "空手白狼是一家策略游戏开发工作室。",
 			videoTitle: "观看 Emptyhanded&Whitewolf Direct！",
+			availableOn: "加入愿望单",
 			screenshotsTitle: "游戏截图",
 			publisherInfoTitle: "热爱策略、模拟和角色扮演游戏的开发者",
-			publisherInfoDesc: "我们是一家开发深度战略和战术游戏的开发者。我们的目标是创造您喜爱的游戏，并将这些游戏带给您。",
-			newsletterTitle: "预订您的测试资格",
-			newsletterSubtitle: "加入我们的新闻通讯，获取关于游戏、活动的最新消息，抢先参加游戏测试等。",
+			publisherInfoDesc: "我们是一家开发策略游戏的工作室。我们的目标是创造您喜爱的游戏，并将这些游戏带给您。",
+			newsletterTitle: "预约您的测试资格",
+			newsletterSubtitle: "加入我们的邮件组，获取关于游戏的最新消息，并抢先参加游戏测试。",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "订阅",
 			footerPressEmail: "媒体",
@@ -1187,12 +1118,15 @@
 		},
 		'zh-TW': {
 			name: "繁體中文",
+			fontClass: "font-zh-TW",
+			developerName: "空手白狼",
 			heroTitle: "我們 ❤️ 策略遊戲",
-			heroSubtitle: "Emptyhanded&Whitewolf 是一家開發具有戰略和戰術深度遊戲的開發者。",
+			heroSubtitle: "空手白狼是一家策略游戲開發工作室。",
 			videoTitle: "觀看 Emptyhanded&Whitewolf Direct！",
+			availableOn: "加入愿望單",
 			screenshotsTitle: "遊戲截圖",
 			publisherInfoTitle: "熱愛策略、模擬和角色扮演遊戲的開發者",
-			publisherInfoDesc: "我們是一家開發深度戰略和戰術遊戲的開發者。我們的目標是創造您喜愛的遊戲，並將這些遊戲帶給您。",
+			publisherInfoDesc: "我們是一家開發策略游戲的工作室。我們的目標是創造您喜愛的遊戲，並將這些遊戲帶給您。",
 			newsletterTitle: "預約您的測試名額",
 			newsletterSubtitle: "加入我們的電子報，獲取最新遊戲消息、活動資訊，並搶先參加遊戲測試。",
 			newsletterPlaceholder: "your.email@example.com",
@@ -1210,9 +1144,12 @@
 		},
 		'ko': {
 			name: "한국어",
+			fontClass: "font-kr",
+			developerName: "공수백낭",
 			heroTitle: "우리는 ❤️ 전략 게임",
-			heroSubtitle: "Emptyhanded&Whitewolf는 전략적이고 전술적인 깊이를 가진 게임을 개발합니다.",
+			heroSubtitle: "공수백낭 는 전략적이고 전술적인 깊이를 가진 게임을 개발합니다.",
 			videoTitle: "Emptyhanded&Whitewolf Direct 시청하기!",
+			availableOn: "위시리스트에 추가",
 			screenshotsTitle: "스크린샷",
 			publisherInfoTitle: "전략, 시뮬레이션, 롤플레잉 게임을 사랑하는 개발자",
 			publisherInfoDesc: "우리는 깊이 있는 전략 및 전술 게임을 개발합니다. 우리의 목표는 여러분이 좋아할 게임을 만들고 전달하는 것입니다.",
@@ -1233,9 +1170,12 @@
 		},
 		'ja': {
 			name: "日本語",
+			fontClass: "font-jp",
+			developerName: "空手白狼",
 			heroTitle: "私たちは ❤️ ストラテジーゲーム",
-			heroSubtitle: "Emptyhanded&Whitewolf は戦略性と戦術性の深さを持つゲームを開発するデベロッパーです。",
+			heroSubtitle: "空手白狼 は戦略性と戦術性の深さを持つゲームを開発するデベロッパーです。",
 			videoTitle: "Emptyhanded&Whitewolf Direct をご覧ください！",
+			availableOn: "ウィッシュリストに追加",
 			screenshotsTitle: "スクリーンショット",
 			publisherInfoTitle: "戦略・シミュレーション・RPGを愛する開発者",
 			publisherInfoDesc: "私たちは深い戦略と戦術のゲームを開発しています。目標は、皆さんが愛するゲームを作り、届けることです。",
@@ -1256,9 +1196,12 @@
 		},
 		'vi': {
 			name: "Tiếng Việt",
+			fontClass: "font-vi",
+			developerName: "Không thủ bạch lang",
 			heroTitle: "Chúng tôi ❤️ trò chơi chiến lược",
-			heroSubtitle: "Emptyhanded&Whitewolf là nhà phát triển trò chơi có chiều sâu chiến lược và chiến thuật.",
+			heroSubtitle: "Không thủ bạch lang là nhà phát triển trò chơi có chiều sâu chiến lược và chiến thuật.",
 			videoTitle: "Xem Emptyhanded&Whitewolf Direct!",
+			availableOn: "Thêm vào danh sách mong muốn",
 			screenshotsTitle: "Ảnh chụp màn hình",
 			publisherInfoTitle: "Nhà phát triển yêu thích game Chiến lược, Mô phỏng và Nhập vai",
 			publisherInfoDesc: "Chúng tôi phát triển các trò chơi chiến lược và chiến thuật chuyên sâu. Mục tiêu là tạo ra những trò chơi bạn yêu thích và mang chúng đến với bạn.",
@@ -1276,12 +1219,41 @@
 			footerPress: "Tin tức",
 			footerWikis: "Wiki chính thức",
 			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Bản quyền."
+		},		
+		'en': {
+			name: "English",
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded&Whitewolf",
+			heroTitle: "We ❤️ strategy games",
+			heroSubtitle: "Emptyhanded&Whitewolf is a developer of games featuring strategic and tactical depth.",
+			videoTitle: "Watch the Emptyhanded&Whitewolf Direct!",
+			availableOn: "Wishlist On",
+			screenshotsTitle: "Screenshots",
+			publisherInfoTitle: "Developer In Love With Strategy, Simulation, and Role-Playing Games",
+			publisherInfoDesc: "We are a developer of deep strategic and tactical games from around the world. Our aim is to create the games you love, and to bring these games to you.",
+			newsletterTitle: "Reserve Your Spot In Beta Test",
+			newsletterSubtitle: "Join our news letter to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.",
+			newsletterPlaceholder: "your.email@example.com",
+			newsletterButton: "Subscribe",
+			footerPressEmail: "Press",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Publisher",
+			footerDeveloperEmail: "Developer",
+			footerGeneralEmail: "Contact",
+			footerInfluencers: "Influencer",
+			footerJobs: "Freelance Jobs",
+			footerPress: "Press",
+			footerWikis: "Official Game Wikis",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. All rights reserved."
 		},
 		'id': {
 			name: "Bahasa Indonesia",
+			fontClass: "font-id",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "Kami ❤️ permainan strategi",
 			heroSubtitle: "Emptyhanded&Whitewolf adalah pengembang game dengan kedalaman strategi dan taktik.",
 			videoTitle: "Tonton Emptyhanded&Whitewolf Direct!",
+			availableOn: "Tambahkan ke Daftar Keinginan",
 			screenshotsTitle: "Cuplikan Layar",
 			publisherInfoTitle: "Pengembang yang mencintai Game Strategi, Simulasi, dan RPG",
 			publisherInfoDesc: "Kami mengembangkan game strategi dan taktik yang mendalam. Tujuan kami adalah menciptakan game yang Anda sukai dan membawanya kepada Anda.",
@@ -1302,10 +1274,13 @@
 		},
 		'th': {
 			name: "ภาษาไทย",
+			fontClass: "font-th",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "พวกเรา ❤️ เกมกลยุทธ์",
 			heroSubtitle: "Emptyhanded&Whitewolf เป็นผู้พัฒนาเกมที่มีความลึกเชิงกลยุทธ์และยุทธวิธี",
 			videoTitle: "ชม Emptyhanded&Whitewolf Direct!",
 			screenshotsTitle: "ภาพหน้าจอ",
+			availableOn: "เพิ่มในรายการปรารถนา",
 			publisherInfoTitle: "นักพัฒนาที่หลงใหลในเกมกลยุทธ์ จำลอง และสวมบทบาท",
 			publisherInfoDesc: "เราคือผู้พัฒนาเกมเชิงกลยุทธ์และยุทธวิธีลึกซึ้ง เป้าหมายคือสร้างเกมที่คุณรักและนำมาสู่คุณ",
 			newsletterTitle: "จองสิทธิ์เข้าร่วมทดสอบเบต้า",
@@ -1325,10 +1300,13 @@
 		},
 		'ru': {
 			name: "Русский",
+			fontClass: "font-ru",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "Мы ❤️ стратегические игры",
 			heroSubtitle: "Emptyhanded&Whitewolf — разработчик игр с глубокой стратегией и тактикой.",
 			videoTitle: "Смотрите Emptyhanded&Whitewolf Direct!",
 			screenshotsTitle: "Скриншоты",
+			availableOn: "Добавить в список желаемого",
 			publisherInfoTitle: "Разработчик, любящий стратегии, симуляторы и ролевые игры",
 			publisherInfoDesc: "Мы создаем глубокие стратегические и тактические игры. Наша цель — создавать игры, которые вы любите, и приносить их вам.",
 			newsletterTitle: "Забронируйте место в бета-тесте",
@@ -1348,10 +1326,13 @@
 		},
 		'de': {
 			name: "Deutsch",
+			fontClass: "font-de",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "Wir ❤️ Strategiespiele",
 			heroSubtitle: "Emptyhanded&Whitewolf ist ein Entwickler von Spielen mit strategischer und taktischer Tiefe.",
 			videoTitle: "Schau dir Emptyhanded&Whitewolf Direct an!",
 			screenshotsTitle: "Screenshots",
+			availableOn: "Zur Wunschliste hinzufügen",
 			publisherInfoTitle: "Entwickler mit Leidenschaft für Strategie-, Simulations- und Rollenspiele",
 			publisherInfoDesc: "Wir entwickeln tiefgehende strategische und taktische Spiele. Unser Ziel ist es, Spiele zu schaffen, die Sie lieben, und sie zu Ihnen zu bringen.",
 			newsletterTitle: "Reserviere deinen Platz im Betatest",
@@ -1371,10 +1352,13 @@
 		},
 		'es': {
 			name: "Español",
+			fontClass: "font-es",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "Nos encantan ❤️ los juegos de estrategia",
 			heroSubtitle: "Emptyhanded&Whitewolf es un desarrollador de juegos con profundidad estratégica y táctica.",
 			videoTitle: "¡Mira el Emptyhanded&Whitewolf Direct!",
 			screenshotsTitle: "Capturas de pantalla",
+			availableOn: "Añadir a la lista de deseos",
 			publisherInfoTitle: "Desarrollador enamorado de los juegos de estrategia, simulación y rol",
 			publisherInfoDesc: "Somos un desarrollador de juegos estratégicos y tácticos profundos. Nuestro objetivo es crear los juegos que amas y llevarlos a ti.",
 			newsletterTitle: "Reserva tu lugar en la prueba beta",
@@ -1394,9 +1378,12 @@
 		},
 		'fr': {
 			name: "Français",
+			fontClass: "font-fr",
+			developerName: "Emptyhanded&Whitewolf",
 			heroTitle: "Nous ❤️ les jeux de stratégie",
 			heroSubtitle: "Emptyhanded&Whitewolf est un développeur de jeux avec une profondeur stratégique et tactique.",
 			videoTitle: "Regardez le Emptyhanded&Whitewolf Direct !",
+			availableOn: "Ajouter à la liste de souhaits",
 			screenshotsTitle: "Captures d’écran",
 			publisherInfoTitle: "Développeur passionné de jeux de stratégie, de simulation et de rôle",
 			publisherInfoDesc: "Nous développons des jeux stratégiques et tactiques profonds. Notre objectif est de créer les jeux que vous aimez et de les partager avec vous.",
@@ -1416,142 +1403,198 @@
 			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tous droits réservés."
 		},
 		'pt': {
-        name: "Português",
-        heroTitle: "Nós ❤️ jogos de estratégia",
-        heroSubtitle: "Emptyhanded&Whitewolf é uma desenvolvedora de jogos com profundidade estratégica e tática.",
-        videoTitle: "Assista ao Emptyhanded&Whitewolf Direct!",
-        screenshotsTitle: "Capturas de Tela",
-        publisherInfoTitle: "Desenvolvedora Apaixonada por Jogos de Estratégia, Simulação e RPG",
-        publisherInfoDesc: "Somos uma desenvolvedora de jogos estratégicos e táticos aprofundados de todo o mundo. Nosso objetivo é criar os jogos que você ama e trazê-los até você.",
-        newsletterTitle: "Reserve Seu Lugar no Teste Beta",
-        newsletterSubtitle: "Assine nossa newsletter para receber as últimas notícias sobre nossos jogos, eventos, jogar nosso jogo em teste antes de todo mundo e muito mais.",
-        newsletterPlaceholder: "seu.email@exemplo.com",
-        newsletterButton: "Inscrever-se",
-        footerPressEmail: "Imprensa",
-        footerStreamerEmail: "Streamer",
-        footerPublisherEmail: "Editora",
-        footerDeveloperEmail: "Desenvolvedora",
-        footerGeneralEmail: "Contato",
-        footerInfluencers: "Influenciador",
-        footerJobs: "Vagas de Freelance",
-        footerPress: "Imprensa",
-		footerWikis: "Wikis Oficiais do Jogo",
-        footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados."
+			name: "Português",
+			fontClass: "font-pt",
+			developerName: "Emptyhanded&Whitewolf",
+			heroTitle: "Nós ❤️ jogos de estratégia",
+			heroSubtitle: "Emptyhanded&Whitewolf é uma desenvolvedora de jogos com profundidade estratégica e tática.",
+			videoTitle: "Assista ao Emptyhanded&Whitewolf Direct!",
+			availableOn: "Adicionar à lista de desejos",
+			screenshotsTitle: "Capturas de Tela",
+			publisherInfoTitle: "Desenvolvedora Apaixonada por Jogos de Estratégia, Simulação e RPG",
+			publisherInfoDesc: "Somos uma desenvolvedora de jogos estratégicos e táticos aprofundados de todo o mundo. Nosso objetivo é criar os jogos que você ama e trazê-los até você.",
+			newsletterTitle: "Reserve Seu Lugar no Teste Beta",
+			newsletterSubtitle: "Assine nossa newsletter para receber as últimas notícias sobre nossos jogos, eventos, jogar nosso jogo em teste antes de todo mundo e muito mais.",
+			newsletterPlaceholder: "seu.email@exemplo.com",
+			newsletterButton: "Inscrever-se",
+			footerPressEmail: "Imprensa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editora",
+			footerDeveloperEmail: "Desenvolvedora",
+			footerGeneralEmail: "Contato",
+			footerInfluencers: "Influenciador",
+			footerJobs: "Vagas de Freelance",
+			footerPress: "Imprensa",
+			footerWikis: "Wikis Oficiais do Jogo",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados."
 		},
 		'tr': {
-        name: "Türkçe",
-        heroTitle: "Strateji oyunlarını ❤️ seviyoruz",
-        heroSubtitle: "Emptyhanded&Whitewolf, stratejik ve taktiksel derinliği olan oyunlar geliştiren bir stüdyo.",
-        videoTitle: "Emptyhanded&Whitewolf Direct'i İzleyin!",
-        screenshotsTitle: "Ekran Görüntüleri",
-        publisherInfoTitle: "Strateji, Simülasyon ve Rol Yapma Oyunlarına Aşık Bir Geliştirici",
-        publisherInfoDesc: "Biz, dünyanın dört bir yanından derin stratejik ve taktiksel oyunlar geliştiren bir stüdyoyuz. Amacımız, sevdiğiniz oyunları yaratmak ve bu oyunları size sunmaktır.",
-        newsletterTitle: "Beta Testinde Yerinizi Ayırtın",
-        newsletterSubtitle: "Oyunlarımız, etkinliklerimiz, oyunlarımızı herkesten önce test etme fırsatı ve daha fazlası hakkında en son haberleri almak için bültenimize katılın.",
-        newsletterPlaceholder: "senin.email@example.com",
-        newsletterButton: "Abone Ol",
-        footerPressEmail: "Basın",
-        footerStreamerEmail: "Yayıncı",
-        footerPublisherEmail: "Yayıncı",
-        footerDeveloperEmail: "Geliştirici",
-        footerGeneralEmail: "İletişim",
-        footerInfluencers: "Influencer",
-        footerJobs: "Serbest Çalışma İşleri",
-        footerPress: "Basın",
-		footerWikis: "Resmi Oyun Wikileri",
-        footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tüm hakları saklıdır."
+			name: "Türkçe",
+			fontClass: "font-tr",
+			developerName: "Emptyhanded&Whitewolf",
+			heroTitle: "Strateji oyunlarını ❤️ seviyoruz",
+			heroSubtitle: "Emptyhanded&Whitewolf, stratejik ve taktiksel derinliği olan oyunlar geliştiren bir stüdyo.",
+			videoTitle: "Emptyhanded&Whitewolf Direct'i İzleyin!",
+			screenshotsTitle: "Ekran Görüntüleri",
+			availableOn: "İstek listesine ekle",
+			publisherInfoTitle: "Strateji, Simülasyon ve Rol Yapma Oyunlarına Aşık Bir Geliştirici",
+			publisherInfoDesc: "Biz, dünyanın dört bir yanından derin stratejik ve taktiksel oyunlar geliştiren bir stüdyoyuz. Amacımız, sevdiğiniz oyunları yaratmak ve bu oyunları size sunmaktır.",
+			newsletterTitle: "Beta Testinde Yerinizi Ayırtın",
+			newsletterSubtitle: "Oyunlarımız, etkinliklerimiz, oyunlarımızı herkesten önce test etme fırsatı ve daha fazlası hakkında en son haberleri almak için bültenimize katılın.",
+			newsletterPlaceholder: "senin.email@example.com",
+			newsletterButton: "Abone Ol",
+			footerPressEmail: "Basın",
+			footerStreamerEmail: "Yayıncı",
+			footerPublisherEmail: "Yayıncı",
+			footerDeveloperEmail: "Geliştirici",
+			footerGeneralEmail: "İletişim",
+			footerInfluencers: "Influencer",
+			footerJobs: "Serbest Çalışma İşleri",
+			footerPress: "Basın",
+			footerWikis: "Resmi Oyun Wikileri",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tüm hakları saklıdır."
 		},
 		'ar': {
-        name: "العربية",
-        heroTitle: "نحن ❤️ ألعاب الاستراتيجية",
-        heroSubtitle: "Emptyhanded&Whitewolf هو مطور ألعاب تتميز بالعمق الاستراتيجي والتكتيكي.",
-        videoTitle: "شاهد البث المباشر من Emptyhanded&Whitewolf!",
-        screenshotsTitle: "لقطات الشاشة",
-        publisherInfoTitle: "مطور يعشق ألعاب الاستراتيجية والمحاكاة ولعب الأدوار",
-        publisherInfoDesc: "نحن مطورون لألعاب استراتيجية وتكتيكية عميقة من جميع أنحاء العالم. هدفنا هو صنع الألعاب التي تحبها، وتقديم هذه الألعاب إليك.",
-        newsletterTitle: "احجز مكانك في الاختبار التجريبي",
-        newsletterSubtitle: "انضم إلى قائمتنا البريدية للحصول على آخر الأخبار حول ألعابنا، وفعالياتنا، ولعب لعبتنا في مرحلة الاختبار التجريبي قبل أي شخص آخر، والمزيد.",
-        newsletterPlaceholder: "بريدك.الإلكتروني@مثال.com",
-        newsletterButton: "اشترك",
-        footerPressEmail: "للصحافة",
-        footerStreamerEmail: "لليوتيوبرز",
-        footerPublisherEmail: "للناشرين",
-        footerDeveloperEmail: "للمطورين",
-        footerGeneralEmail: "للاتصال",
-        footerInfluencers: "للمؤثرين",
-        footerJobs: "وظائف حرة",
-        footerPress: "صحافة",
-		footerWikis: "موسوعات الألعاب الرسمية",
-        footerCopyright: "© 2025 Emptyhanded&Whitewolf. جميع الحقوق محفوظة."
+			name: "العربية",
+			fontClass: "font-ar",
+			developerName: "Emptyhanded&Whitewolf",
+			heroTitle: "نحن ❤️ ألعاب الاستراتيجية",
+			heroSubtitle: "Emptyhanded&Whitewolf هو مطور ألعاب تتميز بالعمق الاستراتيجي والتكتيكي.",
+			videoTitle: "شاهد البث المباشر من Emptyhanded&Whitewolf!",
+			availableOn: "أضف إلى قائمة الرغبات",
+			screenshotsTitle: "لقطات الشاشة",
+			publisherInfoTitle: "مطور يعشق ألعاب الاستراتيجية والمحاكاة ولعب الأدوار",
+			publisherInfoDesc: "نحن مطورون لألعاب استراتيجية وتكتيكية عميقة من جميع أنحاء العالم. هدفنا هو صنع الألعاب التي تحبها، وتقديم هذه الألعاب إليك.",
+			newsletterTitle: "احجز مكانك في الاختبار التجريبي",
+			newsletterSubtitle: "انضم إلى قائمتنا البريدية للحصول على آخر الأخبار حول ألعابنا، وفعالياتنا، ولعب لعبتنا في مرحلة الاختبار التجريبي قبل أي شخص آخر، والمزيد.",
+			newsletterPlaceholder: "بريدك.الإلكتروني@مثال.com",
+			newsletterButton: "اشترك",
+			footerPressEmail: "للصحافة",
+			footerStreamerEmail: "لليوتيوبرز",
+			footerPublisherEmail: "للناشرين",
+			footerDeveloperEmail: "للمطورين",
+			footerGeneralEmail: "للاتصال",
+			footerInfluencers: "للمؤثرين",
+			footerJobs: "وظائف حرة",
+			footerPress: "صحافة",
+			footerWikis: "موسوعات الألعاب الرسمية",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. جميع الحقوق محفوظة."
 		},
 	};
 
-        const languageSelectorContainer = document.getElementById('language-selector-container');
-        const languageSelectorButton = document.getElementById('language-selector-button');
-        const languageDropdown = document.getElementById('language-dropdown');
+    const languageSelectorContainer = document.getElementById('language-selector-container');
+    const languageSelectorButton = document.getElementById('language-selector-button');
+    const languageDropdown = document.getElementById('language-dropdown');
 
-        // Populate language dropdown
-        for (const langCode in translations) {
-            const langName = translations[langCode].name;
-            const link = document.createElement('a');
-            link.href = '#';
-            link.textContent = langName;
-            link.classList.add('block', 'px-4', 'py-2', 'text-sm', 'text-gray-300', 'hover:bg-gray-700', 'hover:text-white');
-            link.dataset.lang = langCode;
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                setLanguage(langCode);
-                languageDropdown.classList.add('hidden');
-            });
-            languageDropdown.appendChild(link);
+    // Populate the language dropdown menu
+    for (const langCode in translations) {
+        const langName = translations[langCode].name;
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = langName;
+        link.classList.add('block', 'px-4', 'py-2', 'text-sm', 'text-gray-300', 'hover:bg-gray-700', 'hover:text-white');
+        link.dataset.lang = langCode;
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            setLanguage(langCode);
+            languageDropdown.classList.add('hidden');
+        });
+        languageDropdown.appendChild(link);
+    }
+
+    const setLanguage = (lang) => {
+        if (!translations[lang]) return;
+
+        // --- 1. FONT SWITCHING ---
+        const body = document.body;
+        // Clear any other language font classes first
+        for (const code in translations) {
+             if (translations[code].fontClass) {
+                body.classList.remove(translations[code].fontClass);
+             }
+        }
+        // Add the new font class for the selected language
+        if (translations[lang].fontClass) {
+            body.classList.add(translations[lang].fontClass);
         }
 
-        const setLanguage = (lang) => {
-            const elements = document.querySelectorAll('[data-key]');
-            elements.forEach(el => {
-                const key = el.dataset.key;
-                if (translations[lang] && translations[lang][key]) {
-                    el.style.opacity = 0;
-                    setTimeout(() => {
-                        if (el.tagName === 'INPUT') {
-                            el.placeholder = translations[lang][key];
-                        } else {
-                            el.innerText = translations[lang][key];
-                        }
-                        el.style.opacity = 1;
-                    }, 150);
-                }
-            });
-            // Update button text
-            languageSelectorButton.querySelector('span').innerText = translations[lang].name;
-             // Handle RTL for Arabic
-            if (lang === 'ar') {
-                document.documentElement.setAttribute('dir', 'rtl');
-            } else {
-                document.documentElement.setAttribute('dir', 'ltr');
-            }
-        };
-
-        // Toggle dropdown
-        languageSelectorButton.addEventListener('click', () => {
-            languageDropdown.classList.toggle('hidden');
-        });
-
-        // Hide dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!languageSelectorContainer.contains(e.target)) {
-                languageDropdown.classList.add('hidden');
+        // --- 2. TEXT TRANSLATION ---
+        const elements = document.querySelectorAll('[data-key]');
+        elements.forEach(el => {
+            const key = el.dataset.key;
+            if (translations[lang][key]) {
+                // Fade-out/fade-in effect for smooth transition
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    if (el.tagName === 'INPUT') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
+                    el.style.opacity = 1;
+                }, 150);
             }
         });
         
-        // --- MOBILE MENU SCRIPT (placeholder) ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        // Add functionality for mobile menu if needed
+        // Update language selector button text
+        languageSelectorButton.querySelector('span').innerText = translations[lang].name;
         
-        // Set default language on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            setLanguage('en');
-        });
+        // Handle Right-to-Left (RTL) languages if you add them later
+        if (lang === 'ar') { 
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
+
+        // --- 3. PERSISTENCE ---
+        // Store the user's selected language in localStorage
+        localStorage.setItem('selectedLanguage', lang);
+    };
+    
+    // --- AUTOMATIC LANGUAGE DETECTION ---
+    const detectAndSetLanguage = () => {
+        // First, check if the user has previously selected a language
+        const savedLang = localStorage.getItem('selectedLanguage');
+        if (savedLang && translations[savedLang]) {
+            setLanguage(savedLang);
+            return;
+        }
+
+        // If not, detect the browser's preferred language
+        const userLangs = navigator.languages || [navigator.language || 'en'];
+        let supportedLang = 'en'; // Set a default language
+
+        for (const lang of userLangs) {
+            const baseLang = lang.split('-')[0]; // 'en-US' -> 'en'
+            if (translations[lang]) { // Check for the full code, e.g., 'en-US'
+                supportedLang = lang;
+                break;
+            }
+            if (translations[baseLang]) { // Check for the base code, e.g., 'en'
+                supportedLang = baseLang;
+                break;
+            }
+        }
+        setLanguage(supportedLang);
+    };
+
+    // --- EVENT LISTENERS ---
+    // Toggle dropdown visibility
+    languageSelectorButton.addEventListener('click', () => {
+        languageDropdown.classList.toggle('hidden');
+    });
+
+    // Hide dropdown when clicking anywhere else on the page
+    document.addEventListener('click', (e) => {
+        if (!languageSelectorContainer.contains(e.target)) {
+            languageDropdown.classList.add('hidden');
+        }
+    });
+    
+    // Set the initial language when the page content is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        detectAndSetLanguage();
+    });
     </script>
 
 </body>
