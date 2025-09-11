@@ -8,6 +8,10 @@
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+	<!-- Favicons -->
+	<link rel="icon" href="assets/favicon_light_scheme.png" media="(prefers-color-scheme: light)">
+	<link rel="icon" href="assets/favicon_dark_scheme.png" media="(prefers-color-scheme: dark)">	
+	
     <!-- Google Fonts for language-specific typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,9 +184,6 @@
                         <!-- Language options will be injected here by JS -->
                     </div>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-white">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                </button>
             </div>
         </div>
     </header>
@@ -1015,30 +1016,6 @@
 		  <h3 class="text-blue-400 font-bold mb-4">EMPTYHANDED & WHITEWOLF</h3>
 		  <ul class="space-y-3 text-sm">
 			<li class="flex items-center space-x-2">
-			  <span data-key="footerPressEmail">📄 Press:</span>
-			  <a href="mailto:press@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
-				press@emptyhandedwhitewolf.com
-			  </a>
-			</li>
-			<li class="flex items-center space-x-2">
-			  <span data-key="footerStreamerEmail">🎮 Streamer:</span>
-			  <a href="mailto:influencers@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
-				influencers@emptyhandedwhitewolf.com
-			  </a>
-			</li>
-			<li class="flex items-center space-x-2">
-			  <span data-key="footerPublisherEmail">📢 Publisher:</span>
-			  <a href="mailto:publisher@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
-				publisher@emptyhandedwhitewolf.com
-			  </a>
-			</li>
-			<li class="flex items-center space-x-2">
-			  <span data-key="footerDeveloperEmail">💻 Developer:</span>
-			  <a href="mailto:developer@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
-				developer@emptyhandedwhitewolf.com
-			  </a>
-			</li>
-			<li class="flex items-center space-x-2">
 			  <span data-key="footerGeneralEmail">❓ General:</span>
 			  <a href="mailto:contact@emptyhandedwhitewolf.com" class="text-yellow-400 hover:underline">
 				contact@emptyhandedwhitewolf.com
@@ -1049,12 +1026,8 @@
 
 		<!-- Right column: Menu -->
 		<div>
-		  <h3 class="text-blue-400 font-bold mb-4">MENU</h3>
+		  <h3 class="text-blue-400 font-bold mb-4"></h3>
 		  <ul class="space-y-3 text-sm">
-			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerInfluencers">Influencers</a></li>
-			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerJobs">Freelance Jobs</a></li>
-			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerPress">Press</a></li>
-			<li><a href="#" class="text-yellow-400 hover:underline" data-key="footerWikis">Official Wikis</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -1064,22 +1037,20 @@
 		<div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
 		  <!-- Left: copyright + policies -->
 		  <p class="text-sm text-gray-400 mb-4 md:mb-0">
-			© Copyright 2025 |
-			<a href="#" class="text-yellow-400 hover:underline">Terms of Use</a> |
-			<a href="#" class="text-yellow-400 hover:underline">Privacy Policy</a> |
-			<a href="#" class="text-yellow-400 hover:underline">Alpha and Beta Testing Agreement</a>
+			© Copyright 2025 
 		  </p>
 
-		  <!-- Right: social icons -->
-		  <div class="flex space-x-4 text-yellow-400 text-xl">
+		  <div class="flex items-center gap-x-4 text-yellow-400 text-xl">
 			<!-- Replace these placeholders with proper SVGs or icons -->
-			<a href="#" aria-label="Steam">🎮</a>
-			<a href="#" aria-label="GOG">🕹️</a>
-			<a href="#" aria-label="Twitter">🐦</a>
-			<a href="#" aria-label="YouTube">▶️</a>
-			<a href="#" aria-label="Reddit">👽</a>
-			<a href="#" aria-label="Facebook">📘</a>
-			<a href="#" aria-label="Discord">💬</a>
+			<a href="https://www.youtube.com/@EmptyHandedDev" class="text-gray-400 hover:text-white transition-colors" aria-label="Youtube">
+				<img src="assets/youtube_icon_white.svg" alt="Youtube" class="h-4 opacity-60 hover:opacity-100 transition-opacity"/>
+			</a>
+			<a href="https://space.bilibili.com/3546974278125995" class="text-gray-400 hover:text-white transition-colors" aria-label="Bilibili">
+				<img src="assets/bilibili_icon_white.svg" alt="Bilibili" class="h-5 opacity-60 hover:opacity-100 transition-opacity"/>
+            </a>
+			<a href="https://store.steampowered.com/app/3070420/Martial_Realms/" class="text-gray-400 hover:text-white transition-colors" aria-label="Steam">
+					<img src="assets/steam_icon_white.svg" alt="Steam" class="h-5 opacity-60 hover:opacity-100 transition-opacity"/>
+            </a>
 		  </div>
 		</div>
 	  </div>
