@@ -15,8 +15,7 @@
     <!-- Google Fonts for language-specific typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Teko:wght@400;700&family=Roboto:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans:wght@400;700&display=swap"" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Teko:wght@400;700&family=Roboto:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* A base background color */
         body {
@@ -31,7 +30,23 @@
         .newsletter-bg {
             background-color: #1e293b; /* slate-800 */
         }
-        
+		
+
+		/* --- GLOBAL FONT FALLBACKS --- */
+
+		/* 1. Default for ALL body text */
+		body {
+			/* A neutral, highly-compatible stack for readability */
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		}
+
+		/* 2. Default for ALL headings */
+		/* This rule overrides the body rule for any element with the .font-heading class */
+		.font-heading {
+			/* A stack with more impactful, bold system fonts */
+			font-family: 'Impact', 'Arial Black', 'Georgia', serif;
+		}
+        /* --- LANGUAGE-SPECIFIC OVERRIDES --- */
         /* English Font Rules */
         body.font-en {
             font-family: 'Roboto', sans-serif; /* Body font */
@@ -143,6 +158,8 @@
         [data-key] {
             transition: opacity 0.3s ease-in-out;
         }
+		
+
     </style>
 </head>
 
@@ -194,8 +211,1019 @@
             </div>
         </section>
 
+<!-- Newsletter section -->
+
+<style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1760346");</style>
+    <style type="text/css">
+    /* LOADER */
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: " ";
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-30659685.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer h4,
+      #mlb2-30659685.ml-form-embedContainer p,
+      #mlb2-30659685.ml-form-embedContainer span,
+      #mlb2-30659685.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #274770;
         
-        <!-- Newsletter -->
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 0px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 100%; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 100%; width: 100%; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: undefinedpx;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: center;
+        word-break: break-word;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #76757e;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #76757e;
+        font-size: 20px;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #444d62 !important;
+        color: #ffffff !important;
+        border-color: #cccccc;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #ffffff; }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #ffffff; }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #ffffff; }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #ffffff; }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #444d62 !important;
+        color: #ffffff !important;
+        border-color: #cccccc;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #cccccc!important;
+          background-color: #444d62!important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: "";
+       }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: "";
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: "";
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #000000;
+          font-size: 12px!important;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #444d62 !important;
+        color: #ffffff !important;
+        border-color: #cccccc;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #444d62;
+        color: #ffffff;
+        border-color: #cccccc;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #efc038 !important;
+        border-color: #efc038;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-size: 18px !important;
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #5c5a4c !important;
+        border-color: #5c5a4c !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #ffffff;
+        display: block;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #ffffff !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #efc038 !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #5c5a4c !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 0px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 400px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    </style>
+
+    
+  <style type="text/css">
+    @media only screen and (max-width: 400px) {
+       .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+        margin-bottom: 10px !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+    
+    <style type="text/css">
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions { text-align: left; float: left; width: 100%; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent {
+        margin: 0 0 15px 0;
+        text-align: left;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.horizontal {
+        margin: 0 0 15px 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent h4 {
+        color: #000000;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        margin: 0 0 10px 0;
+        word-break: break-word;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p {
+        color: #000000;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0 0 10px 0;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p {
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 22px;
+        margin: 0 0 10px 0;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p a {
+        color: #ffffff;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p:last-child {
+        margin: 0;
+      }
+
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p:last-child { margin: 0 0 15px 0; }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptions {
+        margin: 0;
+        padding: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox {
+        margin: 0 0 10px 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox:last-child {
+        margin: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description {
+        color: #000000;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+        font-style: normal;
+        font-weight: 700;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .description {
+        color: #000000;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 5px 0 0 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR {
+        padding-bottom: 20px;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p {
+        color: #000000;
+        font-size: 10px;
+        line-height: 14px;
+        margin: 0;
+        padding: 0;
+      }
+      #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p a {
+        color: #000000;
+        text-decoration: underline;
+
+      }
+      @media (max-width: 768px) {
+        #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p {
+          font-size: 12px !important;
+          line-height: 18px !important;
+        }
+        #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p {
+          font-size: 10px !important;
+          line-height: 14px !important;
+        }
+      }
+    </style>
+
+
+      
+    <div id="mlb2-30659685" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30659685">
+      <div class="ml-form-align-center ">
+        <div class="ml-form-embedWrapper embedForm">
+
+          
+          
+
+          <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+
+            <div class="ml-form-embedContent" style=" ">
+              
+                <h4 class=" font-heading" data-key="newsletterTitle">Reserve Your Spot In Beta Test</h4>
+                <p class="mt-4 text-gray-400" data-key="newsletterSubtitle" style="color: #BBBBBB">Join our mailing list to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.</p>
+              
+            </div>
+
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1786489/forms/165049771858330823/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                
+
+                  
+                  <div class="ml-form-fieldRow ">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+                      <label>Email</label>
+
+
+                      <!-- input -->
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                      <!-- /input -->
+
+                      <!-- textarea -->
+                      
+                      <!-- /textarea -->
+
+                      <!-- select -->
+                      
+                      <!-- /select -->
+
+                      <!-- checkboxes -->
+            
+            <!-- /checkboxes -->
+
+                      <!-- radio -->
+                      
+                      <!-- /radio -->
+
+                      <!-- countries -->
+                      
+                      <!-- /countries -->
+
+
+
+
+
+                    </div>
+                  </div><div class="ml-form-fieldRow ">
+                    <div class="ml-field-group ml-field-language">
+
+                      <label data-key="newsletterLanguage">Newsletter Language </label>
+
+
+                      <!-- input -->
+                      
+                      <!-- /input -->
+
+                      <!-- textarea -->
+                      
+                      <!-- /textarea -->
+
+                      <!-- select -->
+                      <select class="custom-select" name="fields[language]" aria-label="language">
+                        <option value="" data-key="newsletterDefaultLanguage">-</option>
+                        <!-- Visible if current or any next has value -->
+                        <option>
+                          English
+                        </option>
+						
+						<option>
+                          Simplified Chinese
+                        </option>
+
+                        <option>
+                          Traditional Chinese
+                        </option>
+
+                        <option>
+                          Japanese
+                        </option>
+
+                        <option>
+                          Korean
+                        </option>
+
+                        <option>
+                          Russian
+                        </option>
+
+                        <option>
+                          Arabic
+                        </option>
+
+                        <option>
+                          Spanish - Spain
+                        </option>
+
+                        <option>
+                          Spanish - Latin America
+                        </option>
+
+                        <option>
+                          Portuguese - Brazil
+                        </option>
+						
+						<option>
+                          Portuguese - Portugal
+                        </option>
+
+                        <option>
+                          German
+                        </option>
+
+                        <option>
+                          French
+                        </option>
+
+                        <option>
+                          Polish
+                        </option>
+
+                        <option>
+                          Turkish
+                        </option>
+
+                        <option>
+                          Thai
+                        </option>
+
+                        <option>
+                          Ukrainian
+                        </option>
+
+                        <option>
+                          Italian
+                        </option>
+
+                        <option>
+                          Czech
+                        </option>
+
+                        <option>
+                          Hungarian
+                        </option>
+						
+						<option>
+                          Dutch
+                        </option>
+
+                        <option>
+                          Swedish
+                        </option>
+
+                        <option>
+                          Danish
+                        </option>
+
+                        <option>
+                          Vietnamese
+                        </option>
+
+                        <option>
+                          Finnish
+                        </option>
+
+                        <option>
+                          Indonesian
+                        </option>
+
+                        <option>
+                          Romanian
+                        </option>
+
+                        <option>
+                          Norwegian
+                        </option>
+
+                        <option>
+                          Greek
+                        </option>
+
+                        <option>
+                          Bulgarian
+                        </option>
+                      </select>
+                      <!-- /select -->
+
+                      <!-- checkboxes -->
+            
+            <!-- /checkboxes -->
+
+                      <!-- radio -->
+                      
+                      <!-- /radio -->
+
+                      <!-- countries -->
+                      
+                      <!-- /countries -->
+
+
+
+
+
+                    </div>
+                  </div>
+
+              <!-- Language Disclaimer 
+              <div class="ml-form-embedPermissions " style="">
+                <div class="ml-form-embedPermissionsContent horizontal language-disclaimer ">
+                          <p data-key="languageDisclaimer" style="color: #BBBBBB;" >Note: Most languages are AI translated with the exception of English and Chinese. Japanses will be AI translated with manual review.</p>
+                </div>
+              </div>
+               /Language Disclaimer -->
+
+              <!-- Privacy policy -->
+              <div class="ml-form-embedPermissions" style="">
+                <div class="ml-form-embedPermissionsContent horizontal privacy-policy">
+
+                  
+
+                  
+                          <p data-key="newsletterPrivacyPolicy" style="color: #BBBBBB;">You can unsubscribe anytime. For more details, review our Privacy Policy at the bottom of this webpage.</p>
+                  
+
+                  
+                </div>
+              </div>
+              <!-- /Privacy policy -->
+
+              
+
+              
+
+              
+
+
+
+
+
+
+              
+              <input type="hidden" name="ml-submit" value="1">
+
+              <div class="ml-form-embedSubmit">
+                
+                  <button type="submit" class="primary" data-key="newsletterButton">Subscribe</button>
+                
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+
+              
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+
+          <div class="ml-form-successBody row-success" style="display: none">
+
+            <div class="ml-form-successContent">
+              
+                <h4>Thank you!</h4>
+                
+                  <p>You have successfully joined our subscriber list.</p>
+                
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+  
+  
+  <script>
+    function ml_webform_success_30659685() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-30659685 .row-success').show();
+      $('.ml-subscribe-form-30659685 .row-form').hide();
+    }
+      </script>
+  
+  
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+        <script>
+            fetch("https://assets.mailerlite.com/jsonp/1786489/forms/165049771858330823/takel")
+        </script>
+        
+        <!-- Newsletter 
         <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1757400");</style>
 		<style type="text/css">
 		/* LOADER */
@@ -851,9 +1879,9 @@
 
                         <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                           
-                          <!-- input -->
+                       
                       <input type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
-                      <!-- /input -->
+                     
                         </div>
 
 
@@ -877,9 +1905,7 @@
                 </div>
               </div>
 
-              <!-- Privacy policy -->
-              
-              <!-- /Privacy policy -->
+
 
               
               
@@ -913,6 +1939,7 @@
         </div>
       </div>
     </div>
+-->
 
   
 
@@ -1006,6 +2033,7 @@
         </script>
 
     </main>
+	*/
     
 	<!-- Footer -->
 	<footer class="bg-black text-gray-300">
@@ -1037,7 +2065,7 @@
 		  <!-- Left: copyright + policies -->
 		  <p class="text-sm text-gray-400 mb-4 md:mb-0">
 			© Emptyhanded & Whitewolf |
-			<a href="https://cutt.ly/DrMsM6td" class="text-yellow-400 hover:underline">Privacy Policy</a> |
+			<a href="https://cutt.ly/DrMsM6td" class="text-yellow-400 hover:underline" data-key="footerPrivacyPolicy">Privacy Policy</a>
 		  </p>
 
 		  <div class="flex items-center gap-x-4 text-yellow-400 text-xl">
@@ -1059,7 +2087,7 @@
 	// --- TRANSLATION SCRIPT --- 
 	const translations = {
 		'en': {
-			name: "English",
+			name: "English",//Target language name in that language
 			fontClass: "font-en", // Font for English
 			developerName: "Emptyhanded & Whitewolf",
 			heroTitle: "We ❤️ strategy games",
@@ -1084,7 +2112,11 @@
 			footerJobs: "Freelance Jobs",
 			footerPress: "Press",
 			footerWikis: "Official Game Wikis",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. All rights reserved."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. All rights reserved.",
+			footerPrivacyPolicy: "Privacy Policy",
+			newsletterLanguage: "Newsletter Language",
+			newsletterPrivacyPolicy: "You can unsubscribe anytime. For more details, review our Privacy Policy at the bottom of this webpage.",
+			newsletterDefaultLanguage: "English",//Target language name in that language
 		},
 		'zh-CN': {
 			name: "简体中文",
@@ -1110,7 +2142,11 @@
 			footerJobs: "自由职业",
 			footerPress: "新闻",
 			footerWikis: "官方游戏维基",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版权所有。"
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版权所有。",
+			footerPrivacyPolicy: "隐私政策",
+			newsletterLanguage: "邮件组语言",
+			newsletterPrivacyPolicy: "您可以随时取消订阅。有关更多详细信息，请查看本网页底部的隐私政策。",
+			newsletterDefaultLanguage: "Simplified Chinese",
 		},
 		'zh-TW': {
 			name: "繁體中文",
@@ -1136,7 +2172,11 @@
 			footerJobs: "自由工作",
 			footerPress: "新聞",
 			footerWikis: "官方遊戲維基",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版權所有。"
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 版權所有。",
+			footerPrivacyPolicy: "隱私權政策",
+			newsletterLanguage: "電子報語言",
+			newsletterPrivacyPolicy: "您可以隨時取消訂閱。有關更多詳細資訊，請查看本網頁底部的隱私權政策。",
+			newsletterDefaultLanguage: "Traditional Chinese",
 		},
 		'ko': {
 			name: "한국어",
@@ -1162,7 +2202,11 @@
 			footerJobs: "프리랜서 채용",
 			footerPress: "보도자료",
 			footerWikis: "공식 게임 위키",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf 판권 소유."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 판권 소유.",
+			footerPrivacyPolicy: "개인정보 보호정책",
+			newsletterLanguage: "뉴스레터 언어",
+			newsletterPrivacyPolicy: "언제든지 구독을 취소할 수 있습니다. 자세한 내용은 이 웹페이지 하단에 있는 개인정보 보호정책을 검토하십시오.",
+			newsletterDefaultLanguage: "Korean",
 		},
 		'ja': {
 			name: "日本語",
@@ -1178,7 +2222,7 @@
 			newsletterTitle: "ベータテストに参加予約",
 			newsletterSubtitle: "ニュースレターに登録して、最新のゲーム情報、イベント情報を受け取り、他の人より早くテストに参加しましょう。",
 			newsletterPlaceholder: "your.email@example.com",
-			newsletterButton: "購読",
+			newsletterButton: "登録",
 			footerPressEmail: "プレス",
 			footerStreamerEmail: "ストリーマー",
 			footerPublisherEmail: "パブリッシャー",
@@ -1188,7 +2232,11 @@
 			footerJobs: "フリーランス求人",
 			footerPress: "報道",
 			footerWikis: "公式ゲームウィキ",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf 無断転載を禁ず。"
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf 無断転載を禁ず。",
+			footerPrivacyPolicy: "プライバシーポリシー",
+			newsletterLanguage: "ニュースレターの言語",
+			newsletterPrivacyPolicy: "いつでも登録解除できます。詳細については、このウェブページ下部のプライバシーポリシーをご確認ください。",
+			newsletterDefaultLanguage: "Japanese",
 		},
 		'vi': {
 			name: "Tiếng Việt",
@@ -1214,7 +2262,11 @@
 			footerJobs: "Việc làm tự do",
 			footerPress: "Tin tức",
 			footerWikis: "Wiki chính thức",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Bản quyền."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Bản quyền.",
+			footerPrivacyPolicy: "Chính sách quyền riêng tư",
+			newsletterLanguage: "Ngôn ngữ nhận bản tin",
+			newsletterPrivacyPolicy: "Bạn có thể hủy đăng ký bất cứ lúc nào. Để biết thêm chi tiết, hãy xem Chính sách quyền riêng tư của chúng tôi ở cuối trang web này.",
+			newsletterDefaultLanguage: "Vietnamese",
 		},		
 		'id': {
 			name: "Bahasa Indonesia",
@@ -1240,7 +2292,11 @@
 			footerJobs: "Pekerjaan Lepas",
 			footerPress: "Berita",
 			footerWikis: "Wiki Resmi Game",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Hak cipta."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Hak cipta.",
+			footerPrivacyPolicy: "Kebijakan Privasi",
+			newsletterLanguage: "Bahasa Buletin",
+			newsletterPrivacyPolicy: "Anda dapat berhenti berlangganan kapan saja. Untuk detail lebih lanjut, tinjau Kebijakan Privasi kami di bagian bawah halaman web ini.",
+			newsletterDefaultLanguage: "Indonesian",
 		},
 		'th': {
 			name: "ภาษาไทย",
@@ -1266,7 +2322,11 @@
 			footerJobs: "งานฟรีแลนซ์",
 			footerPress: "ข่าว",
 			footerWikis: "วิกิทางการ",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf สงวนลิขสิทธิ์."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf สงวนลิขสิทธิ์.",
+			footerPrivacyPolicy: "นโยบายความเป็นส่วนตัว",
+			newsletterLanguage: "ภาษาของจดหมายข่าว",
+			newsletterPrivacyPolicy: "คุณสามารถยกเลิกการสมัครได้ตลอดเวลา สำหรับรายละเอียดเพิ่มเติม โปรดอ่านนโยบายความเป็นส่วนตัวของเราที่ด้านล่างของหน้าเว็บนี้",
+			newsletterDefaultLanguage: "Thai",
 		},
 		'ru': {
 			name: "Русский",
@@ -1292,7 +2352,11 @@
 			footerJobs: "Фриланс",
 			footerPress: "Новости",
 			footerWikis: "Официальные вики",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Все права защищены."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Все права защищены.",
+			footerPrivacyPolicy: "Политика конфиденциальности",
+			newsletterLanguage: "Язык рассылки",
+			newsletterPrivacyPolicy: "Вы можете отменить подписку в любое время. Для получения дополнительной информации ознакомьтесь с нашей Политикой конфиденциальности внизу этой веб-страницы.",
+			newsletterDefaultLanguage: "Russian",
 		},
 		'de': {
 			name: "Deutsch",
@@ -1318,33 +2382,75 @@
 			footerJobs: "Freelance Jobs",
 			footerPress: "Nachrichten",
 			footerWikis: "Offizielle Spielwikis",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle Rechte vorbehalten."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle Rechte vorbehalten.",
+			footerPrivacyPolicy: "Datenschutzrichtlinie",
+			newsletterLanguage: "Newsletter-Sprache",
+			newsletterPrivacyPolicy: "Sie können sich jederzeit abmelden. Weitere Details finden Sie in unserer Datenschutzrichtlinie am Ende dieser Webseite.",
+			newsletterDefaultLanguage: "German",
 		},
-		'es': {
-			name: "Español",
-			fontClass: "font-es",
+		'es-es': {
+			name: "Español de España",//Target language name in that language
+			fontClass: "font-en", // Font for English
 			developerName: "Emptyhanded & Whitewolf",
-			heroTitle: "Nos encantan ❤️ los juegos de estrategia",
-			heroSubtitle: "Emptyhanded&Whitewolf es un desarrollador de juegos con profundidad estratégica y táctica.",
+			heroTitle: "Nos ❤️ los juegos de estrategia",
+			heroSubtitle: "Emptyhanded&Whitewolf es un desarrollador de juegos caracterizados por su profundidad estratégica y táctica.",
 			videoTitle: "¡Mira el Emptyhanded&Whitewolf Direct!",
+			availableOn: "Añadir a la lista de deseos en",
 			screenshotsTitle: "Capturas de pantalla",
-			availableOn: "Añadir a la lista de deseos",
-			publisherInfoTitle: "Desarrollador enamorado de los juegos de estrategia, simulación y rol",
-			publisherInfoDesc: "Somos un desarrollador de juegos estratégicos y tácticos profundos. Nuestro objetivo es crear los juegos que amas y llevarlos a ti.",
-			newsletterTitle: "Reserva tu lugar en la prueba beta",
-			newsletterSubtitle: "Únete a nuestro boletín para recibir las últimas noticias sobre nuestros juegos, eventos, probar antes que nadie y más.",
-			newsletterPlaceholder: "your.email@example.com",
+			publisherInfoTitle: "Desarrolladores apasionados por los juegos de estrategia, simulación y rol",
+			publisherInfoDesc: "Somos desarrolladores de juegos estratégicos y tácticos de gran profundidad de todo el mundo. Nuestro objetivo es crear los juegos que te encantan y ofrecértelos.",
+			newsletterTitle: "Reserva tu plaza para la Beta Test",
+			newsletterSubtitle: "Únete a nuestra lista de correo para recibir las últimas noticias sobre nuestros juegos y eventos, jugar a nuestros juegos en pruebas antes que nadie y mucho más.",
+			newsletterPlaceholder: "tu.email@ejemplo.com",
 			newsletterButton: "Suscribirse",
+			newsletterSuccessTitle: "¡Gracias!",
+			newsletterSuccessMessage: "Te has unido correctamente a nuestra lista de correo.",
 			footerPressEmail: "Prensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editor",
 			footerDeveloperEmail: "Desarrollador",
 			footerGeneralEmail: "Contacto",
-			footerInfluencers: "Influencer",
+			footerInfluencers: "Influencers",
 			footerJobs: "Trabajos Freelance",
-			footerPress: "Noticias",
+			footerPress: "Prensa",
 			footerWikis: "Wikis Oficiales del Juego",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos los derechos reservados."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos los derechos reservados.",
+			footerPrivacyPolicy: "Política de privacidad",
+			newsletterLanguage: "Idioma del boletín",
+			newsletterPrivacyPolicy: "Puede darse de baja en cualquier momento. Para más detalles, consulte nuestra Política de privacidad al final de esta página web.",
+			newsletterDefaultLanguage: "Spanish - Spain",//Target language name in that language
+		},
+		'es-la': {
+			name: "Español de América Latina",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Nos ❤️ los juegos de estrategia",
+			heroSubtitle: "Emptyhanded&Whitewolf es un desarrollador de juegos caracterizados por su profundidad estratégica y táctica.",
+			videoTitle: "¡Mira el Emptyhanded&Whitewolf Direct!",
+			availableOn: "Añadir a la lista de deseos en",
+			screenshotsTitle: "Capturas de pantalla",
+			publisherInfoTitle: "Desarrolladores apasionados por los juegos de estrategia, simulación y rol",
+			publisherInfoDesc: "Somos desarrolladores de juegos estratégicos y tácticos de gran profundidad de todo el mundo. Nuestro objetivo es crear los juegos que te encantan y ofrecértelos.",
+			newsletterTitle: "Reserva tu lugar en la Beta Test",
+			newsletterSubtitle: "Únete a nuestra lista de correo para recibir las últimas noticias sobre nuestros juegos y eventos, jugar a nuestros juegos en pruebas antes que nadie y más.",
+			newsletterPlaceholder: "tu.email@ejemplo.com",
+			newsletterButton: "Suscribirse",
+			newsletterSuccessTitle: "¡Gracias!",
+			newsletterSuccessMessage: "Te has unido exitosamente a nuestra lista de correo.",
+			footerPressEmail: "Prensa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editor",
+			footerDeveloperEmail: "Desarrollador",
+			footerGeneralEmail: "Contacto",
+			footerInfluencers: "Influencers",
+			footerJobs: "Trabajos Freelance",
+			footerPress: "Prensa",
+			footerWikis: "Wikis Oficiales del Juego",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos los derechos reservados.",
+			footerPrivacyPolicy: "Política de privacidad",
+			newsletterLanguage: "Idioma del boletín",
+			newsletterPrivacyPolicy: "Puedes darte de baja en cualquier momento. Para más detalles, revisa nuestra Política de privacidad al pie de esta página web.",
+			newsletterDefaultLanguage: "Spanish - Latin America",//Target language name in that language
 		},
 		'fr': {
 			name: "Français",
@@ -1370,33 +2476,75 @@
 			footerJobs: "Travaux Freelance",
 			footerPress: "Actualités",
 			footerWikis: "Wikis Officiels du Jeu",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tous droits réservés."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tous droits réservés.",
+			footerPrivacyPolicy: "Politique de confidentialité",
+			newsletterLanguage: "Langue de la newsletter",
+			newsletterPrivacyPolicy: "Vous pouvez vous désabonner à tout moment. Pour plus de détails, consultez notre politique de confidentialité au bas de cette page web.",
+			newsletterDefaultLanguage: "French",
 		},
-		'pt': {
-			name: "Português",
-			fontClass: "font-pt",
+		'pt-br': {
+			name: "Português do Brasil",//Target language name in that language
+			fontClass: "font-en", // Font for English
 			developerName: "Emptyhanded & Whitewolf",
 			heroTitle: "Nós ❤️ jogos de estratégia",
-			heroSubtitle: "Emptyhanded&Whitewolf é uma desenvolvedora de jogos com profundidade estratégica e tática.",
+			heroSubtitle: "Emptyhanded&Whitewolf é uma desenvolvedora de jogos que apresenta profundidade estratégica e tática.",
 			videoTitle: "Assista ao Emptyhanded&Whitewolf Direct!",
-			availableOn: "Adicionar à lista de desejos",
-			screenshotsTitle: "Capturas de Tela",
+			availableOn: "Adicionar à Lista de Desejos em",
+			screenshotsTitle: "Capturas de tela",
 			publisherInfoTitle: "Desenvolvedora Apaixonada por Jogos de Estratégia, Simulação e RPG",
-			publisherInfoDesc: "Somos uma desenvolvedora de jogos estratégicos e táticos aprofundados de todo o mundo. Nosso objetivo é criar os jogos que você ama e trazê-los até você.",
-			newsletterTitle: "Reserve Seu Lugar no Teste Beta",
-			newsletterSubtitle: "Assine nossa newsletter para receber as últimas notícias sobre nossos jogos, eventos, jogar nosso jogo em teste antes de todo mundo e muito mais.",
+			publisherInfoDesc: "Somos uma desenvolvedora de jogos estratégicos e táticos profundos de todo o mundo. Nosso objetivo é criar e trazer até você os jogos que você ama.",
+			newsletterTitle: "Reserve sua vaga no Beta Test",
+			newsletterSubtitle: "Junte-se à nossa lista de e-mail para receber as últimas notícias sobre nossos jogos e eventos, jogar nosso jogo em testes antes de todo mundo e muito mais.",
 			newsletterPlaceholder: "seu.email@exemplo.com",
-			newsletterButton: "Inscrever-se",
+			newsletterButton: "Assinar",
+			newsletterSuccessTitle: "Obrigado!",
+			newsletterSuccessMessage: "Você se juntou com sucesso à nossa lista de e-mail.",
 			footerPressEmail: "Imprensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editora",
-			footerDeveloperEmail: "Desenvolvedora",
+			footerDeveloperEmail: "Desenvolvedor",
 			footerGeneralEmail: "Contato",
-			footerInfluencers: "Influenciador",
-			footerJobs: "Vagas de Freelance",
+			footerInfluencers: "Influenciadores",
+			footerJobs: "Trabalhos Freelance",
 			footerPress: "Imprensa",
 			footerWikis: "Wikis Oficiais do Jogo",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados.",
+			footerPrivacyPolicy: "Política de Privacidade",
+			newsletterLanguage: "Idioma do Newsletter",
+			newsletterPrivacyPolicy: "Você pode cancelar a inscrição a qualquer momento. Para mais detalhes, consulte nossa Política de Privacidade no rodapé desta página.",
+			newsletterDefaultLanguage: "Portuguese - Brazil",//Target language name in that language
+		},
+		'pt-pt': {
+			name: "Português de Portugal",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Nós ❤️ jogos de estratégia",
+			heroSubtitle: "Emptyhanded&Whitewolf é uma produtora de jogos que se caraterizam pela profundidade estratégica e tática.",
+			videoTitle: "Veja o Emptyhanded&Whitewolf Direct!",
+			availableOn: "Adicionar à Lista de Desejos em",
+			screenshotsTitle: "Capturas de ecrã",
+			publisherInfoTitle: "Produtores Apaixonados por Jogos de Estratégia, Simulação e RPG",
+			publisherInfoDesc: "Somos uma produtora de jogos estratégicos e táticos aprofundados de todo o mundo. O nosso objetivo é criar os jogos que adora e levá-los até si.",
+			newsletterTitle: "Reserve o seu lugar na Beta Test",
+			newsletterSubtitle: "Junte-se à nossa lista de correio para receber as últimas notícias sobre os nossos jogos e eventos, jogar os nossos jogos em testes antes de toda a gente e muito mais.",
+			newsletterPlaceholder: "o.seu.email@exemplo.com",
+			newsletterButton: "Subscrever",
+			newsletterSuccessTitle: "Obrigado!",
+			newsletterSuccessMessage: "Juntou-se com sucesso à nossa lista de correio.",
+			footerPressEmail: "Imprensa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editora",
+			footerDeveloperEmail: "Produtor",
+			footerGeneralEmail: "Contacto",
+			footerInfluencers: "Influenciadores",
+			footerJobs: "Trabalhos Freelance",
+			footerPress: "Imprensa",
+			footerWikis: "Wikis Oficiais do Jogo",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Todos os direitos reservados.",
+			footerPrivacyPolicy: "Política de Privacidade",
+			newsletterLanguage: "Idioma da Newsletter",
+			newsletterPrivacyPolicy: "Pode anular a subscrição a qualquer momento. Para mais detalhes, consulte a nossa Política de Privacidade no fundo desta página web.",
+			newsletterDefaultLanguage: "Portuguese - Portugal",//Target language name in that language
 		},
 		'tr': {
 			name: "Türkçe",
@@ -1422,7 +2570,11 @@
 			footerJobs: "Serbest Çalışma İşleri",
 			footerPress: "Basın",
 			footerWikis: "Resmi Oyun Wikileri",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tüm hakları saklıdır."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tüm hakları saklıdır.",
+			footerPrivacyPolicy: "Gizlilik Politikası",
+			newsletterLanguage: "Bülten Dili",
+			newsletterPrivacyPolicy: "İstediğiniz zaman abonelikten çıkabilirsiniz. Daha fazla ayrıntı için bu web sayfasının altındaki Gizlilik Politikamızı inceleyin.",
+			newsletterDefaultLanguage: "Turkish",
 		},
 		'ar': {
 			name: "العربية",
@@ -1448,7 +2600,427 @@
 			footerJobs: "وظائف حرة",
 			footerPress: "صحافة",
 			footerWikis: "موسوعات الألعاب الرسمية",
-			footerCopyright: "© 2025 Emptyhanded&Whitewolf. جميع الحقوق محفوظة."
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. جميع الحقوق محفوظة.",
+			footerPrivacyPolicy: "سياسة الخصوصية",
+			newsletterLanguage: "لغة الرسالة الإخبارية",
+			newsletterPrivacyPolicy: "يمكنك إلغاء الاشتراك في أي وقت. لمزيد من التفاصيل، راجع سياسة الخصوصية الخاصة بنا في أسفل صفحة الويب هذه.",
+			newsletterDefaultLanguage: "Arabic",
+		},
+		'pl': {
+			name: "Polski",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Kochamy ❤️ gry strategiczne",
+			heroSubtitle: "Emptyhanded&Whitewolf to twórca gier charakteryzujących się strategiczną i taktyczną głębią.",
+			videoTitle: "Obejrzyj Emptyhanded&Whitewolf Direct!",
+			availableOn: "Dodaj do listy życzeń na",
+			screenshotsTitle: "Zrzuty ekranu",
+			publisherInfoTitle: "Deweloper Zakochany w Grach Strategicznych, Symulacyjnych i Role-Playing",
+			publisherInfoDesc: "Tworzymy dogłębne gry strategiczne i taktyczne z całego świata. Naszym celem jest tworzenie gier, które kochasz i dostarczanie ich do Ciebie.",
+			newsletterTitle: "Zarezerwuj Swoje Miejsce W Beta Testach",
+			newsletterSubtitle: "Dołącz do naszej listy mailingowej, aby otrzymywać najnowsze informacje o naszych grach, wydarzeniach, grać w naszą grę w fazie testowej przed wszystkimi innymi i nie tylko.",
+			newsletterPlaceholder: "twoj.email@przyklad.com",
+			newsletterButton: "Subskrybuj",
+			newsletterSuccessTitle: "Dziękujemy!",
+			newsletterSuccessMessage: "Pomyślnie dołączyłeś do naszej listy mailingowej.",
+			footerPressEmail: "Prasa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Wydawca",
+			footerDeveloperEmail: "Deweloper",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influencer",
+			footerJobs: "Praca Freelance",
+			footerPress: "Prasa",
+			footerWikis: "Oficjalne Wiki Gier",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Wszelkie prawa zastrzeżone.",
+			footerPrivacyPolicy: "Polityka prywatności",
+			newsletterLanguage: "Język newslettera",
+			newsletterPrivacyPolicy: "Możesz zrezygnować z subskrypcji w dowolnym momencie. Więcej szczegółów znajdziesz w naszej Polityce prywatności na dole tej strony internetowej.",
+			newsletterDefaultLanguage: "Polish",//Target language name in that language
+		},
+		'uk': {
+			name: "Українська",//Target language name in that language
+			fontClass: "font-ru", // Font for Russian
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Ми ❤️ стратегічні ігри",
+			heroSubtitle: "Emptyhanded&Whitewolf — це розробник ігор, які вирізняються стратегічною та тактичною глибиною.",
+			videoTitle: "Дивіться Emptyhanded&Whitewolf Direct!",
+			availableOn: "Додати до списку бажаного на",
+			screenshotsTitle: "Знімки екрана",
+			publisherInfoTitle: "Розробник, Закоханий в Ігри Стратегії, Симуляції та Рольові Ігри",
+			publisherInfoDesc: "Ми — розробник глибоких стратегічних та тактичних ігор з усього світу. Наша мета — створювати ігри, які ви любите, та надавати їх вам.",
+			newsletterTitle: "Забронюйте Своє Місце У Бета-Тесті",
+			newsletterSubtitle: "Приєднуйтесь до нашої розсилки, щоб отримувати останні новини про наші ігри, події, грати в нашу гру в режимі плейтесту раніше за всіх та багато іншого.",
+			newsletterPlaceholder: "ваша.пошта@example.com",
+			newsletterButton: "Підписатися",
+			newsletterSuccessTitle: "Дякуємо!",
+			newsletterSuccessMessage: "Ви успішно приєдналися до нашої розсилки.",
+			footerPressEmail: "Преса",
+			footerStreamerEmail: "Стример",
+			footerPublisherEmail: "Видавець",
+			footerDeveloperEmail: "Розробник",
+			footerGeneralEmail: "Контакти",
+			footerInfluencers: "Інфлюенсер",
+			footerJobs: "Фріланс Роботи",
+			footerPress: "Преса",
+			footerWikis: "Офіційні Віків Ігор",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Усі права захищені.",
+			footerPrivacyPolicy: "Політика конфіденційності",
+			newsletterLanguage: "Мова розсилки",
+			newsletterPrivacyPolicy: "Ви можете скасувати підписку в будь-який час. Для отримання додаткової інформації ознайомтеся з нашою Політикою конфіденційності внизу цієї веб-сторінки.",
+			newsletterDefaultLanguage: "Ukrainian",//Target language name in that language
+		},
+		'it': {
+			name: "Italiano",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Amiamo ❤️ i giochi di strategia",
+			heroSubtitle: "Emptyhanded&Whitewolf è uno sviluppatore di giochi caratterizzati da profondità strategica e tattica.",
+			videoTitle: "Guarda l'Emptyhanded&Whitewolf Direct!",
+			availableOn: "Aggiungi alla Lista dei Desideri su",
+			screenshotsTitle: "Screenshot",
+			publisherInfoTitle: "Sviluppatore Innamorato dei Giochi di Strategia, Simulazione e di Ruolo",
+			publisherInfoDesc: "Siamo uno sviluppatore di giochi strategici e tattici profondi provenienti da tutto il mondo. Il nostro obiettivo è creare i giochi che ami e farteli avere.",
+			newsletterTitle: "Prenota il tuo Posto nel Beta Test",
+			newsletterSubtitle: "Iscriviti alla nostra mailing list per ricevere le ultime notizie sui nostri giochi, eventi, giocare al nostro gioco in playtest prima di chiunque altro e altro ancora.",
+			newsletterPlaceholder: "la.tua.email@esempio.com",
+			newsletterButton: "Iscriviti",
+			newsletterSuccessTitle: "Grazie!",
+			newsletterSuccessMessage: "Ti sei iscritto con successo alla nostra mailing list.",
+			footerPressEmail: "Stampa",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editore",
+			footerDeveloperEmail: "Sviluppatore",
+			footerGeneralEmail: "Contatto",
+			footerInfluencers: "Influencer",
+			footerJobs: "Lavori Freelance",
+			footerPress: "Stampa",
+			footerWikis: "Wiki Ufficiali dei Giochi",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Tutti i diritti riservati.",
+			footerPrivacyPolicy: "Informativa sulla privacy",
+			newsletterLanguage: "Lingua della newsletter",
+			newsletterPrivacyPolicy: "Puoi annullare l'iscrizione in qualsiasi momento. Per maggiori dettagli, consulta la nostra Informativa sulla privacy in fondo a questa pagina web.",
+			newsletterDefaultLanguage: "Italian",//Target language name in that language
+		},
+		'cs': {
+			name: "Čeština",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "My ❤️ strategické hry",
+			heroSubtitle: "Emptyhanded&Whitewolf je vývojář her, které se vyznačují strategickou a taktickou hloubkou.",
+			videoTitle: "Sledujte Emptyhanded&Whitewolf Direct!",
+			availableOn: "Přidat do seznamu přání na",
+			screenshotsTitle: "Snímky obrazovky",
+			publisherInfoTitle: "Vývojář Zamilovaný do Strategických, Simulačních a Rolových Her",
+			publisherInfoDesc: "Jsme vývojář hlubokých strategických a taktických her z celého světa. Naším cílem je vytvářet hry, které milujete, a přinášet vám je.",
+			newsletterTitle: "Rezervujte Si Místo V Beta Testu",
+			newsletterSubtitle: "Připojte se k naší mailing listu a získejte nejnovější zprávy o našich hrách, událostech, zahrajte si naši hru v předběžném testování dříve než kdokoli jiný a další.",
+			newsletterPlaceholder: "vas.email@priklad.com",
+			newsletterButton: "Odebírat",
+			newsletterSuccessTitle: "Děkujeme!",
+			newsletterSuccessMessage: "Úspěšně jste se připojili k našemu mailing listu.",
+			footerPressEmail: "Tisk",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Vydavatel",
+			footerDeveloperEmail: "Vývojář",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influenceři",
+			footerJobs: "Práce na Volné Noze",
+			footerPress: "Tisk",
+			footerWikis: "Oficiální Wiki Hry",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Všechna práva vyhrazena.",
+			footerPrivacyPolicy: "Zásady ochrany osobních údajů",
+			newsletterLanguage: "Jazyk newsletteru",
+			newsletterPrivacyPolicy: "Odběr můžete kdykoli zrušit. Další podrobnosti naleznete v našich Zásadách ochrany osobních údajů v dolní části této webové stránky.",
+			newsletterDefaultLanguage: "Czech",//Target language name in that language
+		},
+		'hu': {
+			name: "Magyar",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Mi ❤️ a stratégiai játékokat",
+			heroSubtitle: "Az Emptyhanded&Whitewolf egy olyan játékfejlesztő, amely stratégiai és taktikai mélységgel rendelkező játékokat készít.",
+			videoTitle: "Nézze meg az Emptyhanded&Whitewolf Directet!",
+			availableOn: "Kívánságlistára",
+			screenshotsTitle: "Képernyőképek",
+			publisherInfoTitle: "Fejlesztő, Aki Szerelmes a Stratégiai, Szimulációs és Szerepjátékokba",
+			publisherInfoDesc: "Mély stratégiai és taktikai játékok fejlesztője vagyunk a világ minden tájáról. Célunk, hogy megalkossuk azokat a játékokat, amiket szeretsz, és eljuttassuk hozzád.",
+			newsletterTitle: "Foglalja le a Helyét a Béta Tesztben",
+			newsletterSubtitle: "Csatlakozzon levelezőlistánkhoz, hogy megkapja a legfrissebb híreket játékainkról, eseményekről, játszhasson a játékunk tesztverziójával mindenki más előtt, és még sok minden másról.",
+			newsletterPlaceholder: "az.email.cimed@pelda.com",
+			newsletterButton: "Feliratkozás",
+			newsletterSuccessTitle: "Köszönjük!",
+			newsletterSuccessMessage: "Sikeresen csatlakozott a levelezőlistánkhoz.",
+			footerPressEmail: "Sajtó",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Kiadó",
+			footerDeveloperEmail: "Fejlesztő",
+			footerGeneralEmail: "Kapcsolat",
+			footerInfluencers: "Influencer",
+			footerJobs: "Szabadúszó Állások",
+			footerPress: "Sajtó",
+			footerWikis: "Hivatalos Játék Wikik",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Minden jog fenntartva.",
+			footerPrivacyPolicy: "Adatvédelmi irányelvek",
+			newsletterLanguage: "Hírlevél nyelve",
+			newsletterPrivacyPolicy: "Bármikor leiratkozhat. További részletekért tekintse meg az Adatvédelmi irányelveket ezen a weboldalon, legalul.",
+			newsletterDefaultLanguage: "Hungarian",//Target language name in that language
+		},
+		'nl': {
+			name: "Nederlands",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Wij ❤️ strategie spellen",
+			heroSubtitle: "Emptyhanded&Whitewolf is een ontwikkelaar van games met strategische en tactische diepgang.",
+			videoTitle: "Bekijk de Emptyhanded&Whitewolf Direct!",
+			availableOn: "Zet op Verlanglijst op",
+			screenshotsTitle: "Schermafbeeldingen",
+			publisherInfoTitle: "Ontwikkelaar Verliefd op Strategie-, Simulatie- en Rollenspellen",
+			publisherInfoDesc: "Wij zijn een ontwikkelaar van diepgaande strategische en tactische spellen van over de hele wereld. Ons doel is om de spellen waar je van houdt te creëren en deze naar jou toe te brengen.",
+			newsletterTitle: "Reserveer Je Plek In De Beta Test",
+			newsletterSubtitle: "Word lid van onze mailinglijst voor het laatste nieuws over onze games, evenementen, speel onze game in playtest vóór alle anderen en meer.",
+			newsletterPlaceholder: "jouw.email@voorbeeld.com",
+			newsletterButton: "Abonneren",
+			newsletterSuccessTitle: "Bedankt!",
+			newsletterSuccessMessage: "Je bent succesvol lid geworden van onze mailinglijst.",
+			footerPressEmail: "Pers",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Uitgever",
+			footerDeveloperEmail: "Ontwikkelaar",
+			footerGeneralEmail: "Contact",
+			footerInfluencers: "Influencer",
+			footerJobs: "Freelance Banen",
+			footerPress: "Pers",
+			footerWikis: "Officiële Game Wiki's",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle rechten voorbehouden.",
+			footerPrivacyPolicy: "Privacybeleid",
+			newsletterLanguage: "Nieuwsbrief taal",
+			newsletterPrivacyPolicy: "U kunt zich op elk moment uitschrijven. Voor meer details, bekijk ons Privacybeleid onderaan deze webpagina.",
+			newsletterDefaultLanguage: "Dutch",//Target language name in that language
+		},
+		'sv': {
+			name: "Svenska",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Vi ❤️ strategispel",
+			heroSubtitle: "Emptyhanded&Whitewolf är en utvecklare av spel med strategiskt och taktiskt djup.",
+			videoTitle: "Se Emptyhanded&Whitewolf Direct!",
+			availableOn: "Önskelista på",
+			screenshotsTitle: "Skärmdumpar",
+			publisherInfoTitle: "Utvecklare Förälskad i Strategi-, Simulerings- och Rollspel",
+			publisherInfoDesc: "Vi är en utvecklare av djupa strategiska och taktiska spel från hela världen. Vårt mål är att skapa spelen du älskar och att ge dig dessa spel.",
+			newsletterTitle: "Reservera Din Plats I Beta Testet",
+			newsletterSubtitle: "Gå med i vår e-postlista för att få de senaste nyheterna om våra spel, evenemang, spela vårt spel i playtest före alla andra och mer.",
+			newsletterPlaceholder: "din.email@exempel.com",
+			newsletterButton: "Prenumerera",
+			newsletterSuccessTitle: "Tack!",
+			newsletterSuccessMessage: "Du har lyckats gå med i vår e-postlista.",
+			footerPressEmail: "Press",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Utgivare",
+			footerDeveloperEmail: "Utvecklare",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influencer",
+			footerJobs: "Frilansjobb",
+			footerPress: "Press",
+			footerWikis: "Officiella Spelwikier",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alla rättigheter förbehållna.",
+			footerPrivacyPolicy: "Integritetspolicy",
+			newsletterLanguage: "Nyhetsbrevsspråk",
+			newsletterPrivacyPolicy: "Du kan avregistrera dig när som helst. För mer information, läs vår Integritetspolicy längst ner på denna webbsida.",
+			newsletterDefaultLanguage: "Swedish",//Target language name in that language
+		},
+		'da': {
+			name: "Dansk",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Vi ❤️ strategispil",
+			heroSubtitle: "Emptyhanded&Whitewolf er en udvikler af spil med strategisk og taktisk dybde.",
+			videoTitle: "Se Emptyhanded&Whitewolf Direct!",
+			availableOn: "Ønskeliste på",
+			screenshotsTitle: "Skærmbilleder",
+			publisherInfoTitle: "Udvikler Forelsket i Strategi-, Simulations- og Rollespil",
+			publisherInfoDesc: "Vi er en udvikler af dybe strategiske og taktiske spil fra hele verden. Vores mål er at skabe de spil, du elsker, og bringe disse spil til dig.",
+			newsletterTitle: "Reserver Din Plads I Beta Test",
+			newsletterSubtitle: "Tilmeld dig vores mailingliste for at få de seneste nyheder om vores spil, begivenheder, spille vores spil i playtest før alle andre og mere.",
+			newsletterPlaceholder: "din.email@eksempel.com",
+			newsletterButton: "Abonner",
+			newsletterSuccessTitle: "Tak!",
+			newsletterSuccessMessage: "Du er blevet tilmeldt vores mailingliste.",
+			footerPressEmail: "Presse",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Udgiver",
+			footerDeveloperEmail: "Udvikler",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influencer",
+			footerJobs: "Freelance Jobs",
+			footerPress: "Presse",
+			footerWikis: "Officielle Spil Wikis",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle rettigheder forbeholdes.",
+			footerPrivacyPolicy: "Privatlivspolitik",
+			newsletterLanguage: "Nyhedsbrevssprog",
+			newsletterPrivacyPolicy: "Du kan afmelde dig når som helst. For flere detaljer, se vores Privatlivspolitik nederst på denne webside.",
+			newsletterDefaultLanguage: "Danish",//Target language name in that language
+		},
+		'fi': {
+			name: "Suomi",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Me ❤️ strategiapelejä",
+			heroSubtitle: "Emptyhanded&Whitewolf on kehittäjä peleille, joissa on strategista ja taktista syvyyttä.",
+			videoTitle: "Katso Emptyhanded&Whitewolf Direct!",
+			availableOn: "Toivelistaan",
+			screenshotsTitle: "Kuvakaappaukset",
+			publisherInfoTitle: "Strategia-, Simulaatio- ja Roolipeleihin Rakastunut Kehittäjä",
+			publisherInfoDesc: "Olemme syvällisten strategisten ja taktisten pelien kehittäjä eri puolilta maailmaa. Tavoitteemme on luoda rakastamasi pelit ja tuoda ne sinulle.",
+			newsletterTitle: "Varaa Paikkasi Beta Testissä",
+			newsletterSubtitle: "Liity postituslistallemme saadaksesi viimeisimmät uutiset peleistämme, tapahtumista, pelaa peliämme playtestissä ennen muita ja paljon muuta.",
+			newsletterPlaceholder: "sinun.sahkoposti@esimerkki.com",
+			newsletterButton: "Tilaa",
+			newsletterSuccessTitle: "Kiitos!",
+			newsletterSuccessMessage: "Olet liittynyt postituslistallemme onnistuneesti.",
+			footerPressEmail: "Lehdistö",
+			footerStreamerEmail: "Striimaaja",
+			footerPublisherEmail: "Julkaisija",
+			footerDeveloperEmail: "Kehittäjä",
+			footerGeneralEmail: "Yhteystiedot",
+			footerInfluencers: "Vaikuttaja",
+			footerJobs: "Freelance Työt",
+			footerPress: "Lehdistö",
+			footerWikis: "Viralliset Pelioppaat",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Kaikki oikeudet pidätetään.",
+			footerPrivacyPolicy: "Tietosuojakäytäntö",
+			newsletterLanguage: "Uutiskirjeen kieli",
+			newsletterPrivacyPolicy: "Voit peruuttaa tilauksen milloin tahansa. Lisätietoja saat verkkosivun alaosassa olevasta tietosuojakäytännöstämme.",
+			newsletterDefaultLanguage: "Finnish",//Target language name in that language
+		},
+		'ro': {
+			name: "Română",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Noi ❤️ jocurile de strategie",
+			heroSubtitle: "Emptyhanded&Whitewolf este un dezvoltator de jocuri care se remarcă prin profunzimea strategică și tactică.",
+			videoTitle: "Urmăriți Emptyhanded&Whitewolf Direct!",
+			availableOn: "Adaugă pe Lista de Dorințe pe",
+			screenshotsTitle: "Capturi de ecran",
+			publisherInfoTitle: "Dezvoltator Îndrăgostit de Jocuri de Strategie, Simulare și Rol",
+			publisherInfoDesc: "Suntem un dezvoltator de jocuri strategice și tactice profunde din întreaga lume. Scopul nostru este să creăm jocurile pe care le iubiți și să vi le oferim.",
+			newsletterTitle: "Rezervă-ți Locul În Testarea Beta",
+			newsletterSubtitle: "Alătură-te listei noastre de corespondență pentru a primi cele mai recente știri despre jocurile noastre, evenimente, joacă jocul nostru în playtest înaintea tuturor și multe altele.",
+			newsletterPlaceholder: "adresa.ta.de.email@exemplu.com",
+			newsletterButton: "Abonează-te",
+			newsletterSuccessTitle: "Mulțumim!",
+			newsletterSuccessMessage: "Te-ai alăturat cu succes listei noastre de corespondență.",
+			footerPressEmail: "Presă",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Editor",
+			footerDeveloperEmail: "Dezvoltator",
+			footerGeneralEmail: "Contact",
+			footerInfluencers: "Influencer",
+			footerJobs: "Locuri de Muncă Freelance",
+			footerPress: "Presă",
+			footerWikis: "Wiki-uri Oficiale ale Jocurilor",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Toate drepturile rezervate.",
+			footerPrivacyPolicy: "Politica de confidențialitate",
+			newsletterLanguage: "Limba buletinului informativ",
+			newsletterPrivacyPolicy: "Vă puteți dezabona oricând. Pentru mai multe detalii, consultați Politica noastră de confidențialitate din partea de jos a acestei pagini web.",
+			newsletterDefaultLanguage: "Romanian",//Target language name in that language
+		},
+		'no': {
+			name: "Norsk",//Target language name in that language
+			fontClass: "font-en", // Font for English
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Vi ❤️ strategispill",
+			heroSubtitle: "Emptyhanded&Whitewolf er en utvikler av spill med strategisk og taktisk dybde.",
+			videoTitle: "Se Emptyhanded&Whitewolf Direct!",
+			availableOn: "Ønskeliste på",
+			screenshotsTitle: "Skjermbilder",
+			publisherInfoTitle: "Utvikler Forelsket i Strategi-, Simulasjons- og Rollespill",
+			publisherInfoDesc: "Vi er en utvikler av dype strategiske og taktiske spill fra hele verden. Målet vårt er å skape spillene du elsker, og å bringe disse spillene til deg.",
+			newsletterTitle: "Reserver Plassen Din I Beta Test",
+			newsletterSubtitle: "Bli med på vår e-postliste for å få de siste nyhetene om spillene våre, arrangementer, spill spillet vårt i playtest før alle andre og mer.",
+			newsletterPlaceholder: "din.epost@eksempel.com",
+			newsletterButton: "Abonner",
+			newsletterSuccessTitle: "Takk!",
+			newsletterSuccessMessage: "Du har lykkes med å bli med på vår e-postliste.",
+			footerPressEmail: "Presse",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Utgiver",
+			footerDeveloperEmail: "Utvikler",
+			footerGeneralEmail: "Kontakt",
+			footerInfluencers: "Influencer",
+			footerJobs: "Frilansjobber",
+			footerPress: "Presse",
+			footerWikis: "Offisielle Spillwikier",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Alle rettigheter forbeholdt.",
+			footerPrivacyPolicy: "Personvernregler",
+			newsletterLanguage: "Nyhetsbrev-språk",
+			newsletterPrivacyPolicy: "Du kan når som helst melde deg av. For mer informasjon, se våre personvernregler nederst på denne nettsiden.",
+			newsletterDefaultLanguage: "Norwegian",//Target language name in that language
+		},
+		'el': {
+			name: "Ελληνικά",//Target language name in that language
+			fontClass: "font-zh-CN", // Font for Chinese
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Αγαπάμε ❤️ τα παιχνίδια στρατηγικής",
+			heroSubtitle: "Η Emptyhanded&Whitewolf είναι ένας προγραμματιστής παιχνιδιών που διαθέτουν στρατηγικό και τακτικό βάθος.",
+			videoTitle: "Παρακολουθήστε το Emptyhanded&Whitewolf Direct!",
+			availableOn: "Λίστα Επιθυμιών στο",
+			screenshotsTitle: "Στιγμιότυπα οθόνης",
+			publisherInfoTitle: "Προγραμματιστής Ερωτευμένος με τα Παιχνίδια Στρατηγικής, Προσομοίωσης και Ρόλων",
+			publisherInfoDesc: "Είμαστε ένας προγραμματιστής παιχνιδιών βαθιάς στρατηγικής και τακτικής από όλο τον κόσμο. Στόχος μας είναι να δημιουργήσουμε τα παιχνίδια που αγαπάτε και να σας τα προσφέρουμε.",
+			newsletterTitle: "Κρατήστε τη Θέση σας στο Beta Test",
+			newsletterSubtitle: "Εγγραφείτε στη λίστα αλληλογραφίας μας για να λαμβάνετε τα τελευταία νέα σχετικά με τα παιχνίδια μας, τις εκδηλώσεις, να παίξετε το παιχνίδι μας σε δοκιμή πριν από όλους τους άλλους και πολλά άλλα.",
+			newsletterPlaceholder: "το.email.σας@παραδειγμα.com",
+			newsletterButton: "Εγγραφή",
+			newsletterSuccessTitle: "Ευχαριστούμε!",
+			newsletterSuccessMessage: "Έχετε εγγραφεί επιτυχώς στη λίστα αλληλογραφίας μας.",
+			footerPressEmail: "Τύπος",
+			footerStreamerEmail: "Streamer",
+			footerPublisherEmail: "Εκδότης",
+			footerDeveloperEmail: "Προγραμματιστής",
+			footerGeneralEmail: "Επικοινωνία",
+			footerInfluencers: "Influencer",
+			footerJobs: "Εργασίες Freelance",
+			footerPress: "Τύπος",
+			footerWikis: "Επίσημα Wiki Παιχνιδιών",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Με επιφύλαξη παντός δικαιώματος.",
+			footerPrivacyPolicy: "Πολιτική Απορρήτου",
+			newsletterLanguage: "Γλώσσα ενημερωτικού δελτίου",
+			newsletterPrivacyPolicy: "Μπορείτε να διαγραφείτε ανά πάσα στιγμή. Για περισσότερες λεπτομέρειες, ανατρέξτε στην Πολιτική Απορρήτου μας στο κάτω μέρος αυτής της ιστοσελίδας.",
+			newsletterDefaultLanguage: "Greek",//Target language name in that language
+		},
+		'bg': {
+			name: "Български",//Target language name in that language
+			fontClass: "font-ru", // Font for Russian
+			developerName: "Emptyhanded & Whitewolf",
+			heroTitle: "Ние ❤️ стратегическите игри",
+			heroSubtitle: "Emptyhanded&Whitewolf е разработчик на игри, които се отличават със стратегическа и тактическа дълбочина.",
+			videoTitle: "Гледайте Emptyhanded&Whitewolf Direct!",
+			availableOn: "Списък с желания на",
+			screenshotsTitle: "Екранни снимки",
+			publisherInfoTitle: "Разработчик, Влюбен в Игрите Стратегии, Симулации и Ролеви Игри",
+			publisherInfoDesc: "Ние сме разработчик на дълбоки стратегически и тактически игри от цял ​​свят. Нашата цел е да създаваме игрите, които обичате, и да ви ги предоставяме.",
+			newsletterTitle: "Резервирайте Своето Място В Бета Теста",
+			newsletterSubtitle: "Присъединете се към нашия пощенски списък, за да получавате последните новини за нашите игри, събития, да играете нашата игра в плейтест преди всички останали и други.",
+			newsletterPlaceholder: "вашият.имейл@пример.com",
+			newsletterButton: "Абониране",
+			newsletterSuccessTitle: "Благодарим Ви!",
+			newsletterSuccessMessage: "Успешно се присъединихте към нашия пощенски списък.",
+			footerPressEmail: "Преса",
+			footerStreamerEmail: "Стриймър",
+			footerPublisherEmail: "Издател",
+			footerDeveloperEmail: "Разработчик",
+			footerGeneralEmail: "Контакт",
+			footerInfluencers: "Инфлуенсър",
+			footerJobs: "Работа на Свободна Практика",
+			footerPress: "Преса",
+			footerWikis: "Официални Уикита на Играта",
+			footerCopyright: "© 2025 Emptyhanded&Whitewolf. Всички права запазени.",
+			footerPrivacyPolicy: "Политика за поверителност",
+			newsletterLanguage: "Език на бюлетина",
+			newsletterPrivacyPolicy: "Можете да се отпишете по всяко време. За повече подробности прегледайте нашата Политика за поверителност в долната част на тази уеб страница.",
+			newsletterDefaultLanguage: "Bulgarian",//Target language name in that language
 		},
 	};
 
@@ -1470,6 +3042,8 @@
             languageDropdown.classList.add('hidden');
         });
         languageDropdown.appendChild(link);
+		// Assuming you have a reference to your languageDropdown element
+		languageDropdown.classList.add('max-h-64', 'overflow-y-auto');
     }
 
     const setLanguage = (lang) => {
