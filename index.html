@@ -212,7 +212,6 @@
         </section>
 
 <!-- Newsletter section -->
-
 <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1760346");</style>
     <style type="text/css">
     /* LOADER */
@@ -325,7 +324,7 @@
       }
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-        color: #76757e;
+        color: #BBBBBB;
         font-size: 20px;
         font-weight: 400;
         line-height: 26px;
@@ -336,7 +335,7 @@
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
-        color: #76757e;
+        color: #BBBBBB;
         font-size: 20px;
       }
       #mlb2-30659685.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
@@ -436,7 +435,6 @@
         border-radius: 4px !important;
         border-style: solid !important;
         border-width: 0px !important;
-
         font-size: 14px !important;
         height: auto;
         line-height: 21px !important;
@@ -921,7 +919,6 @@
     </style>
 
 
-      
     <div id="mlb2-30659685" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-30659685">
       <div class="ml-form-align-center ">
         <div class="ml-form-embedWrapper embedForm">
@@ -933,8 +930,8 @@
 
             <div class="ml-form-embedContent" style=" ">
               
-                <h4 class=" font-heading" data-key="newsletterTitle">Reserve Your Spot In Beta Test</h4>
-                <p class="mt-4 text-gray-400" data-key="newsletterSubtitle" style="color: #BBBBBB">Join our mailing list to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.</p>
+                <h4 class="font-heading" data-key="newsletterTitle">Reserve Your Spot In Beta Test</h4>
+                <p data-key="newsletterSubtitle">Join our mailing list to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.</p>
               
             </div>
 
@@ -953,47 +950,15 @@
                       <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
                       <!-- /input -->
 
-                      <!-- textarea -->
-                      
-                      <!-- /textarea -->
-
-                      <!-- select -->
-                      
-                      <!-- /select -->
-
-                      <!-- checkboxes -->
-            
-            <!-- /checkboxes -->
-
-                      <!-- radio -->
-                      
-                      <!-- /radio -->
-
-                      <!-- countries -->
-                      
-                      <!-- /countries -->
-
-
-
-
 
                     </div>
-                  </div><div class="ml-form-fieldRow ">
-                    <div class="ml-field-group ml-field-language">
+                  </div><div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-language ml-validate-required">
 
-                      <label data-key="newsletterLanguage">Newsletter Language </label>
-
-
-                      <!-- input -->
-                      
-                      <!-- /input -->
-
-                      <!-- textarea -->
-                      
-                      <!-- /textarea -->
+                      <label data-key="newsletterLanguage">Newsletter Language</label>
 
                       <!-- select -->
-                      <select class="custom-select" name="fields[language]" aria-label="language">
+                      <select class="custom-select" name="fields[language]" aria-label="language" aria-required="true">
                         <option value="" >-</option>
                         <!-- Visible if current or any next has value -->
                         <option>
@@ -1118,57 +1083,21 @@
                       </select>
                       <!-- /select -->
 
-                      <!-- checkboxes -->
-            
-            <!-- /checkboxes -->
-
-                      <!-- radio -->
-                      
-                      <!-- /radio -->
-
-                      <!-- countries -->
-                      
-                      <!-- /countries -->
-
-
-
-
-
                     </div>
                   </div>
-
-              <!-- Language Disclaimer 
-              <div class="ml-form-embedPermissions " style="">
-                <div class="ml-form-embedPermissionsContent horizontal language-disclaimer ">
-                          <p data-key="languageDisclaimer" style="color: #BBBBBB;" >Note: Most languages are AI translated with the exception of English and Chinese. Japanses will be AI translated with manual review.</p>
-                </div>
+                
               </div>
-               /Language Disclaimer -->
+
 
               <!-- Privacy policy -->
               <div class="ml-form-embedPermissions" style="">
                 <div class="ml-form-embedPermissionsContent horizontal privacy-policy">
-
-                  
-
-                  
-                          <p data-key="newsletterPrivacyPolicy" style="color: #BBBBBB;">You can unsubscribe anytime. For more details, review our Privacy Policy at the bottom of this webpage.</p>
-                  
-
+            
+                          <p  style="color: #AAAAAA" data-key="newsletterPrivacyPolicy">You can unsubscribe anytime. For more details, review our Privacy Policy.</p>
                   
                 </div>
               </div>
               <!-- /Privacy policy -->
-
-              
-
-              
-
-              
-
-
-
-
 
 
               
@@ -1193,10 +1122,8 @@
 
             <div class="ml-form-successContent">
               
-                <h4>Thank you!</h4>
-                
-                  <p>You have successfully joined our subscriber list.</p>
-                
+                <h4 data-key="newsletterSuccessTitle">Confirmation email sent</h4>
+                <p data-key="newsletterSuccessMessage">We have sent you an email to verify your address, you will be subscribed once you clicked the confirmation button in that email.&nbsp;<br>Don't forget to check the spam if you did not see it within 5 mins.&nbsp;</p>
               
             </div>
 
@@ -1301,23 +1228,10 @@
 
 
   
-  
-  <script>
-    function ml_webform_success_30659685() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-30659685 .row-success').show();
-      $('.ml-subscribe-form-30659685 .row-form').hide();
-    }
-      </script>
-  
-  
-      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-        <script>
-            fetch("https://assets.mailerlite.com/jsonp/1786489/forms/165049771858330823/takel")
-        </script>
+
 
     </main>
-	*/
+	
     
 	<!-- Footer -->
 	<footer class="bg-black text-gray-300">
@@ -1385,8 +1299,8 @@
 			newsletterSubtitle: "Join our mailing list to get the latest news about our games, events, play our game in playtest ahead of everybody else, and more.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "Subscribe",
-			newsletterSuccessTitle: "Thank you!",
-			newsletterSuccessMessage: "You have successfully joined our mailing list.",
+			newsletterSuccessTitle: "Verification email sent",
+			newsletterSuccessMessage: "We have sent you an email to verify your address, you will be subscribed once you clicked the confirmation button in that email.&nbsp;<br>Don't forget to check the spam if you did not see it within 5 mins.",
 			footerPressEmail: "Press",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Publisher",
@@ -1417,6 +1331,8 @@
 			newsletterSubtitle: "加入我们的邮件组，获取关于游戏的最新消息，并抢先参加游戏测试。",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "订阅",
+			newsletterSuccessTitle: "验证邮件已发送",
+			newsletterSuccessMessage: "我们已向您的邮箱发送了一封验证邮件，请点击邮件中的确认按钮以完成订阅。&nbsp;<br>如果您在5分钟内未收到邮件，请检查垃圾邮件箱。",
 			footerPressEmail: "媒体",
 			footerStreamerEmail: "主播",
 			footerPublisherEmail: "发行",
@@ -1447,6 +1363,8 @@
 			newsletterSubtitle: "訂閲我們的電子報，獲取最新遊戲消息、活動資訊，並搶先參加遊戲測試。",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "訂閱",
+			newsletterSuccessTitle: "驗證電子郵件已發送",
+			newsletterSuccessMessage: "我們已向您的電子郵件地址發送了一封驗證郵件，請點擊該郵件中的確認按鈕以完成訂閱。&nbsp;<br>如果您在 5 分鐘內沒有看到郵件，請檢查垃圾郵件。",
 			footerPressEmail: "媒體",
 			footerStreamerEmail: "實況主",
 			footerPublisherEmail: "發行",
@@ -1477,6 +1395,8 @@
 			newsletterSubtitle: "뉴스레터를 구독해 최신 게임, 이벤트 소식과 누구보다 먼저 플레이테스트에 참여하세요.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "구독",
+			newsletterSuccessTitle: "인증 이메일 전송됨",
+			newsletterSuccessMessage: "회원님의 주소를 확인하기 위한 이메일을 보냈습니다. 해당 이메일의 확인 버튼을 클릭하시면 구독이 완료됩니다.&nbsp;<br>5분 이내에 이메일을 받지 못했다면 스팸함을 확인해 주세요.",
 			footerPressEmail: "언론",
 			footerStreamerEmail: "스트리머",
 			footerPublisherEmail: "퍼블리셔",
@@ -1507,6 +1427,8 @@
 			newsletterSubtitle: "ニュースレターに登録して、最新のゲーム情報、イベント情報を受け取り、他の人より早くテストに参加しましょう。",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "登録",
+			newsletterSuccessTitle: "確認メールを送信しました",
+			newsletterSuccessMessage: "ご登録いただいたメールアドレス宛に確認メールを送信しました。メール内の確認ボタンをクリックすると購読が完了します。&nbsp;<br>5分以内に届かない場合は、迷惑メールフォルダをご確認ください。",
 			footerPressEmail: "プレス",
 			footerStreamerEmail: "ストリーマー",
 			footerPublisherEmail: "パブリッシャー",
@@ -1537,6 +1459,8 @@
 			newsletterSubtitle: "Đăng ký bản tin để nhận tin tức mới nhất về trò chơi, sự kiện, chơi thử game trước mọi người và nhiều hơn nữa.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "Đăng ký",
+			newsletterSuccessTitle: "Đã gửi email xác minh",
+			newsletterSuccessMessage: "Chúng tôi đã gửi cho bạn một email để xác minh địa chỉ của bạn, bạn sẽ được đăng ký khi nhấp vào nút xác nhận trong email đó.&nbsp;<br>Đừng quên kiểm tra thư rác nếu bạn không thấy nó trong vòng 5 phút.",
 			footerPressEmail: "Báo chí",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Nhà phát hành",
@@ -1567,6 +1491,8 @@
 			newsletterSubtitle: "Bergabunglah dengan buletin kami untuk mendapatkan berita terbaru tentang game, acara, bermain game lebih awal, dan banyak lagi.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "Berlangganan",
+			newsletterSuccessTitle: "Email verifikasi terkirim",
+			newsletterSuccessMessage: "Kami telah mengirimkan email kepada Anda untuk memverifikasi alamat Anda, Anda akan berlangganan setelah Anda mengklik tombol konfirmasi di email tersebut.&nbsp;<br>Jangan lupa untuk memeriksa spam jika Anda tidak melihatnya dalam 5 menit.",
 			footerPressEmail: "Pers",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Penerbit",
@@ -1597,6 +1523,8 @@
 			newsletterSubtitle: "สมัครจดหมายข่าวเพื่อรับข่าวสารล่าสุดเกี่ยวกับเกม กิจกรรม และทดลองเล่นเกมก่อนใคร",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "สมัครสมาชิก",
+			newsletterSuccessTitle: "ส่งอีเมลยืนยันแล้ว",
+			newsletterSuccessMessage: "เราได้ส่งอีเมลเพื่อยืนยันที่อยู่ของคุณแล้ว คุณจะได้รับการสมัครสมาชิกเมื่อคลิกปุ่มยืนยันในอีเมลนั้น&nbsp;<br>อย่าลืมตรวจสอบสแปม หากคุณไม่เห็นภายใน 5 นาที",
 			footerPressEmail: "สื่อ",
 			footerStreamerEmail: "สตรีมเมอร์",
 			footerPublisherEmail: "ผู้จัดจำหน่าย",
@@ -1627,6 +1555,8 @@
 			newsletterSubtitle: "Подпишитесь на рассылку, чтобы получать новости об играх, событиях, участвовать в плейтестах раньше других и многое другое.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "Подписаться",
+			newsletterSuccessTitle: "Письмо для подтверждения отправлено",
+			newsletterSuccessMessage: "Мы отправили вам письмо для подтверждения вашего адреса. Вы будете подписаны, как только нажмете кнопку подтверждения в этом письме.&nbsp;<br>Не забудьте проверить папку \"Спам\", если не увидите его в течение 5 минут.",
 			footerPressEmail: "Пресса",
 			footerStreamerEmail: "Стример",
 			footerPublisherEmail: "Издатель",
@@ -1657,6 +1587,8 @@
 			newsletterSubtitle: "Melde dich für unseren Newsletter an, um die neuesten Nachrichten zu Spielen, Events, frühen Spieltests und mehr zu erhalten.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "Abonnieren",
+			newsletterSuccessTitle: "Bestätigungs-E-Mail gesendet",
+			newsletterSuccessMessage: "Wir haben Ihnen eine E-Mail zur Bestätigung Ihrer Adresse gesendet. Sie werden abonniert, sobald Sie auf den Bestätigungs-Button in dieser E-Mail geklickt haben.&nbsp;<br>Vergessen Sie nicht, den Spam-Ordner zu überprüfen, falls Sie sie nicht innerhalb von 5 Minuten sehen.",
 			footerPressEmail: "Presse",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Publisher",
@@ -1689,6 +1621,8 @@
 			newsletterButton: "Suscribirse",
 			newsletterSuccessTitle: "¡Gracias!",
 			newsletterSuccessMessage: "Te has unido correctamente a nuestra lista de correo.",
+			newsletterSuccessTitle: "Correo de verificación enviado",
+			newsletterSuccessMessage: "Le hemos enviado un correo electrónico para verificar su dirección. Se suscribirá una vez que haga clic en el botón de confirmación en ese correo.&nbsp;<br>No olvide revisar la carpeta de spam si no lo ve en 5 minutos.",
 			footerPressEmail: "Prensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editor",
@@ -1721,6 +1655,8 @@
 			newsletterButton: "Suscribirse",
 			newsletterSuccessTitle: "¡Gracias!",
 			newsletterSuccessMessage: "Te has unido exitosamente a nuestra lista de correo.",
+			newsletterSuccessTitle: "Correo de verificación enviado",
+			newsletterSuccessMessage: "Le hemos enviado un correo electrónico para verificar su dirección. Se suscribirá una vez que haga clic en el botón de confirmación en ese correo.&nbsp;<br>No olvide revisar la carpeta de spam si no lo ve en 5 minutos.",
 			footerPressEmail: "Prensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editor",
@@ -1751,6 +1687,8 @@
 			newsletterSubtitle: "Inscrivez-vous à notre newsletter pour recevoir les dernières nouvelles sur nos jeux, événements, tester nos jeux avant tout le monde, et plus encore.",
 			newsletterPlaceholder: "your.email@example.com",
 			newsletterButton: "S’abonner",
+			newsletterSuccessTitle: "E-mail de vérification envoyé",
+			newsletterSuccessMessage: "Nous vous avons envoyé un e-mail pour vérifier votre adresse. Votre abonnement sera actif dès que vous aurez cliqué sur le bouton de confirmation dans cet e-mail.&nbsp;<br>N'oubliez pas de vérifier les spams si vous ne le voyez pas dans les 5 minutes.",
 			footerPressEmail: "Presse",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Éditeur",
@@ -1781,8 +1719,8 @@
 			newsletterSubtitle: "Junte-se à nossa lista de e-mail para receber as últimas notícias sobre nossos jogos e eventos, jogar nosso jogo em testes antes de todo mundo e muito mais.",
 			newsletterPlaceholder: "seu.email@exemplo.com",
 			newsletterButton: "Assinar",
-			newsletterSuccessTitle: "Obrigado!",
-			newsletterSuccessMessage: "Você se juntou com sucesso à nossa lista de e-mail.",
+			newsletterSuccessTitle: "E-mail de verificação enviado",
+			newsletterSuccessMessage: "Enviamos um e-mail para verificar seu endereço. Você será inscrito assim que clicar no botão de confirmação neste e-mail.&nbsp;<br>Não se esqueça de verificar a caixa de spam se não o vir em 5 minutos.",
 			footerPressEmail: "Imprensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editora",
@@ -1813,8 +1751,8 @@
 			newsletterSubtitle: "Junte-se à nossa lista de correio para receber as últimas notícias sobre os nossos jogos e eventos, jogar os nossos jogos em testes antes de toda a gente e muito mais.",
 			newsletterPlaceholder: "o.seu.email@exemplo.com",
 			newsletterButton: "Subscrever",
-			newsletterSuccessTitle: "Obrigado!",
-			newsletterSuccessMessage: "Juntou-se com sucesso à nossa lista de correio.",
+			newsletterSuccessTitle: "E-mail de verificação enviado",
+			newsletterSuccessMessage: "Enviámos-lhe um e-mail para verificar o seu endereço. Ficará subscrito assim que clicar no botão de confirmação nesse e-mail.&nbsp;<br>Não se esqueça de verificar o spam se não o vir no prazo de 5 minutos.",
 			footerPressEmail: "Imprensa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editora",
@@ -1845,6 +1783,8 @@
 			newsletterSubtitle: "Oyunlarımız, etkinliklerimiz, oyunlarımızı herkesten önce test etme fırsatı ve daha fazlası hakkında en son haberleri almak için bültenimize katılın.",
 			newsletterPlaceholder: "senin.email@example.com",
 			newsletterButton: "Abone Ol",
+			newsletterSuccessTitle: "Doğrulama e-postası gönderildi",
+			newsletterSuccessMessage: "Adresinizi doğrulamak için size bir e-posta gönderdik, bu e-postadaki onay butonuna tıkladığınızda abone olacaksınız.&nbsp;<br>5 dakika içinde görmezseniz spam kutunuzu kontrol etmeyi unutmayın.",
 			footerPressEmail: "Basın",
 			footerStreamerEmail: "Yayıncı",
 			footerPublisherEmail: "Yayıncı",
@@ -1875,6 +1815,8 @@
 			newsletterSubtitle: "انضم إلى قائمتنا البريدية للحصول على آخر الأخبار حول ألعابنا، وفعالياتنا، ولعب لعبتنا في مرحلة الاختبار التجريبي قبل أي شخص آخر، والمزيد.",
 			newsletterPlaceholder: "بريدك.الإلكتروني@مثال.com",
 			newsletterButton: "اشترك",
+			newsletterSuccessTitle: "تم إرسال رسالة التحقق",
+			newsletterSuccessMessage: "لقد أرسلنا إليك رسالة بريد إلكتروني للتحقق من عنوانك، وسيتم اشتراكك بمجرد النقر على زر التأكيد في تلك الرسالة.&nbsp;<br>لا تنسَ فحص مجلد البريد العشوائي (السبام) إذا لم ترها خلال 5 دقائق.",
 			footerPressEmail: "للصحافة",
 			footerStreamerEmail: "لليوتيوبرز",
 			footerPublisherEmail: "للناشرين",
@@ -1905,8 +1847,8 @@
 			newsletterSubtitle: "Dołącz do naszej listy mailingowej, aby otrzymywać najnowsze informacje o naszych grach, wydarzeniach, grać w naszą grę w fazie testowej przed wszystkimi innymi i nie tylko.",
 			newsletterPlaceholder: "twoj.email@przyklad.com",
 			newsletterButton: "Subskrybuj",
-			newsletterSuccessTitle: "Dziękujemy!",
-			newsletterSuccessMessage: "Pomyślnie dołączyłeś do naszej listy mailingowej.",
+			newsletterSuccessTitle: "Wysłano e-mail weryfikacyjny",
+			newsletterSuccessMessage: "Wysłaliśmy Ci e-mail w celu weryfikacji Twojego adresu. Zostaniesz zapisany do newslettera, gdy klikniesz przycisk potwierdzenia w tym e-mailu.&nbsp;<br>Nie zapomnij sprawdzić folderu spam, jeśli nie zobaczysz go w ciągu 5 minut.",
 			footerPressEmail: "Prasa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Wydawca",
@@ -1937,8 +1879,8 @@
 			newsletterSubtitle: "Приєднуйтесь до нашої розсилки, щоб отримувати останні новини про наші ігри, події, грати в нашу гру в режимі плейтесту раніше за всіх та багато іншого.",
 			newsletterPlaceholder: "ваша.пошта@example.com",
 			newsletterButton: "Підписатися",
-			newsletterSuccessTitle: "Дякуємо!",
-			newsletterSuccessMessage: "Ви успішно приєдналися до нашої розсилки.",
+			newsletterSuccessTitle: "Лист підтвердження надіслано",
+			newsletterSuccessMessage: "Ми надіслали вам електронний лист для підтвердження вашої адреси. Ви будете підписані, щойно натиснете кнопку підтвердження у цьому листі.&nbsp;<br>Не забудьте перевірити папку \"Спам\", якщо не побачите його протягом 5 хвилин.",
 			footerPressEmail: "Преса",
 			footerStreamerEmail: "Стример",
 			footerPublisherEmail: "Видавець",
@@ -1969,8 +1911,8 @@
 			newsletterSubtitle: "Iscriviti alla nostra mailing list per ricevere le ultime notizie sui nostri giochi, eventi, giocare al nostro gioco in playtest prima di chiunque altro e altro ancora.",
 			newsletterPlaceholder: "la.tua.email@esempio.com",
 			newsletterButton: "Iscriviti",
-			newsletterSuccessTitle: "Grazie!",
-			newsletterSuccessMessage: "Ti sei iscritto con successo alla nostra mailing list.",
+			newsletterSuccessTitle: "Email di verifica inviata",
+			newsletterSuccessMessage: "Le abbiamo inviato un'email per verificare il suo indirizzo. Sarà abbonato una volta cliccato sul pulsante di conferma in quell'email.&nbsp;<br>Non dimentichi di controllare lo spam se non la vede entro 5 minuti.",
 			footerPressEmail: "Stampa",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editore",
@@ -2001,8 +1943,8 @@
 			newsletterSubtitle: "Připojte se k naší mailing listu a získejte nejnovější zprávy o našich hrách, událostech, zahrajte si naši hru v předběžném testování dříve než kdokoli jiný a další.",
 			newsletterPlaceholder: "vas.email@priklad.com",
 			newsletterButton: "Odebírat",
-			newsletterSuccessTitle: "Děkujeme!",
-			newsletterSuccessMessage: "Úspěšně jste se připojili k našemu mailing listu.",
+			newsletterSuccessTitle: "Ověřovací e-mail odeslán",
+			newsletterSuccessMessage: "Poslali jsme vám e-mail k ověření vaší adresy. Budete přihlášeni k odběru, jakmile kliknete na potvrzovací tlačítko v tomto e-mailu.&nbsp;<br>Nezapomeňte zkontrolovat spam, pokud jej neuvidíte do 5 minut.",
 			footerPressEmail: "Tisk",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Vydavatel",
@@ -2033,8 +1975,8 @@
 			newsletterSubtitle: "Csatlakozzon levelezőlistánkhoz, hogy megkapja a legfrissebb híreket játékainkról, eseményekről, játszhasson a játékunk tesztverziójával mindenki más előtt, és még sok minden másról.",
 			newsletterPlaceholder: "az.email.cimed@pelda.com",
 			newsletterButton: "Feliratkozás",
-			newsletterSuccessTitle: "Köszönjük!",
-			newsletterSuccessMessage: "Sikeresen csatlakozott a levelezőlistánkhoz.",
+			newsletterSuccessTitle: "Megerősítő e-mail elküldve",
+			newsletterSuccessMessage: "Elküldtünk Önnek egy e-mailt a címének ellenőrzéséhez. Feliratkozása akkor lép érvénybe, ha rákattintott az e-mailben lévő megerősítő gombra.&nbsp;<br>Ne felejtse el ellenőrizni a spam mappát, ha 5 percen belül nem látja az e-mailt.",
 			footerPressEmail: "Sajtó",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Kiadó",
@@ -2065,8 +2007,8 @@
 			newsletterSubtitle: "Word lid van onze mailinglijst voor het laatste nieuws over onze games, evenementen, speel onze game in playtest vóór alle anderen en meer.",
 			newsletterPlaceholder: "jouw.email@voorbeeld.com",
 			newsletterButton: "Abonneren",
-			newsletterSuccessTitle: "Bedankt!",
-			newsletterSuccessMessage: "Je bent succesvol lid geworden van onze mailinglijst.",
+			newsletterSuccessTitle: "Verificatie-e-mail verzonden",
+			newsletterSuccessMessage: "We hebben u een e-mail gestuurd om uw adres te verifiëren. U bent geabonneerd zodra u op de bevestigingsknop in die e-mail hebt geklikt.&nbsp;<br>Vergeet niet de spam te controleren als u deze niet binnen 5 minuten ziet.",
 			footerPressEmail: "Pers",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Uitgever",
@@ -2097,8 +2039,8 @@
 			newsletterSubtitle: "Gå med i vår e-postlista för att få de senaste nyheterna om våra spel, evenemang, spela vårt spel i playtest före alla andra och mer.",
 			newsletterPlaceholder: "din.email@exempel.com",
 			newsletterButton: "Prenumerera",
-			newsletterSuccessTitle: "Tack!",
-			newsletterSuccessMessage: "Du har lyckats gå med i vår e-postlista.",
+			newsletterSuccessTitle: "Verifieringse-post skickad",
+			newsletterSuccessMessage: "Vi har skickat ett e-postmeddelande till dig för att verifiera din adress. Du prenumererar när du har klickat på bekräftelseknappen i det e-postmeddelandet.&nbsp;<br>Glöm inte att kolla skräpposten om du inte ser det inom 5 minuter.",
 			footerPressEmail: "Press",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Utgivare",
@@ -2129,8 +2071,8 @@
 			newsletterSubtitle: "Tilmeld dig vores mailingliste for at få de seneste nyheder om vores spil, begivenheder, spille vores spil i playtest før alle andre og mere.",
 			newsletterPlaceholder: "din.email@eksempel.com",
 			newsletterButton: "Abonner",
-			newsletterSuccessTitle: "Tak!",
-			newsletterSuccessMessage: "Du er blevet tilmeldt vores mailingliste.",
+			newsletterSuccessTitle: "Bekræftelses-e-mail sendt",
+			newsletterSuccessMessage: "Vi har sendt dig en e-mail for at bekræfte din adresse. Du bliver tilmeldt, så snart du har klikket på bekræftelsesknappen i den e-mail.&nbsp;<br>Glem ikke at tjekke spamfilteret, hvis du ikke ser den inden for 5 minutter.",
 			footerPressEmail: "Presse",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Udgiver",
@@ -2161,8 +2103,8 @@
 			newsletterSubtitle: "Liity postituslistallemme saadaksesi viimeisimmät uutiset peleistämme, tapahtumista, pelaa peliämme playtestissä ennen muita ja paljon muuta.",
 			newsletterPlaceholder: "sinun.sahkoposti@esimerkki.com",
 			newsletterButton: "Tilaa",
-			newsletterSuccessTitle: "Kiitos!",
-			newsletterSuccessMessage: "Olet liittynyt postituslistallemme onnistuneesti.",
+			newsletterSuccessTitle: "Vahvistussähköposti lähetetty",
+			newsletterSuccessMessage: "Olemme lähettäneet sinulle sähköpostin osoitteesi vahvistamiseksi. Tilaat uutiskirjeen, kun olet napsauttanut vahvistuspainiketta kyseisessä sähköpostissa.&nbsp;<br>Muista tarkistaa roskapostikansio, jos et näe sitä 5 minuutin kuluessa.",
 			footerPressEmail: "Lehdistö",
 			footerStreamerEmail: "Striimaaja",
 			footerPublisherEmail: "Julkaisija",
@@ -2193,8 +2135,8 @@
 			newsletterSubtitle: "Alătură-te listei noastre de corespondență pentru a primi cele mai recente știri despre jocurile noastre, evenimente, joacă jocul nostru în playtest înaintea tuturor și multe altele.",
 			newsletterPlaceholder: "adresa.ta.de.email@exemplu.com",
 			newsletterButton: "Abonează-te",
-			newsletterSuccessTitle: "Mulțumim!",
-			newsletterSuccessMessage: "Te-ai alăturat cu succes listei noastre de corespondență.",
+			newsletterSuccessTitle: "Vahvistussähköposti lähetetty",
+			newsletterSuccessMessage: "Olemme lähettäneet sinulle sähköpostin osoitteesi vahvistamiseksi. Tilaat uutiskirjeen, kun olet napsauttanut vahvistuspainiketta kyseisessä sähköpostissa.&nbsp;<br>Muista tarkistaa roskapostikansio, jos et näe sitä 5 minuutin kuluessa.",
 			footerPressEmail: "Presă",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Editor",
@@ -2225,8 +2167,8 @@
 			newsletterSubtitle: "Bli med på vår e-postliste for å få de siste nyhetene om spillene våre, arrangementer, spill spillet vårt i playtest før alle andre og mer.",
 			newsletterPlaceholder: "din.epost@eksempel.com",
 			newsletterButton: "Abonner",
-			newsletterSuccessTitle: "Takk!",
-			newsletterSuccessMessage: "Du har lykkes med å bli med på vår e-postliste.",
+			newsletterSuccessTitle: "Verifiserings-e-post sendt",
+			newsletterSuccessMessage: "Vi har sendt deg en e-post for å bekrefte adressen din. Du blir abonnent så snart du har klikket på bekreftelsesknappen i den e-posten.&nbsp;<br>Ikke glem å sjekke søppelposten hvis du ikke ser den innen 5 minutter.",
 			footerPressEmail: "Presse",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Utgiver",
@@ -2257,8 +2199,8 @@
 			newsletterSubtitle: "Εγγραφείτε στη λίστα αλληλογραφίας μας για να λαμβάνετε τα τελευταία νέα σχετικά με τα παιχνίδια μας, τις εκδηλώσεις, να παίξετε το παιχνίδι μας σε δοκιμή πριν από όλους τους άλλους και πολλά άλλα.",
 			newsletterPlaceholder: "το.email.σας@παραδειγμα.com",
 			newsletterButton: "Εγγραφή",
-			newsletterSuccessTitle: "Ευχαριστούμε!",
-			newsletterSuccessMessage: "Έχετε εγγραφεί επιτυχώς στη λίστα αλληλογραφίας μας.",
+			newsletterSuccessTitle: "Στάλθηκε email επιβεβαίωσης",
+			newsletterSuccessMessage: "Σας έχουμε στείλει ένα email για να επιβεβαιώσουμε τη διεύθυνσή σας, θα εγγραφείτε μόλις κάνετε κλικ στο κουμπί επιβεβαίωσης σε αυτό το email.&nbsp;<br>Μην ξεχάσετε να ελέγξετε τον φάκελο ανεπιθύμητης αλληλογραφίας (spam) αν δεν το δείτε εντός 5 λεπτών.",
 			footerPressEmail: "Τύπος",
 			footerStreamerEmail: "Streamer",
 			footerPublisherEmail: "Εκδότης",
@@ -2289,8 +2231,8 @@
 			newsletterSubtitle: "Присъединете се към нашия пощенски списък, за да получавате последните новини за нашите игри, събития, да играете нашата игра в плейтест преди всички останали и други.",
 			newsletterPlaceholder: "вашият.имейл@пример.com",
 			newsletterButton: "Абониране",
-			newsletterSuccessTitle: "Благодарим Ви!",
-			newsletterSuccessMessage: "Успешно се присъединихте към нашия пощенски списък.",
+			newsletterSuccessTitle: "Изпратен е имейл за потвърждение",
+			newsletterSuccessMessage: "Изпратихме Ви имейл за потвърждаване на Вашия адрес. Ще бъдете абонирани, след като кликнете върху бутона за потвърждение в този имейл.&nbsp;<br>Не забравяйте да проверите папката за спам, ако не го видите в рамките на 5 минути.",
 			footerPressEmail: "Преса",
 			footerStreamerEmail: "Стриймър",
 			footerPublisherEmail: "Издател",
